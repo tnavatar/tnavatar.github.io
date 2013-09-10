@@ -8,16 +8,20 @@ Experience
 * Harvard Medical School -- Center for Biomedical Informatics  
   Boston, MA, 2010 - present  
   Bioinformatics Developer - Autism research and software development
-    - Developed Puzzlemouse, a web based system for
-    - Developed Autworks, a Rails-based web application for visualizing
-      significant relationships between autism and other diseases using
-      gene interaction networks.
-    - Built Kestrel, a relational database of autism phenotype data.
+    - Developed Puzzlemouse, a web based system for screening videos of
+	  children for autism risk.
+    - Developed Autworks, a web application for visualizing significant
+	  relationships between autism and other diseases using gene interaction
+	  networks and gene set enrichment analysis.
+	- Designed and implemented secure, HIPAA compliant infrastructure for 
+	  hosting protected health information for the Puzzlemouse study using
+	  CentOS images hosted on VMware virtual machines.
+    - Built Kestrel, a database of autism phenotype data using MySQL.
    
 * Harvard Medical School -- Research Information Technology Group,  
   Boston, MA, 2009 - 2010  
   Research Systems Administrator - Server and desktop management  
-    - Maintained a 1000 cpu core high performance computing cluster.
+    - Maintained Orchestra, a 4000 cpu core high performance computing cluster.
     - Installed and supported research applications on Linux.
     - Wrote scripts for automating server and desktop maintenance.  
 	
@@ -34,17 +38,11 @@ Experience
 * Boston College -- Facilities Management  
   Chestnut Hill, MA, 2001 - 2004  
   Develop website and databases; provide support and training.  
-    - Expanded existing electronic document management system using
-      FileMaker Pro and Adobe Acrobat.  Instructed employees on its use. 
-    - Created web interface using CGI to FileMaker Pro databases. 
 	
 * Davis Partnership Architects -- Information Technology  
   Denver, CO 1996 - 2002  
-  Desktop support and training of architectural staff; special projects  
-    - Defined user requirements, implemented and trained users on a
-      document and drawing archival system using IMR Alchemy. 
-    - Developed an IT help-ticket system implemented with Microsoft
-      Access.
+  Database developent, desktop and server support, 
+
 
 Publications
 ------------
@@ -62,11 +60,9 @@ Publications
 
 Education 
 ---------
-* Harvard University Extension School
-  Cousework for A.L.M. in Software Engineering 2009 - present
-* Boston College, College of Arts & Sciences
-  B.A. in Computer Science == 2000 - 2004 
-    - 3.4 GPA; 3.9 Major GPA 
-	- Graduated from University Honors Program 
+* Harvard University Extension School -- 2009 - present
+  Cousework for A.L.M. in Software Engineering 
+* Boston College, College of Arts & Sciences -- 2000 - 2004 
+  B.A. in Computer Science, University Honors
 
-Skills: Ruby, Ruby on Rails, C, R, Java, Lisp, Perl, yacc, lex, HTML, XML, SQL, PostgreSQL, MySQL, Oracle, Microsoft Access, Visual Basic, Visual Studio, Emacs, UNIX, Linux, Macintosh OS X, Filemaker Pro, Adobe Photoshop, InDesign, Illustrator
+Skills: Ruby, Ruby on Rails, C, R, Java, Lisp, Perl, yacc, lex, HTML, XML, SQL, PostgreSQL, MySQL, Oracle, Microsoft Access, Visual Basic, Visual Studio, Emacs, UNIX, Linux, Ubuntu, Debian, CentOS, Red Hat, Macintosh OS X, Filemaker Pro, Adobe Photoshop, InDesign, Illustrator
