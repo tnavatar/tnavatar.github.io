@@ -28,7 +28,7 @@ Scientific programmer, web developer, and systems engineer for lab conducting au
   networks. Built using Ruby on Rails, C, PostgreSQL, JQuery and HTML 5.
 - Built Kestrel, a relational database of autism phenotype data using MySQL.
    
-##### Harvard Medical School -- Research Information Technology Group,  
+##### Harvard Medical School -- Research Information Technology Group  
 Research Systems Administrator - Server and desktop management  
 *Boston, MA -- 2009 - 2010*
 
