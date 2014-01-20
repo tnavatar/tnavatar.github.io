@@ -21,11 +21,12 @@ Scientific programmer, web developer, and systems engineer for lab conducting au
 
 - Developed Puzzlemouse, a web based system for submitting and  evaluating
   home videos of children for autism risk. Designed to meet HMS  standards
-  for data security of patient health information. Built using Ruby on Rails,
+  of data security for patient health information. Built using Ruby on Rails,
   PostgreSQL, JQuery and HTML 5.
 - Developed Autworks, a web application for visualizing significant
   relationships between autism and other diseases using gene interaction
-  networks. Built using Ruby on Rails, C, PostgreSQL, JQuery and HTML 5.
+  networks and gene set enrichment. Built using Ruby on Rails, C, PostgreSQL,
+  JQuery and HTML 5.
 - Built Kestrel, a relational database of autism phenotype data using MySQL.
    
 ##### Harvard Medical School -- Research Information Technology Group,  
