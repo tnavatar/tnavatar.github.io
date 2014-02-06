@@ -59,6 +59,6 @@ Desktop support and training of architectural staff; digital archival
 
 ### Education 
 ##### Harvard University Extension School
-Cousework for A.L.M. in Software Engineering  2009 - present
+Coursework for A.L.M. in Software Engineering  2009 - present
 ##### Boston College, College of Arts & Sciences
 B.A. in Computer Science with University Honors 2000 - 2004 

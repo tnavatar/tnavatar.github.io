@@ -3,8 +3,8 @@ layout: default
 title: resume
 ---
 ## Tristan Nelson 
-tristan@iseult.us  
-857.472.9075
+tnavatar@yahoo.com
+
  
 ### Experience
 
@@ -60,6 +60,6 @@ Desktop support and training of architectural staff; digital archival
 
 ### Education 
 ##### Harvard University Extension School
-Cousework for A.L.M. in Software Engineering  2009 - present
+Coursework for A.L.M. in Software Engineering  2009 - present
 ##### Boston College, College of Arts & Sciences
 B.A. in Computer Science with University Honors 2000 - 2004 
