@@ -11263,7 +11263,7 @@ if (typeof exports == "object") {
   this["List"] = require("list.js");
 }})();
 var options = {
-    valueNames: [ 'gene', 'variants' ]
+    valueNames: [ 'gene', 'variants', 'de-novo', 'tier' ]
 };
 
 var geneList = new List('genes', options);
