@@ -1,258 +1,344 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    
-    <!-- Always force latest IE rendering engine or request Chrome Frame -->
-    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-    
-    <!-- Use title if it's in the page YAML frontmatter -->
-    <title>The Middleman</title>
-    
-    <link href="../stylesheets/all.css" rel="stylesheet" type="text/css" />
-  </head>
-  
-  <body class="genes genes_UPF3B">
-    <div class="container">
-      <div class="row">
-  <div class="col-md-12">
+    <div class="container genes genes_UPF3B">
+      
+<!-- <div class="row"> -->
+  <!-- <div class="col-md-6">
     <p><a href="../">back to genes</a></p>
+  </div> -->
+<!-- </div> -->
+
+<!-- <div class="row "> -->
+  <div class="col-md-6">
+    <p><a href="../">back to genes</a></p>
+    <h1><em>UPF3B</em></h1>
+    <p><b>Gene name:  </b><em>UPF3 regulator of nonsense transcripts homolog B (yeast)</em></p>
+    <p><b>Chromosome band:  </b><em>Xq24</em></p>
+    <h3>Tier 2</h3>
+    <!-- <p class="lead">9 pathogenic variants in 7 papers</p> -->
+    <!-- <ul> -->
+      <!-- <li class="list-unstyled"> -->
+	<!-- <strong> -->
+    <!-- 7 -->
+	<!-- </strong> -->
+	<!-- Implicated in Intellectual Disability/Developmental Delay (ID) -->
+      <!-- </li> -->
+      <!-- <li class="list-unstyled"> -->
+	<!-- <strong> -->
+    <!-- 3 -->
+	<!-- </strong> -->
+	<!-- Implicated in Autism Spectrum Disorder (ASD) -->
+      <!-- </li> -->
+      <!-- <li class="list-unstyled"> -->
+	<!-- <strong> -->
+    <!-- 1 -->
+	<!-- </strong> -->
+	<!-- Implicated in Epilepsy (EP) -->
+      <!-- </li> -->
+      <!-- <li class="list-unstyled"> -->
+	<!-- <strong> -->
+    <!-- 2 -->
+	<!-- </strong> -->
+	<!-- Implicated in Attention Deficit and Hyperactivity Disorder (ADHD) -->
+      <!-- </li> -->
+      <!-- <li class="list-unstyled"> -->
+	<!-- <strong> -->
+    <!-- 1 -->
+	<!-- </strong> -->
+	<!-- Implicated in Schizopherenia (SCZ) -->
+      <!-- </li> -->
+      <!-- <li class="list-unstyled"> -->
+	<!-- <strong> -->
+    <!-- 0 -->
+	<!-- </strong> -->
+	<!-- Implicated in Bipolar Disorder (BD) -->
+      <!-- </li> -->
+    <!-- </ul> -->
+    <!-- <div class="row"> -->
+      <div class="col-md-12" id="barGraph">
+      </div>
+    <!-- </div> -->
+
+  </div>
+  <!--  -->
+
+<!-- </div> -->
+
+<div class="row" id="top-pieChart">
+  <div class="col-md-6" id="pieChart">
   </div>
 </div>
 
-<div class="row ">
-  <div class="col-md-12">
-    <h1>UPF3B</h1>   
-    <p><em>gene name</em></p>
-    <p><em>gene location</em></p>
-    <h3>tier 2</h3>
-    <p class="lead">6 pathogenic variants in 6 papers</p>
-    <ul>
-      <li class="list-unstyled">
-	<strong>
-	  4
-	</strong>
-	implicated in Intelectual Disorder/Developmental Delay (ID)
-      </li>
-      <li class="list-unstyled">
-	<strong>
-	  3
-	</strong>
-	implicated in Autism Spectrum Disorder (ASD)
-      </li>
-      <li class="list-unstyled">
-	<strong>
-	  1
-	</strong>
-	implicated in Epilepsy (EP)
-      </li>
-      <li class="list-unstyled">
-	<strong>
-	  2
-	</strong>
-	implicated in Attention Deficit and Hyperactivity Disorder (ADHD)
-      </li>
-      <li class="list-unstyled">
-	<strong>
-	  1
-	</strong>
-	implicated in Schizopherenia (SCZ)
-      </li>
-      <li class="list-unstyled">
-	<strong>
-	  0
-	</strong>
-	implicated in Bipolar Disorder (BD)
-      </li>
-    </ul>
-  </div>
+
+<p id="par">
+  <b>Columns to display:</b><br>
+  &nbsp; Note: categories denoted by + may not have values in all cases.
+</p>
+
+<div class="col-md-3 checkboxes">
+  <p><input type="checkbox" name="disorders" checked="checked" /> Disorder(s)<br>
+  <input type="checkbox" name="variant_type" checked="checked" /> Variant Type<br>
+  <input type="checkbox" name="inheritance" checked="checked" /> Inheritance<br>
+  <input type="checkbox" name="method" checked="checked" /> Method<br>
+  <input type="checkbox" name="chromosome" /> Chromosome +<br>
+  <input type="checkbox" name="cnv_size" /> CNV Size +<br>
+  <input type="checkbox" name="genome_build" /> Genome Build +</p>
 </div>
-
-
+<div class="col-md-9 checkboxes">
+  <p><input type="checkbox" name="coding_dna_change" /> Coding DNA Change +<br>
+  <input type="checkbox" name="protein_change" /> Protein Change +<br>
+  <input type="checkbox" name="position" /> Position +<br>
+  <input type="checkbox" name="reference_sequence" /> Reference Sequence +<br>
+  <input type="checkbox" name="alternate_sequence" /> Alternate Sequence +<br>
+  <input type="checkbox" name="patient_id" /> Patient ID<br>
+  <input type="checkbox" name="the_reference" checked="checked" /> Reference</p>
+</div>
 <div class="row">
-  <div class="col-md-12">
-    <h4>
-      Laumonnier F
-      et. al.,
-      <a href="http://www.ncbi.nlm.nih.gov/pubmed/19238151">Mutations of the UPF3B gene, which encodes a protein widely expressed in neurons, are associated with nonspecific mental retardation with or without autism.</a>,
-      Mol Psychiatry 
-      2010
-    </h4>
-    <table class="table">
-      <thead>
-	<tr>
-	  <th class="col-md-2">Patient ID</th>
-          <th class="col-md-4">Disorders</th>
-	  <th class="col-md-2">Type</th>
-	  <th class="col-md-2">Inheritance</th>
-	  <th class="col-md-2">Method</th>
-	</tr>
-      </thead>
-      <tbody>
-	<tr>
-	  <td>MRX62 III-4</td>
-	  <td>ID, EP</td>
-	  <td>Nonsense</td>
-	  <td><em>Maternal</em></td>
-	  <td>Targeted sequencing</td>
-      </tbody>
+  <div class="col-md-12" id="table-container">
+    <table class="table" id="maintable">
+    <thead>
+  <tr>
+  <th class="disorders">Disorder(s)</th>
+  <th class="variant_type">Variant Type</th>
+  <th class="inheritance">Inheritance</th>
+  <th class="method">Method</th>
+  <th class="chromosome">Chromosome</th>
+  <th class="cnv_size">CNV Size</th>
+  <th class="genome_build">Genome Build</th>
+  <th class="coding_dna_change">Coding DNA Change</th>
+  <th class="protein_change">Protein Change</th>
+  <th class="position">Position</th>
+  <th class="reference_sequence">Reference Sequence</th>
+  <th class="alternate_sequence">Alternate Sequence</th>
+  <th class="patient_id">Patient ID</th>
+  <th class="the_reference">Reference</th>
+  </tr>
+</thead>
+
+
+
+
+
+<tbody>
+<!--  -->
+<tr>
+<td class="disorders">ASD, ADHD, SCZ</td>
+<td class="variant_type">Frameshift</td>
+<td class="inheritance">Maternal</td>
+<td class="method">Targeted sequencing</td>
+<td class="chromosome"></td>
+<td class="cnv_size"></td>
+<td class="genome_build"></td>
+<td class="coding_dna_change">c.683_686delAAGA</td>
+<td class="protein_change">p.Q228fsX18</td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">NSB1442</td>
+<td class="the_reference"><a href="#references">Addington et al. 2011</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ASD</td>
+<td class="variant_type">Frameshift</td>
+<td class="inheritance"><em>De novo</em></td>
+<td class="method">Whole exome sequencing</td>
+<td class="chromosome"></td>
+<td class="cnv_size"></td>
+<td class="genome_build"></td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position">118985816</td>
+<td class="reference_sequence">ins(A)</td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">11609</td>
+<td class="the_reference"><a href="#references">Iossifov et al. 2014</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID, EP</td>
+<td class="variant_type">Nonsense</td>
+<td class="inheritance">Maternal</td>
+<td class="method">Targeted sequencing</td>
+<td class="chromosome"></td>
+<td class="cnv_size"></td>
+<td class="genome_build"></td>
+<td class="coding_dna_change">c.1081C>T</td>
+<td class="protein_change">p.Arg361*</td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">MRX62 III-4</td>
+<td class="the_reference"><a href="#references">Laumonnier et al. 2010</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID, ASD, ADHD</td>
+<td class="variant_type">Frameshift</td>
+<td class="inheritance">Maternal</td>
+<td class="method">Targeted sequencing</td>
+<td class="chromosome"></td>
+<td class="cnv_size"></td>
+<td class="genome_build"></td>
+<td class="coding_dna_change">c.697_698delAG</td>
+<td class="protein_change">p.Arg233fs*30</td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">Case 1</td>
+<td class="the_reference"><a href="#references">Lynch et al. 2014</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID</td>
+<td class="variant_type">Frameshift</td>
+<td class="inheritance"><em>De novo</em></td>
+<td class="method">Whole exome sequencing</td>
+<td class="chromosome"></td>
+<td class="cnv_size"></td>
+<td class="genome_build"></td>
+<td class="coding_dna_change">c.1091_1094delAGAG</td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">564</td>
+<td class="the_reference"><a href="#references">Soden et al. 2014</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID</td>
+<td class="variant_type">Frameshift</td>
+<td class="inheritance">Maternal</td>
+<td class="method">Targeted sequencing</td>
+<td class="chromosome"></td>
+<td class="cnv_size"></td>
+<td class="genome_build"></td>
+<td class="coding_dna_change">c.674_677delGAAA</td>
+<td class="protein_change">p.R225fs*20</td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">Family 1</td>
+<td class="the_reference"><a href="#references">Tarpey et al. 2007*</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID</td>
+<td class="variant_type">Frameshift</td>
+<td class="inheritance">Maternal</td>
+<td class="method">Targeted sequencing</td>
+<td class="chromosome"></td>
+<td class="cnv_size"></td>
+<td class="genome_build"></td>
+<td class="coding_dna_change">c.867_868delAG</td>
+<td class="protein_change">p.G290fs*2</td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">Family 2</td>
+<td class="the_reference"><a href="#references">Tarpey et al. 2007*</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID</td>
+<td class="variant_type">Nonsense</td>
+<td class="inheritance">Maternal</td>
+<td class="method">Targeted sequencing</td>
+<td class="chromosome"></td>
+<td class="cnv_size"></td>
+<td class="genome_build"></td>
+<td class="coding_dna_change">c.1288C>T</td>
+<td class="protein_change">p.R430*</td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">Family 3</td>
+<td class="the_reference"><a href="#references">Tarpey et al. 2007*</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID</td>
+<td class="variant_type">Nonsense</td>
+<td class="inheritance">Maternal</td>
+<td class="method">Whole exome sequencing</td>
+<td class="chromosome"></td>
+<td class="cnv_size"></td>
+<td class="genome_build"></td>
+<td class="coding_dna_change"></td>
+<td class="protein_change">p.R430X</td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">III-1</td>
+<td class="the_reference"><a href="#references">Xu et al. 2013</a></td>
+<!--  -->
+</tbody>
     </table>
+    <div id="bottom_anchor"></div>
   </div>
 </div>
-<div class="row">
+<!--  -->
+
+<div class="row" id="citations">
+  <h4>References</h4>
   <div class="col-md-12">
-    <h4>
+    <p><a name="references"></a>
       Addington AM
       et. al.,
-      <a href="http://www.ncbi.nlm.nih.gov/pubmed/20479756">A novel frameshift mutation in UPF3B identified in brothers affected with childhood onset schizophrenia and autism spectrum disorders.</a>,
-      Mol Psychiatry 
+      <a href="http://www.ncbi.nlm.nih.gov/pubmed/20479756">A novel frameshift mutation in UPF3B identified in brothers affected with childhood onset schizophrenia and autism spectrum disorders.</a>
+      Mol Psychiatry
       2011
-    </h4>
-    <table class="table">
-      <thead>
-	<tr>
-	  <th class="col-md-2">Patient ID</th>
-          <th class="col-md-4">Disorders</th>
-	  <th class="col-md-2">Type</th>
-	  <th class="col-md-2">Inheritance</th>
-	  <th class="col-md-2">Method</th>
-	</tr>
-      </thead>
-      <tbody>
-	<tr>
-	  <td>NSB1442</td>
-	  <td>ASD, ADHD, SCZ</td>
-	  <td>Frameshift</td>
-	  <td><em>Maternal</em></td>
-	  <td>Targeted sequencing</td>
-      </tbody>
-    </table>
+    </p>
   </div>
-</div>
-<div class="row">
   <div class="col-md-12">
-    <h4>
-      Lynch SA
-      et. al.,
-      <a href="http://www.ncbi.nlm.nih.gov/pubmed/22609145">Broadening the phenotype associated with mutations in UPF3B: two further cases with renal dysplasia and variable developmental delay.</a>,
-      Eur J Med Genet 
-      2012
-    </h4>
-    <table class="table">
-      <thead>
-	<tr>
-	  <th class="col-md-2">Patient ID</th>
-          <th class="col-md-4">Disorders</th>
-	  <th class="col-md-2">Type</th>
-	  <th class="col-md-2">Inheritance</th>
-	  <th class="col-md-2">Method</th>
-	</tr>
-      </thead>
-      <tbody>
-	<tr>
-	  <td>Case 1</td>
-	  <td>ID, ASD, ADHD</td>
-	  <td>Frameshift</td>
-	  <td><em>Maternal</em></td>
-	  <td>Targeted sequencing</td>
-      </tbody>
-    </table>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-12">
-    <h4>
-      Xu X
-      et. al.,
-      <a href="http://www.ncbi.nlm.nih.gov/pubmed/22957832">Exome sequencing identifies UPF3B as the causative gene for a Chinese non-syndrome mental retardation pedigree.</a>,
-      Clin Genet 
-      2013
-    </h4>
-    <table class="table">
-      <thead>
-	<tr>
-	  <th class="col-md-2">Patient ID</th>
-          <th class="col-md-4">Disorders</th>
-	  <th class="col-md-2">Type</th>
-	  <th class="col-md-2">Inheritance</th>
-	  <th class="col-md-2">Method</th>
-	</tr>
-      </thead>
-      <tbody>
-	<tr>
-	  <td>III-1</td>
-	  <td>ID</td>
-	  <td>Nonsense</td>
-	  <td><em>Maternal</em></td>
-	  <td>Whole exome sequencing</td>
-      </tbody>
-    </table>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-12">
-    <h4>
+    <p><a name="references"></a>
       Iossifov I
       et. al.,
-      <a href="http://www.ncbi.nlm.nih.gov/pubmed/25363768">The contribution of de novo coding mutations to autism spectrum disorder.</a>,
-      Nature 
+      <a href="http://www.ncbi.nlm.nih.gov/pubmed/25363768">The contribution of de novo coding mutations to autism spectrum disorder.</a>
+      Nature
       2014
-    </h4>
-    <table class="table">
-      <thead>
-	<tr>
-	  <th class="col-md-2">Patient ID</th>
-          <th class="col-md-4">Disorders</th>
-	  <th class="col-md-2">Type</th>
-	  <th class="col-md-2">Inheritance</th>
-	  <th class="col-md-2">Method</th>
-	</tr>
-      </thead>
-      <tbody>
-	<tr>
-	  <td>11609</td>
-	  <td>ASD</td>
-	  <td>Frameshift</td>
-	  <td><em>De novo</em></td>
-	  <td>Whole exome sequencing</td>
-      </tbody>
-    </table>
+    </p>
   </div>
-</div>
-<div class="row">
   <div class="col-md-12">
-    <h4>
+    <p><a name="references"></a>
+      Laumonnier F
+      et. al.,
+      <a href="http://www.ncbi.nlm.nih.gov/pubmed/19238151">Mutations of the UPF3B gene, which encodes a protein widely expressed in neurons, are associated with nonspecific mental retardation with or without autism.</a>
+      Mol Psychiatry
+      2010
+    </p>
+  </div>
+  <div class="col-md-12">
+    <p><a name="references"></a>
+      Lynch SA
+      et. al.,
+      <a href="http://www.ncbi.nlm.nih.gov/pubmed/22609145">Broadening the phenotype associated with mutations in UPF3B: two further cases with renal dysplasia and variable developmental delay.</a>
+      Eur J Med Genet
+      2012
+    </p>
+  </div>
+  <div class="col-md-12">
+    <p><a name="references"></a>
       Soden SE
       et. al.,
-      <a href="http://www.ncbi.nlm.nih.gov/pubmed/25473036">Effectiveness of exome and genome sequencing guided by acuity of illness for diagnosis of neurodevelopmental disorders.</a>,
-      Sci Transl Med 
+      <a href="http://www.ncbi.nlm.nih.gov/pubmed/25473036">Effectiveness of exome and genome sequencing guided by acuity of illness for diagnosis of neurodevelopmental disorders.</a>
+      Sci Transl Med
       2014
-    </h4>
-    <table class="table">
-      <thead>
-	<tr>
-	  <th class="col-md-2">Patient ID</th>
-          <th class="col-md-4">Disorders</th>
-	  <th class="col-md-2">Type</th>
-	  <th class="col-md-2">Inheritance</th>
-	  <th class="col-md-2">Method</th>
-	</tr>
-      </thead>
-      <tbody>
-	<tr>
-	  <td>564</td>
-	  <td>ID</td>
-	  <td>Frameshift</td>
-	  <td><em>De novo</em></td>
-	  <td>Whole exome sequencing</td>
-      </tbody>
-    </table>
+    </p>
+  </div>
+  <div class="col-md-12">
+    <p><a name="references"></a>
+      Tarpey PS
+      et. al.,
+      <a href="http://www.ncbi.nlm.nih.gov/pubmed/17704778">Mutations in UPF3B, a member of the nonsense-mediated mRNA decay complex, cause syndromic and nonsyndromic mental retardation.</a>
+      Nat Genet
+      2007
+    </p>
+  </div>
+  <div class="col-md-12">
+    <p><a name="references"></a>
+      Xu X
+      et. al.,
+      <a href="http://www.ncbi.nlm.nih.gov/pubmed/22957832">Exome sequencing identifies UPF3B as the causative gene for a Chinese non-syndrome mental retardation pedigree.</a>
+      Clin Genet
+      2013
+    </p>
   </div>
 </div>
 
+<div class="source_data" data-unknown="0" data-denovo="2" data-inherited="7"></div>
 
+<div class="implicated_data" data-ID="7" data-ASD="3" data-EP="1" data-ADHD="2" data-SCZ="1" data-BD="0"></div>
 
     </div>
-  </body>
-  <script src="../javascripts/all.js" type="text/javascript"></script><script src="../javascripts/bootstrap.js" type="text/javascript"></script>
-</html>

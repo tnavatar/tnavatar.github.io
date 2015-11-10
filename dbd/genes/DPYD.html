@@ -1,228 +1,287 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    
-    <!-- Always force latest IE rendering engine or request Chrome Frame -->
-    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-    
-    <!-- Use title if it's in the page YAML frontmatter -->
-    <title>The Middleman</title>
-    
-    <link href="../stylesheets/all.css" rel="stylesheet" type="text/css" />
-  </head>
-  
-  <body class="genes genes_DPYD">
-    <div class="container">
-      <div class="row">
-  <div class="col-md-12">
+    <div class="container genes genes_DPYD">
+      
+<!-- <div class="row"> -->
+  <!-- <div class="col-md-6">
     <p><a href="../">back to genes</a></p>
+  </div> -->
+<!-- </div> -->
+
+<!-- <div class="row "> -->
+  <div class="col-md-6">
+    <p><a href="../">back to genes</a></p>
+    <h1><em>DPYD</em></h1>
+    <p><b>Gene name:  </b><em>dihydropyrimidine dehydrogenase</em></p>
+    <p><b>Chromosome band:  </b><em>1p22</em></p>
+    <h3>Tier 1</h3>
+    <!-- <p class="lead">6 pathogenic variants in 6 papers</p> -->
+    <!-- <ul> -->
+      <!-- <li class="list-unstyled"> -->
+	<!-- <strong> -->
+    <!-- 4 -->
+	<!-- </strong> -->
+	<!-- Implicated in Intellectual Disability/Developmental Delay (ID) -->
+      <!-- </li> -->
+      <!-- <li class="list-unstyled"> -->
+	<!-- <strong> -->
+    <!-- 3 -->
+	<!-- </strong> -->
+	<!-- Implicated in Autism Spectrum Disorder (ASD) -->
+      <!-- </li> -->
+      <!-- <li class="list-unstyled"> -->
+	<!-- <strong> -->
+    <!-- 2 -->
+	<!-- </strong> -->
+	<!-- Implicated in Epilepsy (EP) -->
+      <!-- </li> -->
+      <!-- <li class="list-unstyled"> -->
+	<!-- <strong> -->
+    <!-- 0 -->
+	<!-- </strong> -->
+	<!-- Implicated in Attention Deficit and Hyperactivity Disorder (ADHD) -->
+      <!-- </li> -->
+      <!-- <li class="list-unstyled"> -->
+	<!-- <strong> -->
+    <!-- 1 -->
+	<!-- </strong> -->
+	<!-- Implicated in Schizopherenia (SCZ) -->
+      <!-- </li> -->
+      <!-- <li class="list-unstyled"> -->
+	<!-- <strong> -->
+    <!-- 0 -->
+	<!-- </strong> -->
+	<!-- Implicated in Bipolar Disorder (BD) -->
+      <!-- </li> -->
+    <!-- </ul> -->
+    <!-- <div class="row"> -->
+      <div class="col-md-12" id="barGraph">
+      </div>
+    <!-- </div> -->
+
+  </div>
+  <!--  -->
+
+<!-- </div> -->
+
+<div class="row" id="top-pieChart">
+  <div class="col-md-6" id="pieChart">
   </div>
 </div>
 
-<div class="row ">
-  <div class="col-md-12">
-    <h1>DPYD</h1>   
-    <p><em>gene name</em></p>
-    <p><em>gene location</em></p>
-    <h3>tier 1</h3>
-    <p class="lead">5 pathogenic variants in 5 papers</p>
-    <ul>
-      <li class="list-unstyled">
-	<strong>
-	  3
-	</strong>
-	implicated in Intelectual Disorder/Developmental Delay (ID)
-      </li>
-      <li class="list-unstyled">
-	<strong>
-	  3
-	</strong>
-	implicated in Autism Spectrum Disorder (ASD)
-      </li>
-      <li class="list-unstyled">
-	<strong>
-	  1
-	</strong>
-	implicated in Epilepsy (EP)
-      </li>
-      <li class="list-unstyled">
-	<strong>
-	  0
-	</strong>
-	implicated in Attention Deficit and Hyperactivity Disorder (ADHD)
-      </li>
-      <li class="list-unstyled">
-	<strong>
-	  1
-	</strong>
-	implicated in Schizopherenia (SCZ)
-      </li>
-      <li class="list-unstyled">
-	<strong>
-	  0
-	</strong>
-	implicated in Bipolar Disorder (BD)
-      </li>
-    </ul>
-  </div>
+
+<p id="par">
+  <b>Columns to display:</b><br>
+  &nbsp; Note: categories denoted by + may not have values in all cases.
+</p>
+
+<div class="col-md-3 checkboxes">
+  <p><input type="checkbox" name="disorders" checked="checked" /> Disorder(s)<br>
+  <input type="checkbox" name="variant_type" checked="checked" /> Variant Type<br>
+  <input type="checkbox" name="inheritance" checked="checked" /> Inheritance<br>
+  <input type="checkbox" name="method" checked="checked" /> Method<br>
+  <input type="checkbox" name="chromosome" /> Chromosome +<br>
+  <input type="checkbox" name="cnv_size" /> CNV Size +<br>
+  <input type="checkbox" name="genome_build" /> Genome Build +</p>
 </div>
-
-
+<div class="col-md-9 checkboxes">
+  <p><input type="checkbox" name="coding_dna_change" /> Coding DNA Change +<br>
+  <input type="checkbox" name="protein_change" /> Protein Change +<br>
+  <input type="checkbox" name="position" /> Position +<br>
+  <input type="checkbox" name="reference_sequence" /> Reference Sequence +<br>
+  <input type="checkbox" name="alternate_sequence" /> Alternate Sequence +<br>
+  <input type="checkbox" name="patient_id" /> Patient ID<br>
+  <input type="checkbox" name="the_reference" checked="checked" /> Reference</p>
+</div>
 <div class="row">
-  <div class="col-md-12">
-    <h4>
-      Mazur A
-      et. al.,
-      <a href="http://www.ncbi.nlm.nih.gov/pubmed/19081848">Dihydropyrimidine dehydrogenase deficiency presenting with psychomotor retardation in the first Polish patient.</a>,
-      Acta Biochim Pol 
-      2008
-    </h4>
-    <table class="table">
-      <thead>
-	<tr>
-	  <th class="col-md-2">Patient ID</th>
-          <th class="col-md-4">Disorders</th>
-	  <th class="col-md-2">Type</th>
-	  <th class="col-md-2">Inheritance</th>
-	  <th class="col-md-2">Method</th>
-	</tr>
-      </thead>
-      <tbody>
-	<tr>
-	  <td>NA</td>
-	  <td>ID</td>
-	  <td>Splice site</td>
-	  <td><em>Bi-parental</em></td>
-	  <td>Targeted sequencing</td>
-      </tbody>
+  <div class="col-md-12" id="table-container">
+    <table class="table" id="maintable">
+    <thead>
+  <tr>
+  <th class="disorders">Disorder(s)</th>
+  <th class="variant_type">Variant Type</th>
+  <th class="inheritance">Inheritance</th>
+  <th class="method">Method</th>
+  <th class="chromosome">Chromosome</th>
+  <th class="cnv_size">CNV Size</th>
+  <th class="genome_build">Genome Build</th>
+  <th class="coding_dna_change">Coding DNA Change</th>
+  <th class="protein_change">Protein Change</th>
+  <th class="position">Position</th>
+  <th class="reference_sequence">Reference Sequence</th>
+  <th class="alternate_sequence">Alternate Sequence</th>
+  <th class="patient_id">Patient ID</th>
+  <th class="the_reference">Reference</th>
+  </tr>
+</thead>
+
+
+
+
+
+<tbody>
+<!--  -->
+<tr>
+<td class="disorders">ID, ASD</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance"><em>De novo</em></td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr1</td>
+<td class="cnv_size">1.1 Mbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">1</td>
+<td class="the_reference"><a href="#references">Carter et al. 2011</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID</td>
+<td class="variant_type">Splice site</td>
+<td class="inheritance">Bi-parental</td>
+<td class="method">Targeted sequencing</td>
+<td class="chromosome"></td>
+<td class="cnv_size"></td>
+<td class="genome_build"></td>
+<td class="coding_dna_change">IVS14+1G > A</td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">NA</td>
+<td class="the_reference"><a href="#references">Mazur et al. 2008</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ASD</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance">Maternal</td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr1</td>
+<td class="cnv_size">10.4 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">82062L</td>
+<td class="the_reference"><a href="#references">Prasad et al. 2012</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID, EP</td>
+<td class="variant_type">Frameshift</td>
+<td class="inheritance">Unknown</td>
+<td class="method">Targeted sequencing</td>
+<td class="chromosome"></td>
+<td class="cnv_size"></td>
+<td class="genome_build"></td>
+<td class="coding_dna_change">c.505_513del</td>
+<td class="protein_change">p.169_171del</td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">NA</td>
+<td class="the_reference"><a href="#references">Van Kuilenburg et al. 2010</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID, ASD</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance"><em>De novo</em></td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr1</td>
+<td class="cnv_size">1.4 Mbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">1,452</td>
+<td class="the_reference"><a href="#references">Vulto-van Silfhout et al. 2013</a></td>
+<!--  -->
+<tr>
+<td class="disorders">EP, SCZ</td>
+<td class="variant_type">Nonsense</td>
+<td class="inheritance"><em>De novo</em></td>
+<td class="method">Whole exome sequencing</td>
+<td class="chromosome"></td>
+<td class="cnv_size"></td>
+<td class="genome_build"></td>
+<td class="coding_dna_change">c.1863G>A</td>
+<td class="protein_change">p.W621*</td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">trio_124</td>
+<td class="the_reference"><a href="#references">Xu et al. 2012</a></td>
+<!--  -->
+</tbody>
     </table>
+    <div id="bottom_anchor"></div>
   </div>
 </div>
-<div class="row">
+<!--  -->
+
+<div class="row" id="citations">
+  <h4>References</h4>
   <div class="col-md-12">
-    <h4>
+    <p><a name="references"></a>
       Carter MT
       et. al.,
-      <a href="http://www.ncbi.nlm.nih.gov/pubmed/21114665">Hemizygous deletions on chromosome 1p21.3 involving the DPYD gene in individuals with autism spectrum disorder.</a>,
-      Clin Genet 
+      <a href="http://www.ncbi.nlm.nih.gov/pubmed/21114665">Hemizygous deletions on chromosome 1p21.3 involving the DPYD gene in individuals with autism spectrum disorder.</a>
+      Clin Genet
       2011
-    </h4>
-    <table class="table">
-      <thead>
-	<tr>
-	  <th class="col-md-2">Patient ID</th>
-          <th class="col-md-4">Disorders</th>
-	  <th class="col-md-2">Type</th>
-	  <th class="col-md-2">Inheritance</th>
-	  <th class="col-md-2">Method</th>
-	</tr>
-      </thead>
-      <tbody>
-	<tr>
-	  <td>1</td>
-	  <td>ID, ASD</td>
-	  <td>Deletion</td>
-	  <td><em>De novo</em></td>
-	  <td>Genome-wide CMA</td>
-      </tbody>
-    </table>
+    </p>
   </div>
-</div>
-<div class="row">
   <div class="col-md-12">
-    <h4>
-      Xu B
+    <p><a name="references"></a>
+      Mazur A
       et. al.,
-      <a href="http://www.ncbi.nlm.nih.gov/pubmed/23042115">De novo gene mutations highlight patterns of genetic and neural complexity in schizophrenia.</a>,
-      Nat Genet 
-      2012
-    </h4>
-    <table class="table">
-      <thead>
-	<tr>
-	  <th class="col-md-2">Patient ID</th>
-          <th class="col-md-4">Disorders</th>
-	  <th class="col-md-2">Type</th>
-	  <th class="col-md-2">Inheritance</th>
-	  <th class="col-md-2">Method</th>
-	</tr>
-      </thead>
-      <tbody>
-	<tr>
-	  <td>trio_124</td>
-	  <td>EP, SCZ</td>
-	  <td>Nonsense</td>
-	  <td><em>De novo</em></td>
-	  <td>Whole exome sequencing</td>
-      </tbody>
-    </table>
+      <a href="http://www.ncbi.nlm.nih.gov/pubmed/19081848">Dihydropyrimidine dehydrogenase deficiency presenting with psychomotor retardation in the first Polish patient.</a>
+      Acta Biochim Pol
+      2008
+    </p>
   </div>
-</div>
-<div class="row">
   <div class="col-md-12">
-    <h4>
+    <p><a name="references"></a>
       Prasad A
       et. al.,
-      <a href="http://www.ncbi.nlm.nih.gov/pubmed/23275889">A discovery resource of rare copy number variations in individuals with autism spectrum disorder.</a>,
-      G3 (Bethesda) 
+      <a href="http://www.ncbi.nlm.nih.gov/pubmed/23275889">A discovery resource of rare copy number variations in individuals with autism spectrum disorder.</a>
+      G3 (Bethesda)
       2012
-    </h4>
-    <table class="table">
-      <thead>
-	<tr>
-	  <th class="col-md-2">Patient ID</th>
-          <th class="col-md-4">Disorders</th>
-	  <th class="col-md-2">Type</th>
-	  <th class="col-md-2">Inheritance</th>
-	  <th class="col-md-2">Method</th>
-	</tr>
-      </thead>
-      <tbody>
-	<tr>
-	  <td>82062L</td>
-	  <td>ASD</td>
-	  <td>Deletion</td>
-	  <td><em>Maternal</em></td>
-	  <td>Genome-wide CMA</td>
-      </tbody>
-    </table>
+    </p>
   </div>
-</div>
-<div class="row">
   <div class="col-md-12">
-    <h4>
+    <p><a name="references"></a>
+      van Kuilenburg AB
+      et. al.,
+      <a href="http://www.ncbi.nlm.nih.gov/pubmed/20544545">Dihydropyrimidine dehydrogenase deficiency caused by a novel genomic deletion c.505_513del of DPYD.</a>
+      Nucleosides Nucleotides Nucleic Acids
+      2010
+    </p>
+  </div>
+  <div class="col-md-12">
+    <p><a name="references"></a>
       Vulto-van Silfhout AT
       et. al.,
-      <a href="http://www.ncbi.nlm.nih.gov/pubmed/24038936">Clinical significance of de novo and inherited copy-number variation.</a>,
-      Hum Mutat 
+      <a href="http://www.ncbi.nlm.nih.gov/pubmed/24038936">Clinical significance of de novo and inherited copy-number variation.</a>
+      Hum Mutat
       2013
-    </h4>
-    <table class="table">
-      <thead>
-	<tr>
-	  <th class="col-md-2">Patient ID</th>
-          <th class="col-md-4">Disorders</th>
-	  <th class="col-md-2">Type</th>
-	  <th class="col-md-2">Inheritance</th>
-	  <th class="col-md-2">Method</th>
-	</tr>
-      </thead>
-      <tbody>
-	<tr>
-	  <td>1,452</td>
-	  <td>ID, ASD</td>
-	  <td>Deletion</td>
-	  <td><em>De novo</em></td>
-	  <td>Genome-wide CMA</td>
-      </tbody>
-    </table>
+    </p>
+  </div>
+  <div class="col-md-12">
+    <p><a name="references"></a>
+      Xu B
+      et. al.,
+      <a href="http://www.ncbi.nlm.nih.gov/pubmed/23042115">De novo gene mutations highlight patterns of genetic and neural complexity in schizophrenia.</a>
+      Nat Genet
+      2012
+    </p>
   </div>
 </div>
 
+<div class="source_data" data-unknown="1" data-denovo="3" data-inherited="2"></div>
 
+<div class="implicated_data" data-ID="4" data-ASD="3" data-EP="2" data-ADHD="0" data-SCZ="1" data-BD="0"></div>
 
     </div>
-  </body>
-  <script src="../javascripts/all.js" type="text/javascript"></script><script src="../javascripts/bootstrap.js" type="text/javascript"></script>
-</html>

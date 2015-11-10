@@ -1,294 +1,328 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    
-    <!-- Always force latest IE rendering engine or request Chrome Frame -->
-    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-    
-    <!-- Use title if it's in the page YAML frontmatter -->
-    <title>The Middleman</title>
-    
-    <link href="../stylesheets/all.css" rel="stylesheet" type="text/css" />
-  </head>
-  
-  <body class="genes genes_MBD5">
-    <div class="container">
-      <div class="row">
-  <div class="col-md-12">
+    <div class="container genes genes_MBD5">
+      
+<!-- <div class="row"> -->
+  <!-- <div class="col-md-6">
     <p><a href="../">back to genes</a></p>
+  </div> -->
+<!-- </div> -->
+
+<!-- <div class="row "> -->
+  <div class="col-md-6">
+    <p><a href="../">back to genes</a></p>
+    <h1><em>MBD5</em></h1>
+    <p><b>Gene name:  </b><em>methyl-CpG binding domain protein 5</em></p>
+    <p><b>Chromosome band:  </b><em>2q23.2</em></p>
+    <h3>Tier 1</h3>
+    <!-- <p class="lead">8 pathogenic variants in 7 papers</p> -->
+    <!-- <ul> -->
+      <!-- <li class="list-unstyled"> -->
+	<!-- <strong> -->
+    <!-- 5 -->
+	<!-- </strong> -->
+	<!-- Implicated in Intellectual Disability/Developmental Delay (ID) -->
+      <!-- </li> -->
+      <!-- <li class="list-unstyled"> -->
+	<!-- <strong> -->
+    <!-- 3 -->
+	<!-- </strong> -->
+	<!-- Implicated in Autism Spectrum Disorder (ASD) -->
+      <!-- </li> -->
+      <!-- <li class="list-unstyled"> -->
+	<!-- <strong> -->
+    <!-- 3 -->
+	<!-- </strong> -->
+	<!-- Implicated in Epilepsy (EP) -->
+      <!-- </li> -->
+      <!-- <li class="list-unstyled"> -->
+	<!-- <strong> -->
+    <!-- 2 -->
+	<!-- </strong> -->
+	<!-- Implicated in Attention Deficit and Hyperactivity Disorder (ADHD) -->
+      <!-- </li> -->
+      <!-- <li class="list-unstyled"> -->
+	<!-- <strong> -->
+    <!-- 0 -->
+	<!-- </strong> -->
+	<!-- Implicated in Schizopherenia (SCZ) -->
+      <!-- </li> -->
+      <!-- <li class="list-unstyled"> -->
+	<!-- <strong> -->
+    <!-- 1 -->
+	<!-- </strong> -->
+	<!-- Implicated in Bipolar Disorder (BD) -->
+      <!-- </li> -->
+    <!-- </ul> -->
+    <!-- <div class="row"> -->
+      <div class="col-md-12" id="barGraph">
+      </div>
+    <!-- </div> -->
+
+  </div>
+  <!--  -->
+
+<!-- </div> -->
+
+<div class="row" id="top-pieChart">
+  <div class="col-md-6" id="pieChart">
   </div>
 </div>
 
-<div class="row ">
-  <div class="col-md-12">
-    <h1>MBD5</h1>   
-    <p><em>gene name</em></p>
-    <p><em>gene location</em></p>
-    <h3>tier 1</h3>
-    <p class="lead">8 pathogenic variants in 7 papers</p>
-    <ul>
-      <li class="list-unstyled">
-	<strong>
-	  5
-	</strong>
-	implicated in Intelectual Disorder/Developmental Delay (ID)
-      </li>
-      <li class="list-unstyled">
-	<strong>
-	  3
-	</strong>
-	implicated in Autism Spectrum Disorder (ASD)
-      </li>
-      <li class="list-unstyled">
-	<strong>
-	  3
-	</strong>
-	implicated in Epilepsy (EP)
-      </li>
-      <li class="list-unstyled">
-	<strong>
-	  2
-	</strong>
-	implicated in Attention Deficit and Hyperactivity Disorder (ADHD)
-      </li>
-      <li class="list-unstyled">
-	<strong>
-	  0
-	</strong>
-	implicated in Schizopherenia (SCZ)
-      </li>
-      <li class="list-unstyled">
-	<strong>
-	  1
-	</strong>
-	implicated in Bipolar Disorder (BD)
-      </li>
-    </ul>
-  </div>
+
+<p id="par">
+  <b>Columns to display:</b><br>
+  &nbsp; Note: categories denoted by + may not have values in all cases.
+</p>
+
+<div class="col-md-3 checkboxes">
+  <p><input type="checkbox" name="disorders" checked="checked" /> Disorder(s)<br>
+  <input type="checkbox" name="variant_type" checked="checked" /> Variant Type<br>
+  <input type="checkbox" name="inheritance" checked="checked" /> Inheritance<br>
+  <input type="checkbox" name="method" checked="checked" /> Method<br>
+  <input type="checkbox" name="chromosome" /> Chromosome +<br>
+  <input type="checkbox" name="cnv_size" /> CNV Size +<br>
+  <input type="checkbox" name="genome_build" /> Genome Build +</p>
 </div>
+<div class="col-md-9 checkboxes">
+  <p><input type="checkbox" name="coding_dna_change" /> Coding DNA Change +<br>
+  <input type="checkbox" name="protein_change" /> Protein Change +<br>
+  <input type="checkbox" name="position" /> Position +<br>
+  <input type="checkbox" name="reference_sequence" /> Reference Sequence +<br>
+  <input type="checkbox" name="alternate_sequence" /> Alternate Sequence +<br>
+  <input type="checkbox" name="patient_id" /> Patient ID<br>
+  <input type="checkbox" name="the_reference" checked="checked" /> Reference</p>
+</div>
+<div class="row">
+  <div class="col-md-12" id="table-container">
+    <table class="table" id="maintable">
+    <thead>
+  <tr>
+  <th class="disorders">Disorder(s)</th>
+  <th class="variant_type">Variant Type</th>
+  <th class="inheritance">Inheritance</th>
+  <th class="method">Method</th>
+  <th class="chromosome">Chromosome</th>
+  <th class="cnv_size">CNV Size</th>
+  <th class="genome_build">Genome Build</th>
+  <th class="coding_dna_change">Coding DNA Change</th>
+  <th class="protein_change">Protein Change</th>
+  <th class="position">Position</th>
+  <th class="reference_sequence">Reference Sequence</th>
+  <th class="alternate_sequence">Alternate Sequence</th>
+  <th class="patient_id">Patient ID</th>
+  <th class="the_reference">Reference</th>
+  </tr>
+</thead>
 
 
-<div class="row">
-  <div class="col-md-12">
-    <h4>
-      O'Roak BJ
-      et. al.,
-      <a href="http://www.ncbi.nlm.nih.gov/pubmed/22495309">Sporadic autism exomes reveal a highly interconnected protein network of de novo mutations.</a>,
-      Nature 
-      2012
-    </h4>
-    <table class="table">
-      <thead>
-	<tr>
-	  <th class="col-md-2">Patient ID</th>
-          <th class="col-md-4">Disorders</th>
-	  <th class="col-md-2">Type</th>
-	  <th class="col-md-2">Inheritance</th>
-	  <th class="col-md-2">Method</th>
-	</tr>
-      </thead>
-      <tbody>
-	<tr>
-	  <td>12346.p1</td>
-	  <td>ASD, EP</td>
-	  <td>Frameshift</td>
-	  <td><em>De novo</em></td>
-	  <td>Whole exome sequencing</td>
-      </tbody>
+
+
+
+<tbody>
+<!--  -->
+<tr>
+<td class="disorders">ID, EP</td>
+<td class="variant_type">Frameshift</td>
+<td class="inheritance"><em>De novo</em></td>
+<td class="method">Targeted sequencing</td>
+<td class="chromosome"></td>
+<td class="cnv_size"></td>
+<td class="genome_build"></td>
+<td class="coding_dna_change"></td>
+<td class="protein_change">p.Thr157Glnfs*4</td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">T1898</td>
+<td class="the_reference"><a href="#references">Carvill et al. 2013</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID</td>
+<td class="variant_type">Frameshift</td>
+<td class="inheritance">Unknown</td>
+<td class="method">Targeted sequencing</td>
+<td class="chromosome"></td>
+<td class="cnv_size"></td>
+<td class="genome_build"></td>
+<td class="coding_dna_change"></td>
+<td class="protein_change">p.Val443Argfs*12</td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">NijmegenDNA04-05467</td>
+<td class="the_reference"><a href="#references">Coe et al. 2014</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ASD</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance">Paternal</td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">201.4 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">12390.p1</td>
+<td class="the_reference"><a href="#references">Girirajan et al. 2013</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID, ADHD, BD</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance">Unknown</td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">47.1 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">P16</td>
+<td class="the_reference"><a href="#references">Hodge et al. 2014</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID, ADHD</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance">Unknown</td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">273.7 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">P5</td>
+<td class="the_reference"><a href="#references">Hodge et al. 2014</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID, EP</td>
+<td class="variant_type">Frameshift</td>
+<td class="inheritance"><em>De novo</em></td>
+<td class="method">Whole exome sequencing</td>
+<td class="chromosome"></td>
+<td class="cnv_size"></td>
+<td class="genome_build"></td>
+<td class="coding_dna_change">c.150del</td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">KS78</td>
+<td class="the_reference"><a href="#references">Kleefstra et al. 2012</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ASD</td>
+<td class="variant_type">Splice site</td>
+<td class="inheritance">Maternal</td>
+<td class="method">Targeted sequencing</td>
+<td class="chromosome"></td>
+<td class="cnv_size"></td>
+<td class="genome_build"></td>
+<td class="coding_dna_change">c.3054+2T>A</td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">11797.p1</td>
+<td class="the_reference"><a href="#references">O'Roak et al. 2012</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ASD, EP</td>
+<td class="variant_type">Frameshift</td>
+<td class="inheritance"><em>De novo</em></td>
+<td class="method">Whole exome sequencing</td>
+<td class="chromosome"></td>
+<td class="cnv_size"></td>
+<td class="genome_build"></td>
+<td class="coding_dna_change"></td>
+<td class="protein_change">Frameshift indel</td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">12346.p1</td>
+<td class="the_reference"><a href="#references">O'Roak et al. 2012*</a></td>
+<!--  -->
+</tbody>
     </table>
+    <div id="bottom_anchor"></div>
   </div>
 </div>
-<div class="row">
+<!--  -->
+
+<div class="row" id="citations">
+  <h4>References</h4>
   <div class="col-md-12">
-    <h4>
-      Kleefstra T
-      et. al.,
-      <a href="http://www.ncbi.nlm.nih.gov/pubmed/22726846">Disruption of an EHMT1-associated chromatin-modification module causes intellectual disability.</a>,
-      Am J Hum Genet 
-      2012
-    </h4>
-    <table class="table">
-      <thead>
-	<tr>
-	  <th class="col-md-2">Patient ID</th>
-          <th class="col-md-4">Disorders</th>
-	  <th class="col-md-2">Type</th>
-	  <th class="col-md-2">Inheritance</th>
-	  <th class="col-md-2">Method</th>
-	</tr>
-      </thead>
-      <tbody>
-	<tr>
-	  <td>KS78</td>
-	  <td>ID, EP</td>
-	  <td>Frameshift</td>
-	  <td><em>De novo</em></td>
-	  <td>Whole exome sequencing</td>
-      </tbody>
-    </table>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-12">
-    <h4>
-      O'Roak BJ
-      et. al.,
-      <a href="http://www.ncbi.nlm.nih.gov/pubmed/23160955">Multiplex targeted sequencing identifies recurrently mutated genes in autism spectrum disorders.</a>,
-      Science 
-      2012
-    </h4>
-    <table class="table">
-      <thead>
-	<tr>
-	  <th class="col-md-2">Patient ID</th>
-          <th class="col-md-4">Disorders</th>
-	  <th class="col-md-2">Type</th>
-	  <th class="col-md-2">Inheritance</th>
-	  <th class="col-md-2">Method</th>
-	</tr>
-      </thead>
-      <tbody>
-	<tr>
-	  <td>11797.p1</td>
-	  <td>ASD</td>
-	  <td>Splice site</td>
-	  <td><em>Maternal</em></td>
-	  <td>Targeted sequencing</td>
-      </tbody>
-    </table>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-12">
-    <h4>
-      Girirajan S
-      et. al.,
-      <a href="http://www.ncbi.nlm.nih.gov/pubmed/23375656">Refinement and discovery of new hotspots of copy-number variation associated with autism spectrum disorder.</a>,
-      Am J Hum Genet 
-      2013
-    </h4>
-    <table class="table">
-      <thead>
-	<tr>
-	  <th class="col-md-2">Patient ID</th>
-          <th class="col-md-4">Disorders</th>
-	  <th class="col-md-2">Type</th>
-	  <th class="col-md-2">Inheritance</th>
-	  <th class="col-md-2">Method</th>
-	</tr>
-      </thead>
-      <tbody>
-	<tr>
-	  <td>12390.p1</td>
-	  <td>ASD</td>
-	  <td>Deletion</td>
-	  <td><em>Paternal</em></td>
-	  <td>Genome-wide CMA</td>
-      </tbody>
-    </table>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-12">
-    <h4>
-      Hodge JC
-      et. al.,
-      <a href="http://www.ncbi.nlm.nih.gov/pubmed/23587880">Disruption of MBD5 contributes to a spectrum of psychopathology and neurodevelopmental abnormalities.</a>,
-      Mol Psychiatry 
-      2014
-    </h4>
-    <table class="table">
-      <thead>
-	<tr>
-	  <th class="col-md-2">Patient ID</th>
-          <th class="col-md-4">Disorders</th>
-	  <th class="col-md-2">Type</th>
-	  <th class="col-md-2">Inheritance</th>
-	  <th class="col-md-2">Method</th>
-	</tr>
-      </thead>
-      <tbody>
-	<tr>
-	  <td>P16</td>
-	  <td>ID, ADHD, BD</td>
-	  <td>Deletion</td>
-	  <td><em>NA</em></td>
-	  <td>Genome-wide CMA</td>
-	<tr>
-	  <td>P5</td>
-	  <td>ID, ADHD</td>
-	  <td>Deletion</td>
-	  <td><em>NA</em></td>
-	  <td>Genome-wide CMA</td>
-      </tbody>
-    </table>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-12">
-    <h4>
+    <p><a name="references"></a>
       Carvill GL
       et. al.,
-      <a href="http://www.ncbi.nlm.nih.gov/pubmed/23708187">Targeted resequencing in epileptic encephalopathies identifies de novo mutations in CHD2 and SYNGAP1.</a>,
-      Nat Genet 
+      <a href="http://www.ncbi.nlm.nih.gov/pubmed/23708187">Targeted resequencing in epileptic encephalopathies identifies de novo mutations in CHD2 and SYNGAP1.</a>
+      Nat Genet
       2013
-    </h4>
-    <table class="table">
-      <thead>
-	<tr>
-	  <th class="col-md-2">Patient ID</th>
-          <th class="col-md-4">Disorders</th>
-	  <th class="col-md-2">Type</th>
-	  <th class="col-md-2">Inheritance</th>
-	  <th class="col-md-2">Method</th>
-	</tr>
-      </thead>
-      <tbody>
-	<tr>
-	  <td>T1898</td>
-	  <td>ID, EP</td>
-	  <td>Frameshift</td>
-	  <td><em>De novo</em></td>
-	  <td>Targeted sequencing</td>
-      </tbody>
-    </table>
+    </p>
   </div>
-</div>
-<div class="row">
   <div class="col-md-12">
-    <h4>
+    <p><a name="references"></a>
       Coe BP
       et. al.,
-      <a href="http://www.ncbi.nlm.nih.gov/pubmed/25217958">Refining analyses of copy number variation identifies specific genes associated with developmental delay.</a>,
-      Nat Genet 
+      <a href="http://www.ncbi.nlm.nih.gov/pubmed/25217958">Refining analyses of copy number variation identifies specific genes associated with developmental delay.</a>
+      Nat Genet
       2014
-    </h4>
-    <table class="table">
-      <thead>
-	<tr>
-	  <th class="col-md-2">Patient ID</th>
-          <th class="col-md-4">Disorders</th>
-	  <th class="col-md-2">Type</th>
-	  <th class="col-md-2">Inheritance</th>
-	  <th class="col-md-2">Method</th>
-	</tr>
-      </thead>
-      <tbody>
-	<tr>
-	  <td>NijmegenDNA04-05467</td>
-	  <td>ID</td>
-	  <td>Frameshift</td>
-	  <td><em>NA</em></td>
-	  <td>Targeted sequencing</td>
-      </tbody>
-    </table>
+    </p>
+  </div>
+  <div class="col-md-12">
+    <p><a name="references"></a>
+      Girirajan S
+      et. al.,
+      <a href="http://www.ncbi.nlm.nih.gov/pubmed/23375656">Refinement and discovery of new hotspots of copy-number variation associated with autism spectrum disorder.</a>
+      Am J Hum Genet
+      2013
+    </p>
+  </div>
+  <div class="col-md-12">
+    <p><a name="references"></a>
+      Hodge JC
+      et. al.,
+      <a href="http://www.ncbi.nlm.nih.gov/pubmed/23587880">Disruption of MBD5 contributes to a spectrum of psychopathology and neurodevelopmental abnormalities.</a>
+      Mol Psychiatry
+      2014
+    </p>
+  </div>
+  <div class="col-md-12">
+    <p><a name="references"></a>
+      Kleefstra T
+      et. al.,
+      <a href="http://www.ncbi.nlm.nih.gov/pubmed/22726846">Disruption of an EHMT1-associated chromatin-modification module causes intellectual disability.</a>
+      Am J Hum Genet
+      2012
+    </p>
+  </div>
+  <div class="col-md-12">
+    <p><a name="references"></a>
+      O'Roak BJ
+      et. al.,
+      <a href="http://www.ncbi.nlm.nih.gov/pubmed/23160955">Multiplex targeted sequencing identifies recurrently mutated genes in autism spectrum disorders.</a>
+      Science
+      2012
+    </p>
+  </div>
+  <div class="col-md-12">
+    <p><a name="references"></a>
+      O'Roak BJ
+      et. al.,
+      <a href="http://www.ncbi.nlm.nih.gov/pubmed/22495309">Sporadic autism exomes reveal a highly interconnected protein network of de novo mutations.</a>
+      Nature
+      2012
+    </p>
   </div>
 </div>
 
+<div class="source_data" data-unknown="3" data-denovo="3" data-inherited="2"></div>
 
+<div class="implicated_data" data-ID="5" data-ASD="3" data-EP="3" data-ADHD="2" data-SCZ="0" data-BD="1"></div>
 
     </div>
-  </body>
-  <script src="../javascripts/all.js" type="text/javascript"></script><script src="../javascripts/bootstrap.js" type="text/javascript"></script>
-</html>

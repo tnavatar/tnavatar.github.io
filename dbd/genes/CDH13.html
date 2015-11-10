@@ -1,174 +1,228 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    
-    <!-- Always force latest IE rendering engine or request Chrome Frame -->
-    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-    
-    <!-- Use title if it's in the page YAML frontmatter -->
-    <title>The Middleman</title>
-    
-    <link href="../stylesheets/all.css" rel="stylesheet" type="text/css" />
-  </head>
-  
-  <body class="genes genes_CDH13">
-    <div class="container">
-      <div class="row">
-  <div class="col-md-12">
+    <div class="container genes genes_CDH13">
+      
+<!-- <div class="row"> -->
+  <!-- <div class="col-md-6">
     <p><a href="../">back to genes</a></p>
+  </div> -->
+<!-- </div> -->
+
+<!-- <div class="row "> -->
+  <div class="col-md-6">
+    <p><a href="../">back to genes</a></p>
+    <h1><em>CDH13</em></h1>
+    <p><b>Gene name:  </b><em>cadherin 13</em></p>
+    <p><b>Chromosome band:  </b><em>16q23.3</em></p>
+    <h3>Tier 4</h3>
+    <!-- <p class="lead">4 pathogenic variants in 3 papers</p> -->
+    <!-- <ul> -->
+      <!-- <li class="list-unstyled"> -->
+	<!-- <strong> -->
+    <!-- 3 -->
+	<!-- </strong> -->
+	<!-- Implicated in Intellectual Disability/Developmental Delay (ID) -->
+      <!-- </li> -->
+      <!-- <li class="list-unstyled"> -->
+	<!-- <strong> -->
+    <!-- 1 -->
+	<!-- </strong> -->
+	<!-- Implicated in Autism Spectrum Disorder (ASD) -->
+      <!-- </li> -->
+      <!-- <li class="list-unstyled"> -->
+	<!-- <strong> -->
+    <!-- 0 -->
+	<!-- </strong> -->
+	<!-- Implicated in Epilepsy (EP) -->
+      <!-- </li> -->
+      <!-- <li class="list-unstyled"> -->
+	<!-- <strong> -->
+    <!-- 1 -->
+	<!-- </strong> -->
+	<!-- Implicated in Attention Deficit and Hyperactivity Disorder (ADHD) -->
+      <!-- </li> -->
+      <!-- <li class="list-unstyled"> -->
+	<!-- <strong> -->
+    <!-- 0 -->
+	<!-- </strong> -->
+	<!-- Implicated in Schizopherenia (SCZ) -->
+      <!-- </li> -->
+      <!-- <li class="list-unstyled"> -->
+	<!-- <strong> -->
+    <!-- 0 -->
+	<!-- </strong> -->
+	<!-- Implicated in Bipolar Disorder (BD) -->
+      <!-- </li> -->
+    <!-- </ul> -->
+    <!-- <div class="row"> -->
+      <div class="col-md-12" id="barGraph">
+      </div>
+    <!-- </div> -->
+
+  </div>
+  <!--  -->
+
+<!-- </div> -->
+
+<div class="row" id="top-pieChart">
+  <div class="col-md-6" id="pieChart">
   </div>
 </div>
 
-<div class="row ">
-  <div class="col-md-12">
-    <h1>CDH13</h1>   
-    <p><em>gene name</em></p>
-    <p><em>gene location</em></p>
-    <h3>tier 4</h3>
-    <p class="lead">4 pathogenic variants in 3 papers</p>
-    <ul>
-      <li class="list-unstyled">
-	<strong>
-	  3
-	</strong>
-	implicated in Intelectual Disorder/Developmental Delay (ID)
-      </li>
-      <li class="list-unstyled">
-	<strong>
-	  1
-	</strong>
-	implicated in Autism Spectrum Disorder (ASD)
-      </li>
-      <li class="list-unstyled">
-	<strong>
-	  0
-	</strong>
-	implicated in Epilepsy (EP)
-      </li>
-      <li class="list-unstyled">
-	<strong>
-	  1
-	</strong>
-	implicated in Attention Deficit and Hyperactivity Disorder (ADHD)
-      </li>
-      <li class="list-unstyled">
-	<strong>
-	  0
-	</strong>
-	implicated in Schizopherenia (SCZ)
-      </li>
-      <li class="list-unstyled">
-	<strong>
-	  0
-	</strong>
-	implicated in Bipolar Disorder (BD)
-      </li>
-    </ul>
-  </div>
+
+<p id="par">
+  <b>Columns to display:</b><br>
+  &nbsp; Note: categories denoted by + may not have values in all cases.
+</p>
+
+<div class="col-md-3 checkboxes">
+  <p><input type="checkbox" name="disorders" checked="checked" /> Disorder(s)<br>
+  <input type="checkbox" name="variant_type" checked="checked" /> Variant Type<br>
+  <input type="checkbox" name="inheritance" checked="checked" /> Inheritance<br>
+  <input type="checkbox" name="method" checked="checked" /> Method<br>
+  <input type="checkbox" name="chromosome" /> Chromosome +<br>
+  <input type="checkbox" name="cnv_size" /> CNV Size +<br>
+  <input type="checkbox" name="genome_build" /> Genome Build +</p>
 </div>
-
-
+<div class="col-md-9 checkboxes">
+  <p><input type="checkbox" name="coding_dna_change" /> Coding DNA Change +<br>
+  <input type="checkbox" name="protein_change" /> Protein Change +<br>
+  <input type="checkbox" name="position" /> Position +<br>
+  <input type="checkbox" name="reference_sequence" /> Reference Sequence +<br>
+  <input type="checkbox" name="alternate_sequence" /> Alternate Sequence +<br>
+  <input type="checkbox" name="patient_id" /> Patient ID<br>
+  <input type="checkbox" name="the_reference" checked="checked" /> Reference</p>
+</div>
 <div class="row">
-  <div class="col-md-12">
-    <h4>
-      Shen Y
-      et. al.,
-      <a href="http://www.ncbi.nlm.nih.gov/pubmed/20231187">Clinical genetic testing for patients with autism spectrum disorders.</a>,
-      Pediatrics 
-      2010
-    </h4>
-    <table class="table">
-      <thead>
-	<tr>
-	  <th class="col-md-2">Patient ID</th>
-          <th class="col-md-4">Disorders</th>
-	  <th class="col-md-2">Type</th>
-	  <th class="col-md-2">Inheritance</th>
-	  <th class="col-md-2">Method</th>
-	</tr>
-      </thead>
-      <tbody>
-	<tr>
-	  <td>ASD-09-072</td>
-	  <td>ASD</td>
-	  <td>Deletion</td>
-	  <td><em>Maternal</em></td>
-	  <td>Genome-wide CMA</td>
-      </tbody>
+  <div class="col-md-12" id="table-container">
+    <table class="table" id="maintable">
+    <thead>
+  <tr>
+  <th class="disorders">Disorder(s)</th>
+  <th class="variant_type">Variant Type</th>
+  <th class="inheritance">Inheritance</th>
+  <th class="method">Method</th>
+  <th class="chromosome">Chromosome</th>
+  <th class="cnv_size">CNV Size</th>
+  <th class="genome_build">Genome Build</th>
+  <th class="coding_dna_change">Coding DNA Change</th>
+  <th class="protein_change">Protein Change</th>
+  <th class="position">Position</th>
+  <th class="reference_sequence">Reference Sequence</th>
+  <th class="alternate_sequence">Alternate Sequence</th>
+  <th class="patient_id">Patient ID</th>
+  <th class="the_reference">Reference</th>
+  </tr>
+</thead>
+
+
+
+
+
+<tbody>
+<!--  -->
+<tr>
+<td class="disorders">ID, ADHD</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance">Unknown</td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr16</td>
+<td class="cnv_size">327.3 kbp</td>
+<td class="genome_build">hg19</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">3</td>
+<td class="the_reference"><a href="#references">Coutton et al. 2014</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ASD</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance">Maternal</td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr16</td>
+<td class="cnv_size">166.3 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">ASD-09-072</td>
+<td class="the_reference"><a href="#references">Shen et al. 2010</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance">Unknown</td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr16</td>
+<td class="cnv_size">54.7 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">472</td>
+<td class="the_reference"><a href="#references">Vulto-van Silfhout et al. 2013</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance">Unknown</td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr16</td>
+<td class="cnv_size">294.3 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">3770</td>
+<td class="the_reference"><a href="#references">Vulto-van Silfhout et al. 2013</a></td>
+<!--  -->
+</tbody>
     </table>
+    <div id="bottom_anchor"></div>
   </div>
 </div>
-<div class="row">
+<!--  -->
+
+<div class="row" id="citations">
+  <h4>References</h4>
   <div class="col-md-12">
-    <h4>
-      Vulto-van Silfhout AT
-      et. al.,
-      <a href="http://www.ncbi.nlm.nih.gov/pubmed/24038936">Clinical significance of de novo and inherited copy-number variation.</a>,
-      Hum Mutat 
-      2013
-    </h4>
-    <table class="table">
-      <thead>
-	<tr>
-	  <th class="col-md-2">Patient ID</th>
-          <th class="col-md-4">Disorders</th>
-	  <th class="col-md-2">Type</th>
-	  <th class="col-md-2">Inheritance</th>
-	  <th class="col-md-2">Method</th>
-	</tr>
-      </thead>
-      <tbody>
-	<tr>
-	  <td>472</td>
-	  <td>ID</td>
-	  <td>Deletion</td>
-	  <td><em>NA</em></td>
-	  <td>Genome-wide CMA</td>
-	<tr>
-	  <td>3770</td>
-	  <td>ID</td>
-	  <td>Deletion</td>
-	  <td><em>NA</em></td>
-	  <td>Genome-wide CMA</td>
-      </tbody>
-    </table>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-12">
-    <h4>
+    <p><a name="references"></a>
       Coutton C
       et. al.,
-      <a href="http://www.ncbi.nlm.nih.gov/pubmed/24985125">Array-CGH in children with mild intellectual disability: a population-based study.</a>,
-      Eur J Pediatr 
+      <a href="http://www.ncbi.nlm.nih.gov/pubmed/24985125">Array-CGH in children with mild intellectual disability: a population-based study.</a>
+      Eur J Pediatr
       2015
-    </h4>
-    <table class="table">
-      <thead>
-	<tr>
-	  <th class="col-md-2">Patient ID</th>
-          <th class="col-md-4">Disorders</th>
-	  <th class="col-md-2">Type</th>
-	  <th class="col-md-2">Inheritance</th>
-	  <th class="col-md-2">Method</th>
-	</tr>
-      </thead>
-      <tbody>
-	<tr>
-	  <td>3</td>
-	  <td>ID, ADHD</td>
-	  <td>Deletion</td>
-	  <td><em>NA</em></td>
-	  <td>Genome-wide CMA</td>
-      </tbody>
-    </table>
+    </p>
+  </div>
+  <div class="col-md-12">
+    <p><a name="references"></a>
+      Shen Y
+      et. al.,
+      <a href="http://www.ncbi.nlm.nih.gov/pubmed/20231187">Clinical genetic testing for patients with autism spectrum disorders.</a>
+      Pediatrics
+      2010
+    </p>
+  </div>
+  <div class="col-md-12">
+    <p><a name="references"></a>
+      Vulto-van Silfhout AT
+      et. al.,
+      <a href="http://www.ncbi.nlm.nih.gov/pubmed/24038936">Clinical significance of de novo and inherited copy-number variation.</a>
+      Hum Mutat
+      2013
+    </p>
   </div>
 </div>
 
+<div class="source_data" data-unknown="3" data-denovo="0" data-inherited="1"></div>
 
+<div class="implicated_data" data-ID="3" data-ASD="1" data-EP="0" data-ADHD="1" data-SCZ="0" data-BD="0"></div>
 
     </div>
-  </body>
-  <script src="../javascripts/all.js" type="text/javascript"></script><script src="../javascripts/bootstrap.js" type="text/javascript"></script>
-</html>

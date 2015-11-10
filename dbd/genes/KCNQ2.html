@@ -1,174 +1,317 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    
-    <!-- Always force latest IE rendering engine or request Chrome Frame -->
-    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-    
-    <!-- Use title if it's in the page YAML frontmatter -->
-    <title>The Middleman</title>
-    
-    <link href="../stylesheets/all.css" rel="stylesheet" type="text/css" />
-  </head>
-  
-  <body class="genes genes_KCNQ2">
-    <div class="container">
-      <div class="row">
-  <div class="col-md-12">
+    <div class="container genes genes_KCNQ2">
+      
+<!-- <div class="row"> -->
+  <!-- <div class="col-md-6">
     <p><a href="../">back to genes</a></p>
+  </div> -->
+<!-- </div> -->
+
+<!-- <div class="row "> -->
+  <div class="col-md-6">
+    <p><a href="../">back to genes</a></p>
+    <h1><em>KCNQ2</em></h1>
+    <p><b>Gene name:  </b><em>potassium channel, voltage gated KQT-like subfamily Q, member 2</em></p>
+    <p><b>Chromosome band:  </b><em>20q13.33</em></p>
+    <h3>Tier 1</h3>
+    <!-- <p class="lead">9 pathogenic variants in 4 papers</p> -->
+    <!-- <ul> -->
+      <!-- <li class="list-unstyled"> -->
+	<!-- <strong> -->
+    <!-- 2 -->
+	<!-- </strong> -->
+	<!-- Implicated in Intellectual Disability/Developmental Delay (ID) -->
+      <!-- </li> -->
+      <!-- <li class="list-unstyled"> -->
+	<!-- <strong> -->
+    <!-- 2 -->
+	<!-- </strong> -->
+	<!-- Implicated in Autism Spectrum Disorder (ASD) -->
+      <!-- </li> -->
+      <!-- <li class="list-unstyled"> -->
+	<!-- <strong> -->
+    <!-- 8 -->
+	<!-- </strong> -->
+	<!-- Implicated in Epilepsy (EP) -->
+      <!-- </li> -->
+      <!-- <li class="list-unstyled"> -->
+	<!-- <strong> -->
+    <!-- 0 -->
+	<!-- </strong> -->
+	<!-- Implicated in Attention Deficit and Hyperactivity Disorder (ADHD) -->
+      <!-- </li> -->
+      <!-- <li class="list-unstyled"> -->
+	<!-- <strong> -->
+    <!-- 0 -->
+	<!-- </strong> -->
+	<!-- Implicated in Schizopherenia (SCZ) -->
+      <!-- </li> -->
+      <!-- <li class="list-unstyled"> -->
+	<!-- <strong> -->
+    <!-- 0 -->
+	<!-- </strong> -->
+	<!-- Implicated in Bipolar Disorder (BD) -->
+      <!-- </li> -->
+    <!-- </ul> -->
+    <!-- <div class="row"> -->
+      <div class="col-md-12" id="barGraph">
+      </div>
+    <!-- </div> -->
+
+  </div>
+  <!--  -->
+
+<!-- </div> -->
+
+<div class="row" id="top-pieChart">
+  <div class="col-md-6" id="pieChart">
   </div>
 </div>
 
-<div class="row ">
-  <div class="col-md-12">
-    <h1>KCNQ2</h1>   
-    <p><em>gene name</em></p>
-    <p><em>gene location</em></p>
-    <h3>tier 1</h3>
-    <p class="lead">4 pathogenic variants in 3 papers</p>
-    <ul>
-      <li class="list-unstyled">
-	<strong>
-	  2
-	</strong>
-	implicated in Intelectual Disorder/Developmental Delay (ID)
-      </li>
-      <li class="list-unstyled">
-	<strong>
-	  2
-	</strong>
-	implicated in Autism Spectrum Disorder (ASD)
-      </li>
-      <li class="list-unstyled">
-	<strong>
-	  3
-	</strong>
-	implicated in Epilepsy (EP)
-      </li>
-      <li class="list-unstyled">
-	<strong>
-	  0
-	</strong>
-	implicated in Attention Deficit and Hyperactivity Disorder (ADHD)
-      </li>
-      <li class="list-unstyled">
-	<strong>
-	  0
-	</strong>
-	implicated in Schizopherenia (SCZ)
-      </li>
-      <li class="list-unstyled">
-	<strong>
-	  0
-	</strong>
-	implicated in Bipolar Disorder (BD)
-      </li>
-    </ul>
-  </div>
+
+<p id="par">
+  <b>Columns to display:</b><br>
+  &nbsp; Note: categories denoted by + may not have values in all cases.
+</p>
+
+<div class="col-md-3 checkboxes">
+  <p><input type="checkbox" name="disorders" checked="checked" /> Disorder(s)<br>
+  <input type="checkbox" name="variant_type" checked="checked" /> Variant Type<br>
+  <input type="checkbox" name="inheritance" checked="checked" /> Inheritance<br>
+  <input type="checkbox" name="method" checked="checked" /> Method<br>
+  <input type="checkbox" name="chromosome" /> Chromosome +<br>
+  <input type="checkbox" name="cnv_size" /> CNV Size +<br>
+  <input type="checkbox" name="genome_build" /> Genome Build +</p>
 </div>
-
-
+<div class="col-md-9 checkboxes">
+  <p><input type="checkbox" name="coding_dna_change" /> Coding DNA Change +<br>
+  <input type="checkbox" name="protein_change" /> Protein Change +<br>
+  <input type="checkbox" name="position" /> Position +<br>
+  <input type="checkbox" name="reference_sequence" /> Reference Sequence +<br>
+  <input type="checkbox" name="alternate_sequence" /> Alternate Sequence +<br>
+  <input type="checkbox" name="patient_id" /> Patient ID<br>
+  <input type="checkbox" name="the_reference" checked="checked" /> Reference</p>
+</div>
 <div class="row">
-  <div class="col-md-12">
-    <h4>
-      Milh M
-      et. al.,
-      <a href="http://www.ncbi.nlm.nih.gov/pubmed/23692823">Similar early characteristics but variable neurological outcome of patients with a de novo mutation of KCNQ2.</a>,
-      Orphanet J Rare Dis 
-      2013
-    </h4>
-    <table class="table">
-      <thead>
-	<tr>
-	  <th class="col-md-2">Patient ID</th>
-          <th class="col-md-4">Disorders</th>
-	  <th class="col-md-2">Type</th>
-	  <th class="col-md-2">Inheritance</th>
-	  <th class="col-md-2">Method</th>
-	</tr>
-      </thead>
-      <tbody>
-	<tr>
-	  <td>12</td>
-	  <td>EP</td>
-	  <td>Frameshift</td>
-	  <td><em>De novo</em></td>
-	  <td>Targeted sequencing</td>
-	<tr>
-	  <td>13</td>
-	  <td>ID, EP</td>
-	  <td>Nonsense</td>
-	  <td><em>De novo</em></td>
-	  <td>Targeted sequencing</td>
-      </tbody>
+  <div class="col-md-12" id="table-container">
+    <table class="table" id="maintable">
+    <thead>
+  <tr>
+  <th class="disorders">Disorder(s)</th>
+  <th class="variant_type">Variant Type</th>
+  <th class="inheritance">Inheritance</th>
+  <th class="method">Method</th>
+  <th class="chromosome">Chromosome</th>
+  <th class="cnv_size">CNV Size</th>
+  <th class="genome_build">Genome Build</th>
+  <th class="coding_dna_change">Coding DNA Change</th>
+  <th class="protein_change">Protein Change</th>
+  <th class="position">Position</th>
+  <th class="reference_sequence">Reference Sequence</th>
+  <th class="alternate_sequence">Alternate Sequence</th>
+  <th class="patient_id">Patient ID</th>
+  <th class="the_reference">Reference</th>
+  </tr>
+</thead>
+
+
+
+
+
+<tbody>
+<!--  -->
+<tr>
+<td class="disorders">ID, ASD</td>
+<td class="variant_type">Frameshift</td>
+<td class="inheritance"><em>De novo</em></td>
+<td class="method">Whole exome sequencing</td>
+<td class="chromosome"></td>
+<td class="cnv_size"></td>
+<td class="genome_build"></td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position">62070073</td>
+<td class="reference_sequence">CCTGCAATTCATCAGGGTCAGGTCACA</td>
+<td class="alternate_sequence">C</td>
+<td class="patient_id">11075</td>
+<td class="the_reference"><a href="#references">Dong et al. 2014</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ASD, EP</td>
+<td class="variant_type">Splice site</td>
+<td class="inheritance">Paternal</td>
+<td class="method">Whole genome sequencing</td>
+<td class="chromosome"></td>
+<td class="cnv_size"></td>
+<td class="genome_build"></td>
+<td class="coding_dna_change">c.1247+1G>A/+1</td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">2-1269-03</td>
+<td class="the_reference"><a href="#references">Jiang et al. 2013</a></td>
+<!--  -->
+<tr>
+<td class="disorders">EP</td>
+<td class="variant_type">Frameshift</td>
+<td class="inheritance"><em>De novo</em></td>
+<td class="method">Targeted sequencing</td>
+<td class="chromosome"></td>
+<td class="cnv_size"></td>
+<td class="genome_build"></td>
+<td class="coding_dna_change">c.2318dupG 4</td>
+<td class="protein_change">p.C774Lfs*91</td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">12</td>
+<td class="the_reference"><a href="#references">Milh et al. 2013</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID, EP</td>
+<td class="variant_type">Nonsense</td>
+<td class="inheritance"><em>De novo</em></td>
+<td class="method">Targeted sequencing</td>
+<td class="chromosome"></td>
+<td class="cnv_size"></td>
+<td class="genome_build"></td>
+<td class="coding_dna_change">c.G471A</td>
+<td class="protein_change">p.W157X</td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">13</td>
+<td class="the_reference"><a href="#references">Milh et al. 2013</a></td>
+<!--  -->
+<tr>
+<td class="disorders">EP</td>
+<td class="variant_type">Nonsense</td>
+<td class="inheritance">Paternal</td>
+<td class="method">Targeted sequencing</td>
+<td class="chromosome"></td>
+<td class="cnv_size"></td>
+<td class="genome_build"></td>
+<td class="coding_dna_change">c.1195_1196delAG</td>
+<td class="protein_change">p.Ser399*</td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">Family 7</td>
+<td class="the_reference"><a href="#references">Soldovieri  et al. 2014</a></td>
+<!--  -->
+<tr>
+<td class="disorders">EP</td>
+<td class="variant_type">Frameshift</td>
+<td class="inheritance">Paternal</td>
+<td class="method">Targeted sequencing</td>
+<td class="chromosome"></td>
+<td class="cnv_size"></td>
+<td class="genome_build"></td>
+<td class="coding_dna_change">c.333_334delGT</td>
+<td class="protein_change">p.Ser113Hisfs*6</td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">Family 11</td>
+<td class="the_reference"><a href="#references">Soldovieri  et al. 2014</a></td>
+<!--  -->
+<tr>
+<td class="disorders">EP</td>
+<td class="variant_type">Frameshift</td>
+<td class="inheritance">Maternal</td>
+<td class="method">Targeted sequencing</td>
+<td class="chromosome"></td>
+<td class="cnv_size"></td>
+<td class="genome_build"></td>
+<td class="coding_dna_change">c.2599_2603dup</td>
+<td class="protein_change">p.Arg871Glyfs*61</td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">Family 12</td>
+<td class="the_reference"><a href="#references">Soldovieri  et al. 2014</a></td>
+<!--  -->
+<tr>
+<td class="disorders">EP</td>
+<td class="variant_type">Nonsense</td>
+<td class="inheritance">Maternal</td>
+<td class="method">Targeted sequencing</td>
+<td class="chromosome"></td>
+<td class="cnv_size"></td>
+<td class="genome_build"></td>
+<td class="coding_dna_change">c.1609A>T</td>
+<td class="protein_change">p.Lys537*</td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">Family 13</td>
+<td class="the_reference"><a href="#references">Soldovieri  et al. 2014</a></td>
+<!--  -->
+<tr>
+<td class="disorders">EP</td>
+<td class="variant_type">Frameshift</td>
+<td class="inheritance">Maternal</td>
+<td class="method">Targeted sequencing</td>
+<td class="chromosome"></td>
+<td class="cnv_size"></td>
+<td class="genome_build"></td>
+<td class="coding_dna_change">c.1248-?(*455_?)del</td>
+<td class="protein_change">p.Ser416Argfs*57</td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">Family 14</td>
+<td class="the_reference"><a href="#references">Soldovieri  et al. 2014</a></td>
+<!--  -->
+</tbody>
     </table>
+    <div id="bottom_anchor"></div>
   </div>
 </div>
-<div class="row">
+<!--  -->
+
+<div class="row" id="citations">
+  <h4>References</h4>
   <div class="col-md-12">
-    <h4>
-      Jiang YH
-      et. al.,
-      <a href="http://www.ncbi.nlm.nih.gov/pubmed/23849776">Detection of clinically relevant genetic variants in autism spectrum disorder by whole-genome sequencing.</a>,
-      Am J Hum Genet 
-      2013
-    </h4>
-    <table class="table">
-      <thead>
-	<tr>
-	  <th class="col-md-2">Patient ID</th>
-          <th class="col-md-4">Disorders</th>
-	  <th class="col-md-2">Type</th>
-	  <th class="col-md-2">Inheritance</th>
-	  <th class="col-md-2">Method</th>
-	</tr>
-      </thead>
-      <tbody>
-	<tr>
-	  <td>2-1269-03</td>
-	  <td>ASD, EP</td>
-	  <td>Splice site</td>
-	  <td><em>Paternal</em></td>
-	  <td>Whole genome sequencing</td>
-      </tbody>
-    </table>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-12">
-    <h4>
+    <p><a name="references"></a>
       Dong S
       et. al.,
-      <a href="http://www.ncbi.nlm.nih.gov/pubmed/25284784">De novo insertions and deletions of predominantly paternal origin are associated with autism spectrum disorder.</a>,
-      Cell Rep 
+      <a href="http://www.ncbi.nlm.nih.gov/pubmed/25284784">De novo insertions and deletions of predominantly paternal origin are associated with autism spectrum disorder.</a>
+      Cell Rep
       2014
-    </h4>
-    <table class="table">
-      <thead>
-	<tr>
-	  <th class="col-md-2">Patient ID</th>
-          <th class="col-md-4">Disorders</th>
-	  <th class="col-md-2">Type</th>
-	  <th class="col-md-2">Inheritance</th>
-	  <th class="col-md-2">Method</th>
-	</tr>
-      </thead>
-      <tbody>
-	<tr>
-	  <td>11075</td>
-	  <td>ID, ASD</td>
-	  <td>Frameshift</td>
-	  <td><em>De novo</em></td>
-	  <td>Whole exome sequencing</td>
-      </tbody>
-    </table>
+    </p>
+  </div>
+  <div class="col-md-12">
+    <p><a name="references"></a>
+      Jiang YH
+      et. al.,
+      <a href="http://www.ncbi.nlm.nih.gov/pubmed/23849776">Detection of clinically relevant genetic variants in autism spectrum disorder by whole-genome sequencing.</a>
+      Am J Hum Genet
+      2013
+    </p>
+  </div>
+  <div class="col-md-12">
+    <p><a name="references"></a>
+      Milh M
+      et. al.,
+      <a href="http://www.ncbi.nlm.nih.gov/pubmed/23692823">Similar early characteristics but variable neurological outcome of patients with a de novo mutation of KCNQ2.</a>
+      Orphanet J Rare Dis
+      2013
+    </p>
+  </div>
+  <div class="col-md-12">
+    <p><a name="references"></a>
+      Soldovieri MV
+      et. al.,
+      <a href="http://www.ncbi.nlm.nih.gov/pubmed/24375629">Novel KCNQ2 and KCNQ3 mutations in a large cohort of families with benign neonatal epilepsy: first evidence for an altered channel regulation by syntaxin-1A.</a>
+      Hum Mutat
+      2014
+    </p>
   </div>
 </div>
 
+<div class="source_data" data-unknown="0" data-denovo="3" data-inherited="6"></div>
 
+<div class="implicated_data" data-ID="2" data-ASD="2" data-EP="8" data-ADHD="0" data-SCZ="0" data-BD="0"></div>
 
     </div>
-  </body>
-  <script src="../javascripts/all.js" type="text/javascript"></script><script src="../javascripts/bootstrap.js" type="text/javascript"></script>
-</html>

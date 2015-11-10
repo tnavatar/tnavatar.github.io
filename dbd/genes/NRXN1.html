@@ -1,1086 +1,2093 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    
-    <!-- Always force latest IE rendering engine or request Chrome Frame -->
-    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-    
-    <!-- Use title if it's in the page YAML frontmatter -->
-    <title>The Middleman</title>
-    
-    <link href="../stylesheets/all.css" rel="stylesheet" type="text/css" />
-  </head>
-  
-  <body class="genes genes_NRXN1">
-    <div class="container">
-      <div class="row">
-  <div class="col-md-12">
+    <div class="container genes genes_NRXN1">
+      
+<!-- <div class="row"> -->
+  <!-- <div class="col-md-6">
     <p><a href="../">back to genes</a></p>
+  </div> -->
+<!-- </div> -->
+
+<!-- <div class="row "> -->
+  <div class="col-md-6">
+    <p><a href="../">back to genes</a></p>
+    <h1><em>NRXN1</em></h1>
+    <p><b>Gene name:  </b><em>neurexin 1</em></p>
+    <p><b>Chromosome band:  </b><em>2p16.3</em></p>
+    <h3>Tier 1</h3>
+    <!-- <p class="lead">102 pathogenic variants in 36 papers</p> -->
+    <!-- <ul> -->
+      <!-- <li class="list-unstyled"> -->
+	<!-- <strong> -->
+    <!-- 57 -->
+	<!-- </strong> -->
+	<!-- Implicated in Intellectual Disability/Developmental Delay (ID) -->
+      <!-- </li> -->
+      <!-- <li class="list-unstyled"> -->
+	<!-- <strong> -->
+    <!-- 47 -->
+	<!-- </strong> -->
+	<!-- Implicated in Autism Spectrum Disorder (ASD) -->
+      <!-- </li> -->
+      <!-- <li class="list-unstyled"> -->
+	<!-- <strong> -->
+    <!-- 23 -->
+	<!-- </strong> -->
+	<!-- Implicated in Epilepsy (EP) -->
+      <!-- </li> -->
+      <!-- <li class="list-unstyled"> -->
+	<!-- <strong> -->
+    <!-- 9 -->
+	<!-- </strong> -->
+	<!-- Implicated in Attention Deficit and Hyperactivity Disorder (ADHD) -->
+      <!-- </li> -->
+      <!-- <li class="list-unstyled"> -->
+	<!-- <strong> -->
+    <!-- 20 -->
+	<!-- </strong> -->
+	<!-- Implicated in Schizopherenia (SCZ) -->
+      <!-- </li> -->
+      <!-- <li class="list-unstyled"> -->
+	<!-- <strong> -->
+    <!-- 2 -->
+	<!-- </strong> -->
+	<!-- Implicated in Bipolar Disorder (BD) -->
+      <!-- </li> -->
+    <!-- </ul> -->
+    <!-- <div class="row"> -->
+      <div class="col-md-12" id="barGraph">
+      </div>
+    <!-- </div> -->
+
+  </div>
+  <!--  -->
+
+<!-- </div> -->
+
+<div class="row" id="top-pieChart">
+  <div class="col-md-6" id="pieChart">
   </div>
 </div>
 
-<div class="row ">
-  <div class="col-md-12">
-    <h1>NRXN1</h1>   
-    <p><em>gene name</em></p>
-    <p><em>gene location</em></p>
-    <h3>tier 1</h3>
-    <p class="lead">52 pathogenic variants in 29 papers</p>
-    <ul>
-      <li class="list-unstyled">
-	<strong>
-	  19
-	</strong>
-	implicated in Intelectual Disorder/Developmental Delay (ID)
-      </li>
-      <li class="list-unstyled">
-	<strong>
-	  20
-	</strong>
-	implicated in Autism Spectrum Disorder (ASD)
-      </li>
-      <li class="list-unstyled">
-	<strong>
-	  8
-	</strong>
-	implicated in Epilepsy (EP)
-      </li>
-      <li class="list-unstyled">
-	<strong>
-	  4
-	</strong>
-	implicated in Attention Deficit and Hyperactivity Disorder (ADHD)
-      </li>
-      <li class="list-unstyled">
-	<strong>
-	  17
-	</strong>
-	implicated in Schizopherenia (SCZ)
-      </li>
-      <li class="list-unstyled">
-	<strong>
-	  1
-	</strong>
-	implicated in Bipolar Disorder (BD)
-      </li>
-    </ul>
-  </div>
+
+<p id="par">
+  <b>Columns to display:</b><br>
+  &nbsp; Note: categories denoted by + may not have values in all cases.
+</p>
+
+<div class="col-md-3 checkboxes">
+  <p><input type="checkbox" name="disorders" checked="checked" /> Disorder(s)<br>
+  <input type="checkbox" name="variant_type" checked="checked" /> Variant Type<br>
+  <input type="checkbox" name="inheritance" checked="checked" /> Inheritance<br>
+  <input type="checkbox" name="method" checked="checked" /> Method<br>
+  <input type="checkbox" name="chromosome" /> Chromosome +<br>
+  <input type="checkbox" name="cnv_size" /> CNV Size +<br>
+  <input type="checkbox" name="genome_build" /> Genome Build +</p>
 </div>
+<div class="col-md-9 checkboxes">
+  <p><input type="checkbox" name="coding_dna_change" /> Coding DNA Change +<br>
+  <input type="checkbox" name="protein_change" /> Protein Change +<br>
+  <input type="checkbox" name="position" /> Position +<br>
+  <input type="checkbox" name="reference_sequence" /> Reference Sequence +<br>
+  <input type="checkbox" name="alternate_sequence" /> Alternate Sequence +<br>
+  <input type="checkbox" name="patient_id" /> Patient ID<br>
+  <input type="checkbox" name="the_reference" checked="checked" /> Reference</p>
+</div>
+<div class="row">
+  <div class="col-md-12" id="table-container">
+    <table class="table" id="maintable">
+    <thead>
+  <tr>
+  <th class="disorders">Disorder(s)</th>
+  <th class="variant_type">Variant Type</th>
+  <th class="inheritance">Inheritance</th>
+  <th class="method">Method</th>
+  <th class="chromosome">Chromosome</th>
+  <th class="cnv_size">CNV Size</th>
+  <th class="genome_build">Genome Build</th>
+  <th class="coding_dna_change">Coding DNA Change</th>
+  <th class="protein_change">Protein Change</th>
+  <th class="position">Position</th>
+  <th class="reference_sequence">Reference Sequence</th>
+  <th class="alternate_sequence">Alternate Sequence</th>
+  <th class="patient_id">Patient ID</th>
+  <th class="the_reference">Reference</th>
+  </tr>
+</thead>
 
 
-<div class="row">
-  <div class="col-md-12">
-    <h4>
-      Walsh T
-      et. al.,
-      <a href="http://www.ncbi.nlm.nih.gov/pubmed/18369103">Rare structural variants disrupt multiple genes in neurodevelopmental pathways in schizophrenia.</a>,
-      Science 
-      2008
-    </h4>
-    <table class="table">
-      <thead>
-	<tr>
-	  <th class="col-md-2">Patient ID</th>
-          <th class="col-md-4">Disorders</th>
-	  <th class="col-md-2">Type</th>
-	  <th class="col-md-2">Inheritance</th>
-	  <th class="col-md-2">Method</th>
-	</tr>
-      </thead>
-      <tbody>
-	<tr>
-	  <td>581</td>
-	  <td>SCZ</td>
-	  <td>Deletion</td>
-	  <td><em>NA</em></td>
-	  <td>Genome-wide CMA</td>
-      </tbody>
+
+
+
+<tbody>
+<!--  -->
+<tr>
+<td class="disorders">SCZ</td>
+<td class="variant_type">Frameshift</td>
+<td class="inheritance"><em>De novo</em></td>
+<td class="method">Targeted sequencing</td>
+<td class="chromosome"></td>
+<td class="cnv_size"></td>
+<td class="genome_build"></td>
+<td class="coding_dna_change"></td>
+<td class="protein_change">p.G1402DfsX29</td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">S02959</td>
+<td class="the_reference"><a href="#references">Awadalla et al. 2010</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID, ASD</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance"><em>De novo</em></td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">1.2 Mbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">1</td>
+<td class="the_reference"><a href="#references">Bニ_na et al. 2013</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ASD</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance"><em>De novo</em></td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">615.6 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">2</td>
+<td class="the_reference"><a href="#references">Bニ_na et al. 2013</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance">Unknown</td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">529.3 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">4</td>
+<td class="the_reference"><a href="#references">Bニ_na et al. 2013</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID, EP</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance">Maternal</td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">469.0 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">5</td>
+<td class="the_reference"><a href="#references">Bニ_na et al. 2013</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID, ASD, EP</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance">Unknown</td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">396.3 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">6</td>
+<td class="the_reference"><a href="#references">Bニ_na et al. 2013</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID, ASD</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance">Maternal</td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">398.6 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">7</td>
+<td class="the_reference"><a href="#references">Bニ_na et al. 2013</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID, ASD</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance">Maternal</td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">329.0 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">9</td>
+<td class="the_reference"><a href="#references">Bニ_na et al. 2013</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID, ASD, EP</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance"><em>De novo</em></td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">323.2 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">10</td>
+<td class="the_reference"><a href="#references">Bニ_na et al. 2013</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID, ASD</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance">Paternal</td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">268.4 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">12</td>
+<td class="the_reference"><a href="#references">Bニ_na et al. 2013</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID, EP</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance">Unknown</td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">224.9 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">13</td>
+<td class="the_reference"><a href="#references">Bニ_na et al. 2013</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance">Maternal</td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">216.4 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">16</td>
+<td class="the_reference"><a href="#references">Bニ_na et al. 2013</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID, EP</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance"><em>De novo</em></td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">216.2 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">17</td>
+<td class="the_reference"><a href="#references">Bニ_na et al. 2013</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID, ASD, EP</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance">Unknown</td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">216.2 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">18</td>
+<td class="the_reference"><a href="#references">Bニ_na et al. 2013</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID, ASD, EP</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance">Bi-parental</td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">181.3 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">19</td>
+<td class="the_reference"><a href="#references">Bニ_na et al. 2013</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID, ASD</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance">Maternal</td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">109.6 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">21</td>
+<td class="the_reference"><a href="#references">Bニ_na et al. 2013</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance">Unknown</td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">104.5 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">22</td>
+<td class="the_reference"><a href="#references">Bニ_na et al. 2013</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID, ASD</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance">Paternal</td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">479.5 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">24</td>
+<td class="the_reference"><a href="#references">Bニ_na et al. 2013</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance">Paternal</td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">189.1 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">NA</td>
+<td class="the_reference"><a href="#references">Bermudez-Wagner et al. 2013</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID, EP, ADHD</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance">Paternal</td>
+<td class="method">Targeted CNV analysis</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">17.1 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">11</td>
+<td class="the_reference"><a href="#references">Boone et al. 2010</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID, ASD</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance">Bi-parental</td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">418.8 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">1</td>
+<td class="the_reference"><a href="#references">Bremer et al. 2011</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance">Paternal</td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">315.4 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">3</td>
+<td class="the_reference"><a href="#references">Ching et al. 2010</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ASD</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance">Paternal</td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">231.0 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">4</td>
+<td class="the_reference"><a href="#references">Ching et al. 2010</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ASD</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance">Maternal</td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">257.0 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">6</td>
+<td class="the_reference"><a href="#references">Ching et al. 2010</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID, ASD</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance">Paternal</td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">121.9 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">7</td>
+<td class="the_reference"><a href="#references">Ching et al. 2010</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ASD</td>
+<td class="variant_type">Splice site</td>
+<td class="inheritance">Unknown</td>
+<td class="method">Targeted sequencing</td>
+<td class="chromosome"></td>
+<td class="cnv_size"></td>
+<td class="genome_build"></td>
+<td class="coding_dna_change"></td>
+<td class="protein_change">p.? (splice)</td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">Leuven_402553</td>
+<td class="the_reference"><a href="#references">Coe et al. 2014</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance"><em>De novo</em></td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">380.1 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">1</td>
+<td class="the_reference"><a href="#references">Dabell et al. 2013</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance">Unknown</td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">157.7 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">2</td>
+<td class="the_reference"><a href="#references">Dabell et al. 2013</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ASD</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance">Paternal</td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">686.1 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">4</td>
+<td class="the_reference"><a href="#references">Dabell et al. 2013</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID, EP, ADHD</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance">Maternal</td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">559.2 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">5</td>
+<td class="the_reference"><a href="#references">Dabell et al. 2013</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID, ASD</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance">Paternal</td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">364.9 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">6</td>
+<td class="the_reference"><a href="#references">Dabell et al. 2013</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID, ADHD, BD</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance">Unknown</td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">530.1 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">7</td>
+<td class="the_reference"><a href="#references">Dabell et al. 2013</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance">Unknown</td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">222.5 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">8</td>
+<td class="the_reference"><a href="#references">Dabell et al. 2013</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance"><em>De novo</em></td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">311.2 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">9</td>
+<td class="the_reference"><a href="#references">Dabell et al. 2013</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ASD, ADHD</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance">Unknown</td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">198.3 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">10</td>
+<td class="the_reference"><a href="#references">Dabell et al. 2013</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID, ADHD</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance">Maternal</td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">277.3 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">12</td>
+<td class="the_reference"><a href="#references">Dabell et al. 2013</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID, EP</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance">Unknown</td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">277.3 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">13</td>
+<td class="the_reference"><a href="#references">Dabell et al. 2013</a></td>
+<!--  -->
+<tr>
+<td class="disorders">EP</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance">Unknown</td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">229.8 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">15</td>
+<td class="the_reference"><a href="#references">Dabell et al. 2013</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance">Unknown</td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">131.8 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">16</td>
+<td class="the_reference"><a href="#references">Dabell et al. 2013</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance">Unknown</td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">196.6 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">17</td>
+<td class="the_reference"><a href="#references">Dabell et al. 2013</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID, ASD, EP</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance">Unknown</td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">224.1 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">18</td>
+<td class="the_reference"><a href="#references">Dabell et al. 2013</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID, ASD</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance">Unknown</td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">585.5 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">19</td>
+<td class="the_reference"><a href="#references">Dabell et al. 2013</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID, ASD, EP</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance"><em>De novo</em></td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">120.1 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">28</td>
+<td class="the_reference"><a href="#references">Dabell et al. 2013</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID, ASD</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance">Maternal</td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">361.9 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">29</td>
+<td class="the_reference"><a href="#references">Dabell et al. 2013</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ASD</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance">Unknown</td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">119.7 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">30</td>
+<td class="the_reference"><a href="#references">Dabell et al. 2013</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID, ASD</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance">Unknown</td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">665.8 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">33</td>
+<td class="the_reference"><a href="#references">Dabell et al. 2013</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID, ASD, ADHD</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance">Unknown</td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">60.9 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">34</td>
+<td class="the_reference"><a href="#references">Dabell et al. 2013</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ASD</td>
+<td class="variant_type">Frameshift</td>
+<td class="inheritance">Unknown</td>
+<td class="method">Whole exome sequencing</td>
+<td class="chromosome"></td>
+<td class="cnv_size"></td>
+<td class="genome_build"></td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position">50755769</td>
+<td class="reference_sequence">TAC</td>
+<td class="alternate_sequence">T</td>
+<td class="patient_id">00HI1252A</td>
+<td class="the_reference"><a href="#references">De Rubeis et al. 2014</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID, ASD, EP</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance">Maternal</td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">450.6 kbp</td>
+<td class="genome_build">hg19</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">1</td>
+<td class="the_reference"><a href="#references">Duong et al. 2012</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID, ASD</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance">Maternal</td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">109.6 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">NA</td>
+<td class="the_reference"><a href="#references">Eriksson et al. 2015</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID, ASD</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance">Bi-parental</td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">168.9 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">NA</td>
+<td class="the_reference"><a href="#references">Eriksson et al. 2015</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ASD</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance">Unknown</td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">373.0 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">AU1495304</td>
+<td class="the_reference"><a href="#references">Gai et al. 2012</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ASD</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance">Unknown</td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">241.3 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">AU041106</td>
+<td class="the_reference"><a href="#references">Gai et al. 2012</a></td>
+<!--  -->
+<tr>
+<td class="disorders">SCZ</td>
+<td class="variant_type">Frameshift</td>
+<td class="inheritance"><em>De novo</em></td>
+<td class="method">Targeted sequencing</td>
+<td class="chromosome"></td>
+<td class="cnv_size"></td>
+<td class="genome_build"></td>
+<td class="coding_dna_change">c.4205insACGG</td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">P1</td>
+<td class="the_reference"><a href="#references">Gauthier et al. 2011</a></td>
+<!--  -->
+<tr>
+<td class="disorders">SCZ</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance"><em>De novo</em></td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">627.6 kbp</td>
+<td class="genome_build">hg19</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">4097-6</td>
+<td class="the_reference"><a href="#references">Georgieva et al. 2014</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ASD</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance">Maternal</td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">373.7 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">AU1495303</td>
+<td class="the_reference"><a href="#references">Girirajan et al. 2013</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ASD</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance"><em>De novo</em></td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">62.6 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">13580.p1</td>
+<td class="the_reference"><a href="#references">Girirajan et al. 2013</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ASD</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance">Maternal</td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">229.1 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">AU2681301</td>
+<td class="the_reference"><a href="#references">Girirajan et al. 2013</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID, ASD, EP</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance">Paternal</td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">91.8 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">13609.p1</td>
+<td class="the_reference"><a href="#references">Girirajan et al. 2013</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID, EP</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance">Paternal</td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">347.6 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">N1</td>
+<td class="the_reference"><a href="#references">Gregor et al. 2011</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance">Maternal</td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">987.0 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">N2</td>
+<td class="the_reference"><a href="#references">Gregor et al. 2011</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID, EP</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance">Paternal</td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">229.0 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">N5</td>
+<td class="the_reference"><a href="#references">Gregor et al. 2011</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance"><em>De novo</em></td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">462.3 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">N6</td>
+<td class="the_reference"><a href="#references">Gregor et al. 2011</a></td>
+<!--  -->
+<tr>
+<td class="disorders">SCZ</td>
+<td class="variant_type">Nonsense</td>
+<td class="inheritance">Unknown</td>
+<td class="method">Targeted sequencing</td>
+<td class="chromosome"></td>
+<td class="cnv_size"></td>
+<td class="genome_build"></td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position">50850713</td>
+<td class="reference_sequence">G</td>
+<td class="alternate_sequence">C</td>
+<td class="patient_id">NA</td>
+<td class="the_reference"><a href="#references">Hu et al. 2013</a></td>
+<!--  -->
+<tr>
+<td class="disorders">SCZ</td>
+<td class="variant_type">Nonsense</td>
+<td class="inheritance">Unknown</td>
+<td class="method">Targeted sequencing</td>
+<td class="chromosome"></td>
+<td class="cnv_size"></td>
+<td class="genome_build"></td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position">51254805</td>
+<td class="reference_sequence">T</td>
+<td class="alternate_sequence">A</td>
+<td class="patient_id">NA</td>
+<td class="the_reference"><a href="#references">Hu et al. 2013</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ASD</td>
+<td class="variant_type">Nonsense</td>
+<td class="inheritance"><em>De novo</em></td>
+<td class="method">Whole exome sequencing</td>
+<td class="chromosome"></td>
+<td class="cnv_size"></td>
+<td class="genome_build"></td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position">50724605</td>
+<td class="reference_sequence">A</td>
+<td class="alternate_sequence">T</td>
+<td class="patient_id">12501</td>
+<td class="the_reference"><a href="#references">Iossifov et al. 2012</a></td>
+<!--  -->
+<tr>
+<td class="disorders">SCZ</td>
+<td class="variant_type">Nonsense</td>
+<td class="inheritance"><em>De novo</em></td>
+<td class="method">Whole genome sequencing</td>
+<td class="chromosome"></td>
+<td class="cnv_size"></td>
+<td class="genome_build"></td>
+<td class="coding_dna_change"></td>
+<td class="protein_change">p.Arg113X</td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">NA</td>
+<td class="the_reference"><a href="#references">Kong et al. 2012</a></td>
+<!--  -->
+<tr>
+<td class="disorders">EP</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance">Paternal</td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">602.4 kbp</td>
+<td class="genome_build">hg19</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">EC-JAE085</td>
+<td class="the_reference"><a href="#references">Lal et al. 2015</a></td>
+<!--  -->
+<tr>
+<td class="disorders">EP</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance">Paternal</td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">473.3 kbp</td>
+<td class="genome_build">hg19</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">EC-CAE333</td>
+<td class="the_reference"><a href="#references">Lal et al. 2015</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID, ASD, EP, ADHD</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance"><em>De novo</em></td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">43.8 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">12119.p1</td>
+<td class="the_reference"><a href="#references">Levy et al. 2011</a></td>
+<!--  -->
+<tr>
+<td class="disorders">EP</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance">Paternal</td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">600.0 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">III</td>
+<td class="the_reference"><a href="#references">Mニ_ller et al. 2013</a></td>
+<!--  -->
+<tr>
+<td class="disorders">EP</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance"><em>De novo</em></td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">60.0 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">IV</td>
+<td class="the_reference"><a href="#references">Mニ_ller et al. 2013</a></td>
+<!--  -->
+<tr>
+<td class="disorders">BD</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance">Unknown</td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">64.9 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">72</td>
+<td class="the_reference"><a href="#references">Noor et al. 2014</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID, ASD</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance"><em>De novo</em></td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">190.7 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">13017_223</td>
+<td class="the_reference"><a href="#references">Pinto et al. 2010</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID, ASD</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance"><em>De novo</em></td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">155.2 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">13037_463</td>
+<td class="the_reference"><a href="#references">Pinto et al. 2010</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID, ASD</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance"><em>De novo</em></td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">231.7 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">13153_1703</td>
+<td class="the_reference"><a href="#references">Pinto et al. 2010</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ASD</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance"><em>De novo</em></td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">246.0 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">13216_2383</td>
+<td class="the_reference"><a href="#references">Pinto et al. 2014</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ASD</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance">Paternal</td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">71.0 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">17027_1</td>
+<td class="the_reference"><a href="#references">Pinto et al. 2014</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ASD</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance">Maternal</td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">14.1 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">5236_3</td>
+<td class="the_reference"><a href="#references">Pinto et al. 2014</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID, ASD</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance">Paternal</td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">76.5 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">5328_3</td>
+<td class="the_reference"><a href="#references">Pinto et al. 2014</a></td>
+<!--  -->
+<tr>
+<td class="disorders">SCZ</td>
+<td class="variant_type">Nonsense</td>
+<td class="inheritance">Unknown</td>
+<td class="method">Whole exome sequencing</td>
+<td class="chromosome"></td>
+<td class="cnv_size"></td>
+<td class="genome_build"></td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position">50723177</td>
+<td class="reference_sequence">G</td>
+<td class="alternate_sequence">C</td>
+<td class="patient_id">NA</td>
+<td class="the_reference"><a href="#references">Purcell et al. 2014</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ASD</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance">Paternal</td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">96.0 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">NA</td>
+<td class="the_reference"><a href="#references">Roberts et al. 2014</a></td>
+<!--  -->
+<tr>
+<td class="disorders">SCZ</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance">Unknown</td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">45.2 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">Bonn 1a</td>
+<td class="the_reference"><a href="#references">Rujescu et al.2009</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID, SCZ</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance">Unknown</td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">375.4 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">Bonn 3a</td>
+<td class="the_reference"><a href="#references">Rujescu et al.2009</a></td>
+<!--  -->
+<tr>
+<td class="disorders">SCZ</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance">Unknown</td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">243.1 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">Helsinki 1a</td>
+<td class="the_reference"><a href="#references">Rujescu et al.2009</a></td>
+<!--  -->
+<tr>
+<td class="disorders">SCZ</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance">Unknown</td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">226.4 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">Munich 2a</td>
+<td class="the_reference"><a href="#references">Rujescu et al.2009</a></td>
+<!--  -->
+<tr>
+<td class="disorders">SCZ</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance">Unknown</td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">248.3 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">Utrecht 3a</td>
+<td class="the_reference"><a href="#references">Rujescu et al.2009</a></td>
+<!--  -->
+<tr>
+<td class="disorders">SCZ</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance">Unknown</td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">226.9 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">Utrecht 4a</td>
+<td class="the_reference"><a href="#references">Rujescu et al.2009</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ASD</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance">Paternal</td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">121.9 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">ASD-09-030</td>
+<td class="the_reference"><a href="#references">Shen et al. 2010</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ADHD</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance">Unknown</td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">260.1 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">1</td>
+<td class="the_reference"><a href="#references">Sundaram et al. 2010</a></td>
+<!--  -->
+<tr>
+<td class="disorders">SCZ</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance"><em>De novo</em></td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">281.6 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">4</td>
+<td class="the_reference"><a href="#references">Todarello et al. 2014</a></td>
+<!--  -->
+<tr>
+<td class="disorders">SCZ</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance">Unknown</td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">137.4 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">10</td>
+<td class="the_reference"><a href="#references">Todarello et al. 2014</a></td>
+<!--  -->
+<tr>
+<td class="disorders">SCZ</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance">Unknown</td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">161.0 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">11</td>
+<td class="the_reference"><a href="#references">Todarello et al. 2014</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID, EP</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance">Unknown</td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">0 bp</td>
+<td class="genome_build">NA</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">Patient 2</td>
+<td class="the_reference"><a href="#references">Utine et al. 2014</a></td>
+<!--  -->
+<tr>
+<td class="disorders">SCZ</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance">Unknown</td>
+<td class="method">Targeted CNV analysis</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">0 bp</td>
+<td class="genome_build">NA</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">7</td>
+<td class="the_reference"><a href="#references">Vrijenhoek et al. 2008</a></td>
+<!--  -->
+<tr>
+<td class="disorders">SCZ</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance">Unknown</td>
+<td class="method">Targeted CNV analysis</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">236.8 kbp</td>
+<td class="genome_build">NA</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">NA</td>
+<td class="the_reference"><a href="#references">Vrijenhoek et al. 2008</a></td>
+<!--  -->
+<tr>
+<td class="disorders">SCZ</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance">Unknown</td>
+<td class="method">Targeted CNV analysis</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">0 bp</td>
+<td class="genome_build">NA</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">9</td>
+<td class="the_reference"><a href="#references">Vrijenhoek et al. 2008</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID, ADHD</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance">Paternal</td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">333.5 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">2211</td>
+<td class="the_reference"><a href="#references">Vulto-van Silfhout et al. 2013</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance">Maternal</td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">267.0 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">3419</td>
+<td class="the_reference"><a href="#references">Vulto-van Silfhout et al. 2013</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance">Unknown</td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">174.1 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">5256</td>
+<td class="the_reference"><a href="#references">Vulto-van Silfhout et al. 2013</a></td>
+<!--  -->
+<tr>
+<td class="disorders">SCZ</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance">Unknown</td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">114.6 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">581</td>
+<td class="the_reference"><a href="#references">Walsh et al. 2008</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID</td>
+<td class="variant_type">Deletion</td>
+<td class="inheritance">Bi-parental</td>
+<td class="method">Genome-wide CMA</td>
+<td class="chromosome">chr2</td>
+<td class="cnv_size">112.7 kbp</td>
+<td class="genome_build">hg18</td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">P3</td>
+<td class="the_reference"><a href="#references">Zweier et al. 2009</a></td>
+<!--  -->
+</tbody>
     </table>
+    <div id="bottom_anchor"></div>
   </div>
 </div>
-<div class="row">
+<!--  -->
+
+<div class="row" id="citations">
+  <h4>References</h4>
   <div class="col-md-12">
-    <h4>
-      Vrijenhoek T
-      et. al.,
-      <a href="http://www.ncbi.nlm.nih.gov/pubmed/18940311">Recurrent CNVs disrupt three candidate genes in schizophrenia patients.</a>,
-      Am J Hum Genet 
-      2008
-    </h4>
-    <table class="table">
-      <thead>
-	<tr>
-	  <th class="col-md-2">Patient ID</th>
-          <th class="col-md-4">Disorders</th>
-	  <th class="col-md-2">Type</th>
-	  <th class="col-md-2">Inheritance</th>
-	  <th class="col-md-2">Method</th>
-	</tr>
-      </thead>
-      <tbody>
-	<tr>
-	  <td>7</td>
-	  <td>SCZ</td>
-	  <td>Deletion</td>
-	  <td><em>NA</em></td>
-	  <td>Targeted CNV analysis</td>
-	<tr>
-	  <td>NA</td>
-	  <td>SCZ</td>
-	  <td>Deletion</td>
-	  <td><em>NA</em></td>
-	  <td>Targeted CNV analysis</td>
-	<tr>
-	  <td>9</td>
-	  <td>SCZ</td>
-	  <td>Deletion</td>
-	  <td><em>NA</em></td>
-	  <td>Targeted CNV analysis</td>
-      </tbody>
-    </table>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-12">
-    <h4>
-      Rujescu D
-      et. al.,
-      <a href="http://www.ncbi.nlm.nih.gov/pubmed/18945720">Disruption of the neurexin 1 gene is associated with schizophrenia.</a>,
-      Hum Mol Genet 
-      2009
-    </h4>
-    <table class="table">
-      <thead>
-	<tr>
-	  <th class="col-md-2">Patient ID</th>
-          <th class="col-md-4">Disorders</th>
-	  <th class="col-md-2">Type</th>
-	  <th class="col-md-2">Inheritance</th>
-	  <th class="col-md-2">Method</th>
-	</tr>
-      </thead>
-      <tbody>
-	<tr>
-	  <td>Bonn 1a</td>
-	  <td>SCZ</td>
-	  <td>Deletion</td>
-	  <td><em>NA</em></td>
-	  <td>Genome-wide CMA</td>
-	<tr>
-	  <td>Bonn 3a</td>
-	  <td>ID, SCZ</td>
-	  <td>Deletion</td>
-	  <td><em>NA</em></td>
-	  <td>Genome-wide CMA</td>
-	<tr>
-	  <td>Helsinki 1a</td>
-	  <td>SCZ</td>
-	  <td>Deletion</td>
-	  <td><em>NA</em></td>
-	  <td>Genome-wide CMA</td>
-	<tr>
-	  <td>Munich 2a</td>
-	  <td>SCZ</td>
-	  <td>Deletion</td>
-	  <td><em>NA</em></td>
-	  <td>Genome-wide CMA</td>
-	<tr>
-	  <td>Utrecht 3a</td>
-	  <td>SCZ</td>
-	  <td>Deletion</td>
-	  <td><em>NA</em></td>
-	  <td>Genome-wide CMA</td>
-	<tr>
-	  <td>Utrecht 4a</td>
-	  <td>SCZ</td>
-	  <td>Deletion</td>
-	  <td><em>NA</em></td>
-	  <td>Genome-wide CMA</td>
-      </tbody>
-    </table>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-12">
-    <h4>
-      Zweier C
-      et. al.,
-      <a href="http://www.ncbi.nlm.nih.gov/pubmed/19896112">CNTNAP2 and NRXN1 are mutated in autosomal-recessive Pitt-Hopkins-like mental retardation and determine the level of a common synaptic protein in Drosophila.</a>,
-      Am J Hum Genet 
-      2009
-    </h4>
-    <table class="table">
-      <thead>
-	<tr>
-	  <th class="col-md-2">Patient ID</th>
-          <th class="col-md-4">Disorders</th>
-	  <th class="col-md-2">Type</th>
-	  <th class="col-md-2">Inheritance</th>
-	  <th class="col-md-2">Method</th>
-	</tr>
-      </thead>
-      <tbody>
-	<tr>
-	  <td>P3</td>
-	  <td>ID</td>
-	  <td>Deletion</td>
-	  <td><em>Bi-parental</em></td>
-	  <td>Genome-wide CMA</td>
-      </tbody>
-    </table>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-12">
-    <h4>
-      Shen Y
-      et. al.,
-      <a href="http://www.ncbi.nlm.nih.gov/pubmed/20231187">Clinical genetic testing for patients with autism spectrum disorders.</a>,
-      Pediatrics 
-      2010
-    </h4>
-    <table class="table">
-      <thead>
-	<tr>
-	  <th class="col-md-2">Patient ID</th>
-          <th class="col-md-4">Disorders</th>
-	  <th class="col-md-2">Type</th>
-	  <th class="col-md-2">Inheritance</th>
-	  <th class="col-md-2">Method</th>
-	</tr>
-      </thead>
-      <tbody>
-	<tr>
-	  <td>ASD-09-030</td>
-	  <td>ASD</td>
-	  <td>Deletion</td>
-	  <td><em>Paternal</em></td>
-	  <td>Genome-wide CMA</td>
-      </tbody>
-    </table>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-12">
-    <h4>
-      Sundaram SK
-      et. al.,
-      <a href="http://www.ncbi.nlm.nih.gov/pubmed/20427753">Tourette syndrome is associated with recurrent exonic copy number variants.</a>,
-      Neurology 
-      2010
-    </h4>
-    <table class="table">
-      <thead>
-	<tr>
-	  <th class="col-md-2">Patient ID</th>
-          <th class="col-md-4">Disorders</th>
-	  <th class="col-md-2">Type</th>
-	  <th class="col-md-2">Inheritance</th>
-	  <th class="col-md-2">Method</th>
-	</tr>
-      </thead>
-      <tbody>
-	<tr>
-	  <td>1</td>
-	  <td>ADHD</td>
-	  <td>Deletion</td>
-	  <td><em>NA</em></td>
-	  <td>Genome-wide CMA</td>
-      </tbody>
-    </table>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-12">
-    <h4>
-      Pinto D
-      et. al.,
-      <a href="http://www.ncbi.nlm.nih.gov/pubmed/20531469">Functional impact of global rare copy number variation in autism spectrum disorders.</a>,
-      Nature 
-      2010
-    </h4>
-    <table class="table">
-      <thead>
-	<tr>
-	  <th class="col-md-2">Patient ID</th>
-          <th class="col-md-4">Disorders</th>
-	  <th class="col-md-2">Type</th>
-	  <th class="col-md-2">Inheritance</th>
-	  <th class="col-md-2">Method</th>
-	</tr>
-      </thead>
-      <tbody>
-	<tr>
-	  <td>13017_223</td>
-	  <td>ID, ASD</td>
-	  <td>Deletion</td>
-	  <td><em>De novo</em></td>
-	  <td>Genome-wide CMA</td>
-	<tr>
-	  <td>13037_463</td>
-	  <td>ID, ASD</td>
-	  <td>Deletion</td>
-	  <td><em>De novo</em></td>
-	  <td>Genome-wide CMA</td>
-	<tr>
-	  <td>13153_1703</td>
-	  <td>ID, ASD</td>
-	  <td>Deletion</td>
-	  <td><em>De novo</em></td>
-	  <td>Genome-wide CMA</td>
-      </tbody>
-    </table>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-12">
-    <h4>
+    <p><a name="references"></a>
       Awadalla P
       et. al.,
-      <a href="http://www.ncbi.nlm.nih.gov/pubmed/20797689">Direct measure of the de novo mutation rate in autism and schizophrenia cohorts.</a>,
-      Am J Hum Genet 
+      <a href="http://www.ncbi.nlm.nih.gov/pubmed/20797689">Direct measure of the de novo mutation rate in autism and schizophrenia cohorts.</a>
+      Am J Hum Genet
       2010
-    </h4>
-    <table class="table">
-      <thead>
-	<tr>
-	  <th class="col-md-2">Patient ID</th>
-          <th class="col-md-4">Disorders</th>
-	  <th class="col-md-2">Type</th>
-	  <th class="col-md-2">Inheritance</th>
-	  <th class="col-md-2">Method</th>
-	</tr>
-      </thead>
-      <tbody>
-	<tr>
-	  <td>S02959</td>
-	  <td>SCZ</td>
-	  <td>Frameshift</td>
-	  <td><em>De novo</em></td>
-	  <td>Targeted sequencing</td>
-      </tbody>
-    </table>
+    </p>
   </div>
-</div>
-<div class="row">
   <div class="col-md-12">
-    <h4>
-      Bremer A
+    <p><a name="references"></a>
+      Béna F
       et. al.,
-      <a href="http://www.ncbi.nlm.nih.gov/pubmed/21302340">Copy number variation characteristics in subpopulations of patients with autism spectrum disorders.</a>,
-      Am J Med Genet B Neuropsychiatr Genet 
-      2011
-    </h4>
-    <table class="table">
-      <thead>
-	<tr>
-	  <th class="col-md-2">Patient ID</th>
-          <th class="col-md-4">Disorders</th>
-	  <th class="col-md-2">Type</th>
-	  <th class="col-md-2">Inheritance</th>
-	  <th class="col-md-2">Method</th>
-	</tr>
-      </thead>
-      <tbody>
-	<tr>
-	  <td>1</td>
-	  <td>ID, ASD</td>
-	  <td>Deletion</td>
-	  <td><em>Bi-parental</em></td>
-	  <td>Genome-wide CMA</td>
-      </tbody>
-    </table>
+      <a href="http://www.ncbi.nlm.nih.gov/pubmed/23533028">Molecular and clinical characterization of 25 individuals with exonic deletions of NRXN1 and comprehensive review of the literature.</a>
+      Am J Med Genet B Neuropsychiatr Genet
+      2013
+    </p>
   </div>
-</div>
-<div class="row">
   <div class="col-md-12">
-    <h4>
-      Gai X
-      et. al.,
-      <a href="http://www.ncbi.nlm.nih.gov/pubmed/21358714">Rare structural variation of synapse and neurotransmission genes in autism.</a>,
-      Mol Psychiatry 
-      2012
-    </h4>
-    <table class="table">
-      <thead>
-	<tr>
-	  <th class="col-md-2">Patient ID</th>
-          <th class="col-md-4">Disorders</th>
-	  <th class="col-md-2">Type</th>
-	  <th class="col-md-2">Inheritance</th>
-	  <th class="col-md-2">Method</th>
-	</tr>
-      </thead>
-      <tbody>
-	<tr>
-	  <td>AU1495304</td>
-	  <td>ASD</td>
-	  <td>Deletion</td>
-	  <td><em>NA</em></td>
-	  <td>Genome-wide CMA</td>
-	<tr>
-	  <td>AU041106</td>
-	  <td>ASD</td>
-	  <td>Deletion</td>
-	  <td><em>NA</em></td>
-	  <td>Genome-wide CMA</td>
-      </tbody>
-    </table>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-12">
-    <h4>
-      Gauthier J
-      et. al.,
-      <a href="http://www.ncbi.nlm.nih.gov/pubmed/21424692">Truncating mutations in NRXN2 and NRXN1 in autism spectrum disorders and schizophrenia.</a>,
-      Hum Genet 
-      2011
-    </h4>
-    <table class="table">
-      <thead>
-	<tr>
-	  <th class="col-md-2">Patient ID</th>
-          <th class="col-md-4">Disorders</th>
-	  <th class="col-md-2">Type</th>
-	  <th class="col-md-2">Inheritance</th>
-	  <th class="col-md-2">Method</th>
-	</tr>
-      </thead>
-      <tbody>
-	<tr>
-	  <td>P1</td>
-	  <td>SCZ</td>
-	  <td>Frameshift</td>
-	  <td><em>De novo</em></td>
-	  <td>Targeted sequencing</td>
-      </tbody>
-    </table>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-12">
-    <h4>
-      Levy D
-      et. al.,
-      <a href="http://www.ncbi.nlm.nih.gov/pubmed/21658582">Rare de novo and transmitted copy-number variation in autistic spectrum disorders.</a>,
-      Neuron 
-      2011
-    </h4>
-    <table class="table">
-      <thead>
-	<tr>
-	  <th class="col-md-2">Patient ID</th>
-          <th class="col-md-4">Disorders</th>
-	  <th class="col-md-2">Type</th>
-	  <th class="col-md-2">Inheritance</th>
-	  <th class="col-md-2">Method</th>
-	</tr>
-      </thead>
-      <tbody>
-	<tr>
-	  <td>12119.p1</td>
-	  <td>ID, ASD, EP, ADHD</td>
-	  <td>Deletion</td>
-	  <td><em>De novo</em></td>
-	  <td>Genome-wide CMA</td>
-      </tbody>
-    </table>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-12">
-    <h4>
-      Gregor A
-      et. al.,
-      <a href="http://www.ncbi.nlm.nih.gov/pubmed/21827697">Expanding the clinical spectrum associated with defects in CNTNAP2 and NRXN1.</a>,
-      BMC Med Genet 
-      2011
-    </h4>
-    <table class="table">
-      <thead>
-	<tr>
-	  <th class="col-md-2">Patient ID</th>
-          <th class="col-md-4">Disorders</th>
-	  <th class="col-md-2">Type</th>
-	  <th class="col-md-2">Inheritance</th>
-	  <th class="col-md-2">Method</th>
-	</tr>
-      </thead>
-      <tbody>
-	<tr>
-	  <td>N1</td>
-	  <td>ID, EP</td>
-	  <td>Deletion</td>
-	  <td><em>Paternal</em></td>
-	  <td>Genome-wide CMA</td>
-	<tr>
-	  <td>N2</td>
-	  <td>ID</td>
-	  <td>Deletion</td>
-	  <td><em>Maternal</em></td>
-	  <td>Genome-wide CMA</td>
-	<tr>
-	  <td>N5</td>
-	  <td>ID, EP</td>
-	  <td>Deletion</td>
-	  <td><em>Paternal</em></td>
-	  <td>Genome-wide CMA</td>
-	<tr>
-	  <td>N6</td>
-	  <td>ID</td>
-	  <td>Deletion</td>
-	  <td><em>De novo</em></td>
-	  <td>Genome-wide CMA</td>
-      </tbody>
-    </table>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-12">
-    <h4>
-      Iossifov I
-      et. al.,
-      <a href="http://www.ncbi.nlm.nih.gov/pubmed/22542183">De novo gene disruptions in children on the autistic spectrum.</a>,
-      Neuron 
-      2012
-    </h4>
-    <table class="table">
-      <thead>
-	<tr>
-	  <th class="col-md-2">Patient ID</th>
-          <th class="col-md-4">Disorders</th>
-	  <th class="col-md-2">Type</th>
-	  <th class="col-md-2">Inheritance</th>
-	  <th class="col-md-2">Method</th>
-	</tr>
-      </thead>
-      <tbody>
-	<tr>
-	  <td>12501</td>
-	  <td>ASD</td>
-	  <td>Nonsense</td>
-	  <td><em>De novo</em></td>
-	  <td>Whole exome sequencing</td>
-      </tbody>
-    </table>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-12">
-    <h4>
-      Kong A
-      et. al.,
-      <a href="http://www.ncbi.nlm.nih.gov/pubmed/22914163">Rate of de novo mutations and the importance of father's age to disease risk.</a>,
-      Nature 
-      2012
-    </h4>
-    <table class="table">
-      <thead>
-	<tr>
-	  <th class="col-md-2">Patient ID</th>
-          <th class="col-md-4">Disorders</th>
-	  <th class="col-md-2">Type</th>
-	  <th class="col-md-2">Inheritance</th>
-	  <th class="col-md-2">Method</th>
-	</tr>
-      </thead>
-      <tbody>
-	<tr>
-	  <td>NA</td>
-	  <td>SCZ</td>
-	  <td>Nonsense</td>
-	  <td><em>De novo</em></td>
-	  <td>Whole genome sequencing</td>
-      </tbody>
-    </table>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-12">
-    <h4>
+    <p><a name="references"></a>
       Bermudez-Wagner K
       et. al.,
-      <a href="http://www.ncbi.nlm.nih.gov/pubmed/23207424">2p16.3 microdeletion with partial deletion of the neurexin-1 gene in a female with developmental delays, short stature, and a congenital diaphragmatic hernia.</a>,
-      Clin Dysmorphol 
+      <a href="http://www.ncbi.nlm.nih.gov/pubmed/23207424">2p16.3 microdeletion with partial deletion of the neurexin-1 gene in a female with developmental delays, short stature, and a congenital diaphragmatic hernia.</a>
+      Clin Dysmorphol
       2013
-    </h4>
-    <table class="table">
-      <thead>
-	<tr>
-	  <th class="col-md-2">Patient ID</th>
-          <th class="col-md-4">Disorders</th>
-	  <th class="col-md-2">Type</th>
-	  <th class="col-md-2">Inheritance</th>
-	  <th class="col-md-2">Method</th>
-	</tr>
-      </thead>
-      <tbody>
-	<tr>
-	  <td>NA</td>
-	  <td>ID</td>
-	  <td>Deletion</td>
-	  <td><em>Paternal</em></td>
-	  <td>Genome-wide CMA</td>
-      </tbody>
-    </table>
+    </p>
   </div>
-</div>
-<div class="row">
   <div class="col-md-12">
-    <h4>
-      Møller RS
-      et. al.,
-      <a href="http://www.ncbi.nlm.nih.gov/pubmed/23294455">Exon-disrupting deletions of NRXN1 in idiopathic generalized epilepsy.</a>,
-      Epilepsia 
-      2013
-    </h4>
-    <table class="table">
-      <thead>
-	<tr>
-	  <th class="col-md-2">Patient ID</th>
-          <th class="col-md-4">Disorders</th>
-	  <th class="col-md-2">Type</th>
-	  <th class="col-md-2">Inheritance</th>
-	  <th class="col-md-2">Method</th>
-	</tr>
-      </thead>
-      <tbody>
-	<tr>
-	  <td>III</td>
-	  <td>EP</td>
-	  <td>Deletion</td>
-	  <td><em>Paternal</em></td>
-	  <td>Genome-wide CMA</td>
-	<tr>
-	  <td>IV</td>
-	  <td>EP</td>
-	  <td>Deletion</td>
-	  <td><em>De novo</em></td>
-	  <td>Genome-wide CMA</td>
-      </tbody>
-    </table>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-12">
-    <h4>
-      Girirajan S
-      et. al.,
-      <a href="http://www.ncbi.nlm.nih.gov/pubmed/23375656">Refinement and discovery of new hotspots of copy-number variation associated with autism spectrum disorder.</a>,
-      Am J Hum Genet 
-      2013
-    </h4>
-    <table class="table">
-      <thead>
-	<tr>
-	  <th class="col-md-2">Patient ID</th>
-          <th class="col-md-4">Disorders</th>
-	  <th class="col-md-2">Type</th>
-	  <th class="col-md-2">Inheritance</th>
-	  <th class="col-md-2">Method</th>
-	</tr>
-      </thead>
-      <tbody>
-	<tr>
-	  <td>AU1495303</td>
-	  <td>ASD</td>
-	  <td>Deletion</td>
-	  <td><em>Maternal</em></td>
-	  <td>Genome-wide CMA</td>
-	<tr>
-	  <td>13580.p1</td>
-	  <td>ASD</td>
-	  <td>Deletion</td>
-	  <td><em>De novo</em></td>
-	  <td>Genome-wide CMA</td>
-	<tr>
-	  <td>AU2681301</td>
-	  <td>ASD</td>
-	  <td>Deletion</td>
-	  <td><em>Maternal</em></td>
-	  <td>Genome-wide CMA</td>
-	<tr>
-	  <td>13609.p1</td>
-	  <td>ID, ASD, EP</td>
-	  <td>Deletion</td>
-	  <td><em>Paternal</em></td>
-	  <td>Genome-wide CMA</td>
-      </tbody>
-    </table>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-12">
-    <h4>
-      Vulto-van Silfhout AT
-      et. al.,
-      <a href="http://www.ncbi.nlm.nih.gov/pubmed/24038936">Clinical significance of de novo and inherited copy-number variation.</a>,
-      Hum Mutat 
-      2013
-    </h4>
-    <table class="table">
-      <thead>
-	<tr>
-	  <th class="col-md-2">Patient ID</th>
-          <th class="col-md-4">Disorders</th>
-	  <th class="col-md-2">Type</th>
-	  <th class="col-md-2">Inheritance</th>
-	  <th class="col-md-2">Method</th>
-	</tr>
-      </thead>
-      <tbody>
-	<tr>
-	  <td>2211</td>
-	  <td>ID, ADHD</td>
-	  <td>Deletion</td>
-	  <td><em>Paternal</em></td>
-	  <td>Genome-wide CMA</td>
-	<tr>
-	  <td>3419</td>
-	  <td>ID</td>
-	  <td>Deletion</td>
-	  <td><em>Maternal</em></td>
-	  <td>Genome-wide CMA</td>
-	<tr>
-	  <td>5256</td>
-	  <td>ID</td>
-	  <td>Deletion</td>
-	  <td><em>NA</em></td>
-	  <td>Genome-wide CMA</td>
-      </tbody>
-    </table>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-12">
-    <h4>
-      Hu X
-      et. al.,
-      <a href="http://www.ncbi.nlm.nih.gov/pubmed/24126932">A survey of rare coding variants in candidate genes in schizophrenia by deep sequencing.</a>,
-      Mol Psychiatry 
-      2014
-    </h4>
-    <table class="table">
-      <thead>
-	<tr>
-	  <th class="col-md-2">Patient ID</th>
-          <th class="col-md-4">Disorders</th>
-	  <th class="col-md-2">Type</th>
-	  <th class="col-md-2">Inheritance</th>
-	  <th class="col-md-2">Method</th>
-	</tr>
-      </thead>
-      <tbody>
-	<tr>
-	  <td>NA</td>
-	  <td>SCZ</td>
-	  <td>Nonsense</td>
-	  <td><em>NA</em></td>
-	  <td>Targeted sequencing</td>
-	<tr>
-	  <td>NA</td>
-	  <td>SCZ</td>
-	  <td>Nonsense</td>
-	  <td><em>NA</em></td>
-	  <td>Targeted sequencing</td>
-      </tbody>
-    </table>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-12">
-    <h4>
-      Roberts JL
-      et. al.,
-      <a href="http://www.ncbi.nlm.nih.gov/pubmed/24188901">Chromosomal microarray analysis of consecutive individuals with autism spectrum disorders or learning disability presenting for genetic services.</a>,
-      Gene 
-      2014
-    </h4>
-    <table class="table">
-      <thead>
-	<tr>
-	  <th class="col-md-2">Patient ID</th>
-          <th class="col-md-4">Disorders</th>
-	  <th class="col-md-2">Type</th>
-	  <th class="col-md-2">Inheritance</th>
-	  <th class="col-md-2">Method</th>
-	</tr>
-      </thead>
-      <tbody>
-	<tr>
-	  <td>NA</td>
-	  <td>ASD</td>
-	  <td>Deletion</td>
-	  <td><em>Paternal</em></td>
-	  <td>Genome-wide CMA</td>
-      </tbody>
-    </table>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-12">
-    <h4>
-      Purcell SM
-      et. al.,
-      <a href="http://www.ncbi.nlm.nih.gov/pubmed/24463508">A polygenic burden of rare disruptive mutations in schizophrenia.</a>,
-      Nature 
-      2014
-    </h4>
-    <table class="table">
-      <thead>
-	<tr>
-	  <th class="col-md-2">Patient ID</th>
-          <th class="col-md-4">Disorders</th>
-	  <th class="col-md-2">Type</th>
-	  <th class="col-md-2">Inheritance</th>
-	  <th class="col-md-2">Method</th>
-	</tr>
-      </thead>
-      <tbody>
-	<tr>
-	  <td>NA</td>
-	  <td>SCZ</td>
-	  <td>Nonsense</td>
-	  <td><em>NA</em></td>
-	  <td>Whole exome sequencing</td>
-      </tbody>
-    </table>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-12">
-    <h4>
-      Utine GE
-      et. al.,
-      <a href="http://www.ncbi.nlm.nih.gov/pubmed/24508361">Etiological yield of SNP microarrays in idiopathic intellectual disability.</a>,
-      Eur J Paediatr Neurol 
-      2014
-    </h4>
-    <table class="table">
-      <thead>
-	<tr>
-	  <th class="col-md-2">Patient ID</th>
-          <th class="col-md-4">Disorders</th>
-	  <th class="col-md-2">Type</th>
-	  <th class="col-md-2">Inheritance</th>
-	  <th class="col-md-2">Method</th>
-	</tr>
-      </thead>
-      <tbody>
-	<tr>
-	  <td>Patient 2</td>
-	  <td>ID, EP</td>
-	  <td>Deletion</td>
-	  <td><em>NA</em></td>
-	  <td>Genome-wide CMA</td>
-      </tbody>
-    </table>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-12">
-    <h4>
-      Noor A
-      et. al.,
-      <a href="http://www.ncbi.nlm.nih.gov/pubmed/24700553">Copy number variant study of bipolar disorder in Canadian and UK populations implicates synaptic genes.</a>,
-      Am J Med Genet B Neuropsychiatr Genet 
-      2014
-    </h4>
-    <table class="table">
-      <thead>
-	<tr>
-	  <th class="col-md-2">Patient ID</th>
-          <th class="col-md-4">Disorders</th>
-	  <th class="col-md-2">Type</th>
-	  <th class="col-md-2">Inheritance</th>
-	  <th class="col-md-2">Method</th>
-	</tr>
-      </thead>
-      <tbody>
-	<tr>
-	  <td>72</td>
-	  <td>BD</td>
-	  <td>Deletion</td>
-	  <td><em>NA</em></td>
-	  <td>Genome-wide CMA</td>
-      </tbody>
-    </table>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-12">
-    <h4>
-      Pinto D
-      et. al.,
-      <a href="http://www.ncbi.nlm.nih.gov/pubmed/24768552">Convergence of genes and cellular pathways dysregulated in autism spectrum disorders.</a>,
-      Am J Hum Genet 
-      2014
-    </h4>
-    <table class="table">
-      <thead>
-	<tr>
-	  <th class="col-md-2">Patient ID</th>
-          <th class="col-md-4">Disorders</th>
-	  <th class="col-md-2">Type</th>
-	  <th class="col-md-2">Inheritance</th>
-	  <th class="col-md-2">Method</th>
-	</tr>
-      </thead>
-      <tbody>
-	<tr>
-	  <td>13216_2383</td>
-	  <td>ASD</td>
-	  <td>Deletion</td>
-	  <td><em>De novo</em></td>
-	  <td>Genome-wide CMA</td>
-	<tr>
-	  <td>17027_1</td>
-	  <td>ASD</td>
-	  <td>Deletion</td>
-	  <td><em>Paternal</em></td>
-	  <td>Genome-wide CMA</td>
-	<tr>
-	  <td>5236_3</td>
-	  <td>ASD</td>
-	  <td>Deletion</td>
-	  <td><em>Maternal</em></td>
-	  <td>Genome-wide CMA</td>
-	<tr>
-	  <td>5328_3</td>
-	  <td>ID, ASD</td>
-	  <td>Deletion</td>
-	  <td><em>Paternal</em></td>
-	  <td>Genome-wide CMA</td>
-      </tbody>
-    </table>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-12">
-    <h4>
-      Georgieva L
-      et. al.,
-      <a href="http://www.ncbi.nlm.nih.gov/pubmed/25055870">De novo CNVs in bipolar affective disorder and schizophrenia.</a>,
-      Hum Mol Genet 
-      2014
-    </h4>
-    <table class="table">
-      <thead>
-	<tr>
-	  <th class="col-md-2">Patient ID</th>
-          <th class="col-md-4">Disorders</th>
-	  <th class="col-md-2">Type</th>
-	  <th class="col-md-2">Inheritance</th>
-	  <th class="col-md-2">Method</th>
-	</tr>
-      </thead>
-      <tbody>
-	<tr>
-	  <td>4097-6</td>
-	  <td>SCZ</td>
-	  <td>Deletion</td>
-	  <td><em>De novo</em></td>
-	  <td>Genome-wide CMA</td>
-      </tbody>
-    </table>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-12">
-    <h4>
-      Coe BP
-      et. al.,
-      <a href="http://www.ncbi.nlm.nih.gov/pubmed/25217958">Refining analyses of copy number variation identifies specific genes associated with developmental delay.</a>,
-      Nat Genet 
-      2014
-    </h4>
-    <table class="table">
-      <thead>
-	<tr>
-	  <th class="col-md-2">Patient ID</th>
-          <th class="col-md-4">Disorders</th>
-	  <th class="col-md-2">Type</th>
-	  <th class="col-md-2">Inheritance</th>
-	  <th class="col-md-2">Method</th>
-	</tr>
-      </thead>
-      <tbody>
-	<tr>
-	  <td>Leuven_402553</td>
-	  <td>ASD</td>
-	  <td>Splice site</td>
-	  <td><em>NA</em></td>
-	  <td>Targeted sequencing</td>
-      </tbody>
-    </table>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-12">
-    <h4>
-      De Rubeis S
-      et. al.,
-      <a href="http://www.ncbi.nlm.nih.gov/pubmed/25363760">Synaptic, transcriptional and chromatin genes disrupted in autism.</a>,
-      Nature 
-      2014
-    </h4>
-    <table class="table">
-      <thead>
-	<tr>
-	  <th class="col-md-2">Patient ID</th>
-          <th class="col-md-4">Disorders</th>
-	  <th class="col-md-2">Type</th>
-	  <th class="col-md-2">Inheritance</th>
-	  <th class="col-md-2">Method</th>
-	</tr>
-      </thead>
-      <tbody>
-	<tr>
-	  <td>00HI1252A</td>
-	  <td>ASD</td>
-	  <td>Frameshift</td>
-	  <td><em>NA</em></td>
-	  <td>Whole exome sequencing</td>
-      </tbody>
-    </table>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-12">
-    <h4>
+    <p><a name="references"></a>
       Boone PM
       et. al.,
-      <a href="http://www.ncbi.nlm.nih.gov/pubmed/20848651">Detection of clinically relevant exonic copy-number changes by array CGH.</a>,
-      Hum Mutat 
+      <a href="http://www.ncbi.nlm.nih.gov/pubmed/20848651">Detection of clinically relevant exonic copy-number changes by array CGH.</a>
+      Hum Mutat
       2010
-    </h4>
-    <table class="table">
-      <thead>
-	<tr>
-	  <th class="col-md-2">Patient ID</th>
-          <th class="col-md-4">Disorders</th>
-	  <th class="col-md-2">Type</th>
-	  <th class="col-md-2">Inheritance</th>
-	  <th class="col-md-2">Method</th>
-	</tr>
-      </thead>
-      <tbody>
-	<tr>
-	  <td>11</td>
-	  <td>ID, EP, ADHD</td>
-	  <td>Deletion</td>
-	  <td><em>Paternal</em></td>
-	  <td>Targeted CNV analysis</td>
-      </tbody>
-    </table>
+    </p>
+  </div>
+  <div class="col-md-12">
+    <p><a name="references"></a>
+      Bremer A
+      et. al.,
+      <a href="http://www.ncbi.nlm.nih.gov/pubmed/21302340">Copy number variation characteristics in subpopulations of patients with autism spectrum disorders.</a>
+      Am J Med Genet B Neuropsychiatr Genet
+      2011
+    </p>
+  </div>
+  <div class="col-md-12">
+    <p><a name="references"></a>
+      Ching MS
+      et. al.,
+      <a href="http://www.ncbi.nlm.nih.gov/pubmed/20468056">Deletions of NRXN1 (neurexin-1) predispose to a wide spectrum of developmental disorders.</a>
+      Am J Med Genet B Neuropsychiatr Genet
+      2010
+    </p>
+  </div>
+  <div class="col-md-12">
+    <p><a name="references"></a>
+      Coe BP
+      et. al.,
+      <a href="http://www.ncbi.nlm.nih.gov/pubmed/25217958">Refining analyses of copy number variation identifies specific genes associated with developmental delay.</a>
+      Nat Genet
+      2014
+    </p>
+  </div>
+  <div class="col-md-12">
+    <p><a name="references"></a>
+      Dabell MP
+      et. al.,
+      <a href="http://www.ncbi.nlm.nih.gov/pubmed/23495017">Investigation of NRXN1 deletions: clinical and molecular characterization.</a>
+      Am J Med Genet A
+      2013
+    </p>
+  </div>
+  <div class="col-md-12">
+    <p><a name="references"></a>
+      De Rubeis S
+      et. al.,
+      <a href="http://www.ncbi.nlm.nih.gov/pubmed/25363760">Synaptic, transcriptional and chromatin genes disrupted in autism.</a>
+      Nature
+      2014
+    </p>
+  </div>
+  <div class="col-md-12">
+    <p><a name="references"></a>
+      Duong L
+      et. al.,
+      <a href="http://www.ncbi.nlm.nih.gov/pubmed/22337556">Mutations in NRXN1 in a family multiply affected with brain disorders: NRXN1 mutations and brain disorders.</a>
+      Am J Med Genet B Neuropsychiatr Genet
+      2012
+    </p>
+  </div>
+  <div class="col-md-12">
+    <p><a name="references"></a>
+      Eriksson MA
+      et. al.,
+      <a href="http://www.ncbi.nlm.nih.gov/pubmed/25661985">Rare copy number variants are common in young children with autism spectrum disorder.</a>
+      Acta Paediatr
+      2015
+    </p>
+  </div>
+  <div class="col-md-12">
+    <p><a name="references"></a>
+      Gai X
+      et. al.,
+      <a href="http://www.ncbi.nlm.nih.gov/pubmed/21358714">Rare structural variation of synapse and neurotransmission genes in autism.</a>
+      Mol Psychiatry
+      2012
+    </p>
+  </div>
+  <div class="col-md-12">
+    <p><a name="references"></a>
+      Gauthier J
+      et. al.,
+      <a href="http://www.ncbi.nlm.nih.gov/pubmed/21424692">Truncating mutations in NRXN2 and NRXN1 in autism spectrum disorders and schizophrenia.</a>
+      Hum Genet
+      2011
+    </p>
+  </div>
+  <div class="col-md-12">
+    <p><a name="references"></a>
+      Georgieva L
+      et. al.,
+      <a href="http://www.ncbi.nlm.nih.gov/pubmed/25055870">De novo CNVs in bipolar affective disorder and schizophrenia.</a>
+      Hum Mol Genet
+      2014
+    </p>
+  </div>
+  <div class="col-md-12">
+    <p><a name="references"></a>
+      Girirajan S
+      et. al.,
+      <a href="http://www.ncbi.nlm.nih.gov/pubmed/23375656">Refinement and discovery of new hotspots of copy-number variation associated with autism spectrum disorder.</a>
+      Am J Hum Genet
+      2013
+    </p>
+  </div>
+  <div class="col-md-12">
+    <p><a name="references"></a>
+      Gregor A
+      et. al.,
+      <a href="http://www.ncbi.nlm.nih.gov/pubmed/21827697">Expanding the clinical spectrum associated with defects in CNTNAP2 and NRXN1.</a>
+      BMC Med Genet
+      2011
+    </p>
+  </div>
+  <div class="col-md-12">
+    <p><a name="references"></a>
+      Hu X
+      et. al.,
+      <a href="http://www.ncbi.nlm.nih.gov/pubmed/24126932">A survey of rare coding variants in candidate genes in schizophrenia by deep sequencing.</a>
+      Mol Psychiatry
+      2014
+    </p>
+  </div>
+  <div class="col-md-12">
+    <p><a name="references"></a>
+      Iossifov I
+      et. al.,
+      <a href="http://www.ncbi.nlm.nih.gov/pubmed/22542183">De novo gene disruptions in children on the autistic spectrum.</a>
+      Neuron
+      2012
+    </p>
+  </div>
+  <div class="col-md-12">
+    <p><a name="references"></a>
+      Kong A
+      et. al.,
+      <a href="http://www.ncbi.nlm.nih.gov/pubmed/22914163">Rate of de novo mutations and the importance of father's age to disease risk.</a>
+      Nature
+      2012
+    </p>
+  </div>
+  <div class="col-md-12">
+    <p><a name="references"></a>
+      Lal D
+      et. al.,
+      <a href="http://www.ncbi.nlm.nih.gov/pubmed/25950944">Burden analysis of rare microdeletions suggests a strong impact of neurodevelopmental genes in genetic generalised epilepsies.</a>
+      PLoS Genet
+      2015
+    </p>
+  </div>
+  <div class="col-md-12">
+    <p><a name="references"></a>
+      Levy D
+      et. al.,
+      <a href="http://www.ncbi.nlm.nih.gov/pubmed/21658582">Rare de novo and transmitted copy-number variation in autistic spectrum disorders.</a>
+      Neuron
+      2011
+    </p>
+  </div>
+  <div class="col-md-12">
+    <p><a name="references"></a>
+      Møller RS
+      et. al.,
+      <a href="http://www.ncbi.nlm.nih.gov/pubmed/23294455">Exon-disrupting deletions of NRXN1 in idiopathic generalized epilepsy.</a>
+      Epilepsia
+      2013
+    </p>
+  </div>
+  <div class="col-md-12">
+    <p><a name="references"></a>
+      Noor A
+      et. al.,
+      <a href="http://www.ncbi.nlm.nih.gov/pubmed/24700553">Copy number variant study of bipolar disorder in Canadian and UK populations implicates synaptic genes.</a>
+      Am J Med Genet B Neuropsychiatr Genet
+      2014
+    </p>
+  </div>
+  <div class="col-md-12">
+    <p><a name="references"></a>
+      Pinto D
+      et. al.,
+      <a href="http://www.ncbi.nlm.nih.gov/pubmed/20531469">Functional impact of global rare copy number variation in autism spectrum disorders.</a>
+      Nature
+      2010
+    </p>
+  </div>
+  <div class="col-md-12">
+    <p><a name="references"></a>
+      Pinto D
+      et. al.,
+      <a href="http://www.ncbi.nlm.nih.gov/pubmed/24768552">Convergence of genes and cellular pathways dysregulated in autism spectrum disorders.</a>
+      Am J Hum Genet
+      2014
+    </p>
+  </div>
+  <div class="col-md-12">
+    <p><a name="references"></a>
+      Purcell SM
+      et. al.,
+      <a href="http://www.ncbi.nlm.nih.gov/pubmed/24463508">A polygenic burden of rare disruptive mutations in schizophrenia.</a>
+      Nature
+      2014
+    </p>
+  </div>
+  <div class="col-md-12">
+    <p><a name="references"></a>
+      Roberts JL
+      et. al.,
+      <a href="http://www.ncbi.nlm.nih.gov/pubmed/24188901">Chromosomal microarray analysis of consecutive individuals with autism spectrum disorders or learning disability presenting for genetic services.</a>
+      Gene
+      2014
+    </p>
+  </div>
+  <div class="col-md-12">
+    <p><a name="references"></a>
+      Rujescu D
+      et. al.,
+      <a href="http://www.ncbi.nlm.nih.gov/pubmed/18945720">Disruption of the neurexin 1 gene is associated with schizophrenia.</a>
+      Hum Mol Genet
+      2009
+    </p>
+  </div>
+  <div class="col-md-12">
+    <p><a name="references"></a>
+      Shen Y
+      et. al.,
+      <a href="http://www.ncbi.nlm.nih.gov/pubmed/20231187">Clinical genetic testing for patients with autism spectrum disorders.</a>
+      Pediatrics
+      2010
+    </p>
+  </div>
+  <div class="col-md-12">
+    <p><a name="references"></a>
+      Sundaram SK
+      et. al.,
+      <a href="http://www.ncbi.nlm.nih.gov/pubmed/20427753">Tourette syndrome is associated with recurrent exonic copy number variants.</a>
+      Neurology
+      2010
+    </p>
+  </div>
+  <div class="col-md-12">
+    <p><a name="references"></a>
+      Todarello G
+      et. al.,
+      <a href="http://www.ncbi.nlm.nih.gov/pubmed/24680031">Incomplete penetrance of NRXN1 deletions in families with schizophrenia.</a>
+      Schizophr Res
+      2014
+    </p>
+  </div>
+  <div class="col-md-12">
+    <p><a name="references"></a>
+      Utine GE
+      et. al.,
+      <a href="http://www.ncbi.nlm.nih.gov/pubmed/24508361">Etiological yield of SNP microarrays in idiopathic intellectual disability.</a>
+      Eur J Paediatr Neurol
+      2014
+    </p>
+  </div>
+  <div class="col-md-12">
+    <p><a name="references"></a>
+      Vrijenhoek T
+      et. al.,
+      <a href="http://www.ncbi.nlm.nih.gov/pubmed/18940311">Recurrent CNVs disrupt three candidate genes in schizophrenia patients.</a>
+      Am J Hum Genet
+      2008
+    </p>
+  </div>
+  <div class="col-md-12">
+    <p><a name="references"></a>
+      Vulto-van Silfhout AT
+      et. al.,
+      <a href="http://www.ncbi.nlm.nih.gov/pubmed/24038936">Clinical significance of de novo and inherited copy-number variation.</a>
+      Hum Mutat
+      2013
+    </p>
+  </div>
+  <div class="col-md-12">
+    <p><a name="references"></a>
+      Walsh T
+      et. al.,
+      <a href="http://www.ncbi.nlm.nih.gov/pubmed/18369103">Rare structural variants disrupt multiple genes in neurodevelopmental pathways in schizophrenia.</a>
+      Science
+      2008
+    </p>
+  </div>
+  <div class="col-md-12">
+    <p><a name="references"></a>
+      Zweier C
+      et. al.,
+      <a href="http://www.ncbi.nlm.nih.gov/pubmed/19896112">CNTNAP2 and NRXN1 are mutated in autosomal-recessive Pitt-Hopkins-like mental retardation and determine the level of a common synaptic protein in Drosophila.</a>
+      Am J Hum Genet
+      2009
+    </p>
   </div>
 </div>
 
+<div class="source_data" data-unknown="41" data-denovo="21" data-inherited="40"></div>
 
+<div class="implicated_data" data-ID="57" data-ASD="47" data-EP="23" data-ADHD="9" data-SCZ="20" data-BD="2"></div>
 
     </div>
-  </body>
-  <script src="../javascripts/all.js" type="text/javascript"></script><script src="../javascripts/bootstrap.js" type="text/javascript"></script>
-</html>

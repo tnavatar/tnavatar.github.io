@@ -1,666 +1,866 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    
-    <!-- Always force latest IE rendering engine or request Chrome Frame -->
-    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-    
-    <!-- Use title if it's in the page YAML frontmatter -->
-    <title>The Middleman</title>
-    
-    <link href="../stylesheets/all.css" rel="stylesheet" type="text/css" />
-  </head>
-  
-  <body class="genes genes_SYNGAP1">
-    <div class="container">
-      <div class="row">
-  <div class="col-md-12">
+    <div class="container genes genes_SYNGAP1">
+      
+<!-- <div class="row"> -->
+  <!-- <div class="col-md-6">
     <p><a href="../">back to genes</a></p>
+  </div> -->
+<!-- </div> -->
+
+<!-- <div class="row "> -->
+  <div class="col-md-6">
+    <p><a href="../">back to genes</a></p>
+    <h1><em>SYNGAP1</em></h1>
+    <p><b>Gene name:  </b><em>synaptic Ras GTPase activating protein 1</em></p>
+    <p><b>Chromosome band:  </b><em>6p21.3</em></p>
+    <h3>Tier 1</h3>
+    <!-- <p class="lead">36 pathogenic variants in 17 papers</p> -->
+    <!-- <ul> -->
+      <!-- <li class="list-unstyled"> -->
+	<!-- <strong> -->
+    <!-- 30 -->
+	<!-- </strong> -->
+	<!-- Implicated in Intellectual Disability/Developmental Delay (ID) -->
+      <!-- </li> -->
+      <!-- <li class="list-unstyled"> -->
+	<!-- <strong> -->
+    <!-- 9 -->
+	<!-- </strong> -->
+	<!-- Implicated in Autism Spectrum Disorder (ASD) -->
+      <!-- </li> -->
+      <!-- <li class="list-unstyled"> -->
+	<!-- <strong> -->
+    <!-- 20 -->
+	<!-- </strong> -->
+	<!-- Implicated in Epilepsy (EP) -->
+      <!-- </li> -->
+      <!-- <li class="list-unstyled"> -->
+	<!-- <strong> -->
+    <!-- 1 -->
+	<!-- </strong> -->
+	<!-- Implicated in Attention Deficit and Hyperactivity Disorder (ADHD) -->
+      <!-- </li> -->
+      <!-- <li class="list-unstyled"> -->
+	<!-- <strong> -->
+    <!-- 2 -->
+	<!-- </strong> -->
+	<!-- Implicated in Schizopherenia (SCZ) -->
+      <!-- </li> -->
+      <!-- <li class="list-unstyled"> -->
+	<!-- <strong> -->
+    <!-- 0 -->
+	<!-- </strong> -->
+	<!-- Implicated in Bipolar Disorder (BD) -->
+      <!-- </li> -->
+    <!-- </ul> -->
+    <!-- <div class="row"> -->
+      <div class="col-md-12" id="barGraph">
+      </div>
+    <!-- </div> -->
+
+  </div>
+  <!--  -->
+
+<!-- </div> -->
+
+<div class="row" id="top-pieChart">
+  <div class="col-md-6" id="pieChart">
   </div>
 </div>
 
-<div class="row ">
-  <div class="col-md-12">
-    <h1>SYNGAP1</h1>   
-    <p><em>gene name</em></p>
-    <p><em>gene location</em></p>
-    <h3>tier 1</h3>
-    <p class="lead">34 pathogenic variants in 16 papers</p>
-    <ul>
-      <li class="list-unstyled">
-	<strong>
-	  28
-	</strong>
-	implicated in Intelectual Disorder/Developmental Delay (ID)
-      </li>
-      <li class="list-unstyled">
-	<strong>
-	  9
-	</strong>
-	implicated in Autism Spectrum Disorder (ASD)
-      </li>
-      <li class="list-unstyled">
-	<strong>
-	  19
-	</strong>
-	implicated in Epilepsy (EP)
-      </li>
-      <li class="list-unstyled">
-	<strong>
-	  1
-	</strong>
-	implicated in Attention Deficit and Hyperactivity Disorder (ADHD)
-      </li>
-      <li class="list-unstyled">
-	<strong>
-	  2
-	</strong>
-	implicated in Schizopherenia (SCZ)
-      </li>
-      <li class="list-unstyled">
-	<strong>
-	  0
-	</strong>
-	implicated in Bipolar Disorder (BD)
-      </li>
-    </ul>
-  </div>
+
+<p id="par">
+  <b>Columns to display:</b><br>
+  &nbsp; Note: categories denoted by + may not have values in all cases.
+</p>
+
+<div class="col-md-3 checkboxes">
+  <p><input type="checkbox" name="disorders" checked="checked" /> Disorder(s)<br>
+  <input type="checkbox" name="variant_type" checked="checked" /> Variant Type<br>
+  <input type="checkbox" name="inheritance" checked="checked" /> Inheritance<br>
+  <input type="checkbox" name="method" checked="checked" /> Method<br>
+  <input type="checkbox" name="chromosome" /> Chromosome +<br>
+  <input type="checkbox" name="cnv_size" /> CNV Size +<br>
+  <input type="checkbox" name="genome_build" /> Genome Build +</p>
 </div>
+<div class="col-md-9 checkboxes">
+  <p><input type="checkbox" name="coding_dna_change" /> Coding DNA Change +<br>
+  <input type="checkbox" name="protein_change" /> Protein Change +<br>
+  <input type="checkbox" name="position" /> Position +<br>
+  <input type="checkbox" name="reference_sequence" /> Reference Sequence +<br>
+  <input type="checkbox" name="alternate_sequence" /> Alternate Sequence +<br>
+  <input type="checkbox" name="patient_id" /> Patient ID<br>
+  <input type="checkbox" name="the_reference" checked="checked" /> Reference</p>
+</div>
+<div class="row">
+  <div class="col-md-12" id="table-container">
+    <table class="table" id="maintable">
+    <thead>
+  <tr>
+  <th class="disorders">Disorder(s)</th>
+  <th class="variant_type">Variant Type</th>
+  <th class="inheritance">Inheritance</th>
+  <th class="method">Method</th>
+  <th class="chromosome">Chromosome</th>
+  <th class="cnv_size">CNV Size</th>
+  <th class="genome_build">Genome Build</th>
+  <th class="coding_dna_change">Coding DNA Change</th>
+  <th class="protein_change">Protein Change</th>
+  <th class="position">Position</th>
+  <th class="reference_sequence">Reference Sequence</th>
+  <th class="alternate_sequence">Alternate Sequence</th>
+  <th class="patient_id">Patient ID</th>
+  <th class="the_reference">Reference</th>
+  </tr>
+</thead>
 
 
-<div class="row">
-  <div class="col-md-12">
-    <h4>
-      Hamdan FF
-      et. al.,
-      <a href="http://www.ncbi.nlm.nih.gov/pubmed/19196676">Mutations in SYNGAP1 in autosomal nonsyndromic mental retardation.</a>,
-      N Engl J Med 
-      2009
-    </h4>
-    <table class="table">
-      <thead>
-	<tr>
-	  <th class="col-md-2">Patient ID</th>
-          <th class="col-md-4">Disorders</th>
-	  <th class="col-md-2">Type</th>
-	  <th class="col-md-2">Inheritance</th>
-	  <th class="col-md-2">Method</th>
-	</tr>
-      </thead>
-      <tbody>
-	<tr>
-	  <td>P1</td>
-	  <td>ID, EP</td>
-	  <td>Nonsense</td>
-	  <td><em>De novo</em></td>
-	  <td>Targeted sequencing</td>
-	<tr>
-	  <td>P2</td>
-	  <td>ID, EP</td>
-	  <td>Nonsense</td>
-	  <td><em>De novo</em></td>
-	  <td>Targeted sequencing</td>
-	<tr>
-	  <td>P3</td>
-	  <td>ID, EP</td>
-	  <td>Frameshift</td>
-	  <td><em>De novo</em></td>
-	  <td>Targeted sequencing</td>
-      </tbody>
+
+
+
+<tbody>
+<!--  -->
+<tr>
+<td class="disorders">ID, EP</td>
+<td class="variant_type">Frameshift</td>
+<td class="inheritance">Paternal</td>
+<td class="method">Targeted sequencing</td>
+<td class="chromosome"></td>
+<td class="cnv_size"></td>
+<td class="genome_build"></td>
+<td class="coding_dna_change">c.283dupC</td>
+<td class="protein_change">p.H95PfsX5</td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">P1</td>
+<td class="the_reference"><a href="#references">Berryer et al. 2013</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID, EP</td>
+<td class="variant_type">Nonsense</td>
+<td class="inheritance"><em>De novo</em></td>
+<td class="method">Whole exome sequencing</td>
+<td class="chromosome"></td>
+<td class="cnv_size"></td>
+<td class="genome_build"></td>
+<td class="coding_dna_change">c.2212_2213del</td>
+<td class="protein_change">p.s738X</td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">P4</td>
+<td class="the_reference"><a href="#references">Berryer et al. 2013</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID, EP</td>
+<td class="variant_type">Frameshift</td>
+<td class="inheritance"><em>De novo</em></td>
+<td class="method">Whole exome sequencing</td>
+<td class="chromosome"></td>
+<td class="cnv_size"></td>
+<td class="genome_build"></td>
+<td class="coding_dna_change">c.2184delC</td>
+<td class="protein_change">p.N729TfsX31</td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">P5</td>
+<td class="the_reference"><a href="#references">Berryer et al. 2013</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID, ASD, EP</td>
+<td class="variant_type">Nonsense</td>
+<td class="inheritance"><em>De novo</em></td>
+<td class="method">Targeted sequencing</td>
+<td class="chromosome"></td>
+<td class="cnv_size"></td>
+<td class="genome_build"></td>
+<td class="coding_dna_change"></td>
+<td class="protein_change">p.Trp267*</td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">T15923</td>
+<td class="the_reference"><a href="#references">Carvill et al. 2013</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID, EP</td>
+<td class="variant_type">Frameshift</td>
+<td class="inheritance">Unknown</td>
+<td class="method">Targeted sequencing</td>
+<td class="chromosome"></td>
+<td class="cnv_size"></td>
+<td class="genome_build"></td>
+<td class="coding_dna_change"></td>
+<td class="protein_change">p.Lys108Valfs*25</td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">T19988</td>
+<td class="the_reference"><a href="#references">Carvill et al. 2013</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID, EP</td>
+<td class="variant_type">Nonsense</td>
+<td class="inheritance">Unknown</td>
+<td class="method">Targeted sequencing</td>
+<td class="chromosome"></td>
+<td class="cnv_size"></td>
+<td class="genome_build"></td>
+<td class="coding_dna_change"></td>
+<td class="protein_change">p.Gln702*</td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">T2528</td>
+<td class="the_reference"><a href="#references">Carvill et al. 2013</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID, ASD, EP</td>
+<td class="variant_type">Nonsense</td>
+<td class="inheritance"><em>De novo</em></td>
+<td class="method">Targeted sequencing</td>
+<td class="chromosome"></td>
+<td class="cnv_size"></td>
+<td class="genome_build"></td>
+<td class="coding_dna_change"></td>
+<td class="protein_change">p.Arg143*</td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">T22387</td>
+<td class="the_reference"><a href="#references">Carvill et al. 2013</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ASD</td>
+<td class="variant_type">Frameshift</td>
+<td class="inheritance"><em>De novo</em></td>
+<td class="method">Whole exome sequencing</td>
+<td class="chromosome"></td>
+<td class="cnv_size"></td>
+<td class="genome_build"></td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position">33408610</td>
+<td class="reference_sequence">TC</td>
+<td class="alternate_sequence">T</td>
+<td class="patient_id">09C80386</td>
+<td class="the_reference"><a href="#references">De Rubeis et al. 2014</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ASD</td>
+<td class="variant_type">Nonsense</td>
+<td class="inheritance"><em>De novo</em></td>
+<td class="method">Whole exome sequencing</td>
+<td class="chromosome"></td>
+<td class="cnv_size"></td>
+<td class="genome_build"></td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position">33405763</td>
+<td class="reference_sequence">C</td>
+<td class="alternate_sequence">T</td>
+<td class="patient_id">NDAR_INVDU502HMU_wes1</td>
+<td class="the_reference"><a href="#references">De Rubeis et al. 2014</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ASD</td>
+<td class="variant_type">Frameshift</td>
+<td class="inheritance"><em>De novo</em></td>
+<td class="method">Whole exome sequencing</td>
+<td class="chromosome"></td>
+<td class="cnv_size"></td>
+<td class="genome_build"></td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position">33414451</td>
+<td class="reference_sequence">GAACA</td>
+<td class="alternate_sequence">G</td>
+<td class="patient_id">NDAR_INVZX362NCN_wes1</td>
+<td class="the_reference"><a href="#references">De Rubeis et al. 2014</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID, EP</td>
+<td class="variant_type">Frameshift</td>
+<td class="inheritance"><em>De novo</em></td>
+<td class="method">Whole exome sequencing</td>
+<td class="chromosome"></td>
+<td class="cnv_size"></td>
+<td class="genome_build"></td>
+<td class="coding_dna_change">c.2184del</td>
+<td class="protein_change">p.N729TfsX31</td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">8</td>
+<td class="the_reference"><a href="#references">Dyment et al. 2014</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID</td>
+<td class="variant_type">Loss of function</td>
+<td class="inheritance"><em>De novo</em></td>
+<td class="method">Whole exome sequencing</td>
+<td class="chromosome"></td>
+<td class="cnv_size"></td>
+<td class="genome_build"></td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position">33411606</td>
+<td class="reference_sequence">C</td>
+<td class="alternate_sequence">T</td>
+<td class="patient_id">258536</td>
+<td class="the_reference"><a href="#references">Fitzgerald et al. 2014</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID, EP</td>
+<td class="variant_type">Loss of function</td>
+<td class="inheritance"><em>De novo</em></td>
+<td class="method">Whole exome sequencing</td>
+<td class="chromosome"></td>
+<td class="cnv_size"></td>
+<td class="genome_build"></td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position">33411111</td>
+<td class="reference_sequence">C</td>
+<td class="alternate_sequence">T</td>
+<td class="patient_id">258913</td>
+<td class="the_reference"><a href="#references">Fitzgerald et al. 2014</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID, EP</td>
+<td class="variant_type">Frameshift</td>
+<td class="inheritance"><em>De novo</em></td>
+<td class="method">Whole exome sequencing</td>
+<td class="chromosome"></td>
+<td class="cnv_size"></td>
+<td class="genome_build"></td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position">33406569</td>
+<td class="reference_sequence">CTGTATG</td>
+<td class="alternate_sequence">G</td>
+<td class="patient_id">259041</td>
+<td class="the_reference"><a href="#references">Fitzgerald et al. 2014</a></td>
+<!--  -->
+<tr>
+<td class="disorders">EP</td>
+<td class="variant_type">Frameshift</td>
+<td class="inheritance"><em>De novo</em></td>
+<td class="method">Whole exome sequencing</td>
+<td class="chromosome"></td>
+<td class="cnv_size"></td>
+<td class="genome_build"></td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position">33411102</td>
+<td class="reference_sequence">CT</td>
+<td class="alternate_sequence">C</td>
+<td class="patient_id">259606</td>
+<td class="the_reference"><a href="#references">Fitzgerald et al. 2014</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID</td>
+<td class="variant_type">Loss of function</td>
+<td class="inheritance"><em>De novo</em></td>
+<td class="method">Whole exome sequencing</td>
+<td class="chromosome"></td>
+<td class="cnv_size"></td>
+<td class="genome_build"></td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position">33411093</td>
+<td class="reference_sequence">C</td>
+<td class="alternate_sequence">T</td>
+<td class="patient_id">264135</td>
+<td class="the_reference"><a href="#references">Fitzgerald et al. 2014</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID, EP</td>
+<td class="variant_type">Nonsense</td>
+<td class="inheritance"><em>De novo</em></td>
+<td class="method">Targeted sequencing</td>
+<td class="chromosome"></td>
+<td class="cnv_size"></td>
+<td class="genome_build"></td>
+<td class="coding_dna_change"></td>
+<td class="protein_change">p.K138X</td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">P1</td>
+<td class="the_reference"><a href="#references">Hamdan et al. 2009*</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID, EP</td>
+<td class="variant_type">Nonsense</td>
+<td class="inheritance"><em>De novo</em></td>
+<td class="method">Targeted sequencing</td>
+<td class="chromosome"></td>
+<td class="cnv_size"></td>
+<td class="genome_build"></td>
+<td class="coding_dna_change"></td>
+<td class="protein_change">p.R579X</td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">P2</td>
+<td class="the_reference"><a href="#references">Hamdan et al. 2009*</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID, EP</td>
+<td class="variant_type">Frameshift</td>
+<td class="inheritance"><em>De novo</em></td>
+<td class="method">Targeted sequencing</td>
+<td class="chromosome"></td>
+<td class="cnv_size"></td>
+<td class="genome_build"></td>
+<td class="coding_dna_change"></td>
+<td class="protein_change">p.L813RfsX22</td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">P3</td>
+<td class="the_reference"><a href="#references">Hamdan et al. 2009*</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID, EP</td>
+<td class="variant_type">Nonsense</td>
+<td class="inheritance"><em>De novo</em></td>
+<td class="method">Targeted sequencing</td>
+<td class="chromosome"></td>
+<td class="cnv_size"></td>
+<td class="genome_build"></td>
+<td class="coding_dna_change"></td>
+<td class="protein_change">p.Lys138X</td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">Patient 1</td>
+<td class="the_reference"><a href="#references">Hamdan et al. 2011</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID, EP</td>
+<td class="variant_type">Nonsense</td>
+<td class="inheritance"><em>De novo</em></td>
+<td class="method">Targeted sequencing</td>
+<td class="chromosome"></td>
+<td class="cnv_size"></td>
+<td class="genome_build"></td>
+<td class="coding_dna_change"></td>
+<td class="protein_change">p.Arg579X</td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">Patient 2</td>
+<td class="the_reference"><a href="#references">Hamdan et al. 2011</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID</td>
+<td class="variant_type">Frameshift</td>
+<td class="inheritance"><em>De novo</em></td>
+<td class="method">Targeted sequencing</td>
+<td class="chromosome"></td>
+<td class="cnv_size"></td>
+<td class="genome_build"></td>
+<td class="coding_dna_change"></td>
+<td class="protein_change">p.Leu813ArgfsX23</td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">Patient 3</td>
+<td class="the_reference"><a href="#references">Hamdan et al. 2011</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID, EP</td>
+<td class="variant_type">Frameshift</td>
+<td class="inheritance"><em>De novo</em></td>
+<td class="method">Targeted sequencing</td>
+<td class="chromosome"></td>
+<td class="cnv_size"></td>
+<td class="genome_build"></td>
+<td class="coding_dna_change">c.2677delC</td>
+<td class="protein_change">p.Q893Rfs</td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">P1 R0034759</td>
+<td class="the_reference"><a href="#references">Hamdan et al. 2011*</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID, EP, ADHD</td>
+<td class="variant_type">Frameshift</td>
+<td class="inheritance"><em>De novo</em></td>
+<td class="method">Targeted sequencing</td>
+<td class="chromosome"></td>
+<td class="cnv_size"></td>
+<td class="genome_build"></td>
+<td class="coding_dna_change">c.321_324delGAAG</td>
+<td class="protein_change">p.K108Vfs</td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">P2 R0038372</td>
+<td class="the_reference"><a href="#references">Hamdan et al. 2011*</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID, ASD</td>
+<td class="variant_type">Splice site</td>
+<td class="inheritance"><em>De novo</em></td>
+<td class="method">Targeted sequencing</td>
+<td class="chromosome"></td>
+<td class="cnv_size"></td>
+<td class="genome_build"></td>
+<td class="coding_dna_change">c.2294+1G>A</td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">P3 R0034526</td>
+<td class="the_reference"><a href="#references">Hamdan et al. 2011*</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID, ASD</td>
+<td class="variant_type">Frameshift</td>
+<td class="inheritance"><em>De novo</em></td>
+<td class="method">Whole exome sequencing</td>
+<td class="chromosome"></td>
+<td class="cnv_size"></td>
+<td class="genome_build"></td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position">33408651</td>
+<td class="reference_sequence">del(2)</td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">13073</td>
+<td class="the_reference"><a href="#references">Iossifov et al. 2014</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID, ASD</td>
+<td class="variant_type">Frameshift</td>
+<td class="inheritance"><em>De novo</em></td>
+<td class="method">Whole exome sequencing</td>
+<td class="chromosome"></td>
+<td class="cnv_size"></td>
+<td class="genome_build"></td>
+<td class="coding_dna_change"></td>
+<td class="protein_change">p.Arg299Profs*4 8</td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">105</td>
+<td class="the_reference"><a href="#references">Lee et al. 2014</a></td>
+<!--  -->
+<tr>
+<td class="disorders">SCZ</td>
+<td class="variant_type">Frameshift</td>
+<td class="inheritance">Unknown</td>
+<td class="method">Whole exome sequencing</td>
+<td class="chromosome"></td>
+<td class="cnv_size"></td>
+<td class="genome_build"></td>
+<td class="coding_dna_change"></td>
+<td class="protein_change"></td>
+<td class="position">33411512</td>
+<td class="reference_sequence">C</td>
+<td class="alternate_sequence">CG</td>
+<td class="patient_id">NA</td>
+<td class="the_reference"><a href="#references">Purcell et al. 2014</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID, ASD</td>
+<td class="variant_type">Frameshift</td>
+<td class="inheritance"><em>De novo</em></td>
+<td class="method">Whole exome sequencing</td>
+<td class="chromosome"></td>
+<td class="cnv_size"></td>
+<td class="genome_build"></td>
+<td class="coding_dna_change">c.1253_1254del</td>
+<td class="protein_change">p.Lys418Argfs*54</td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">ER53899</td>
+<td class="the_reference"><a href="#references">Rauch et al. 2012</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID, EP</td>
+<td class="variant_type">Frameshift</td>
+<td class="inheritance"><em>De novo</em></td>
+<td class="method">Whole exome sequencing</td>
+<td class="chromosome"></td>
+<td class="cnv_size"></td>
+<td class="genome_build"></td>
+<td class="coding_dna_change">c.2630dup</td>
+<td class="protein_change">p.Thr878Aspfs*60</td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">BO14/09</td>
+<td class="the_reference"><a href="#references">Rauch et al. 2012</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID</td>
+<td class="variant_type">Frameshift</td>
+<td class="inheritance"><em>De novo</em></td>
+<td class="method">Targeted sequencing</td>
+<td class="chromosome"></td>
+<td class="cnv_size"></td>
+<td class="genome_build"></td>
+<td class="coding_dna_change">c.3583-6G>A</td>
+<td class="protein_change">p.Val1195Alafs*27</td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">APN-139</td>
+<td class="the_reference"><a href="#references">Redin et al. 2014</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID, EP</td>
+<td class="variant_type">Frameshift</td>
+<td class="inheritance"><em>De novo</em></td>
+<td class="method">Targeted sequencing</td>
+<td class="chromosome"></td>
+<td class="cnv_size"></td>
+<td class="genome_build"></td>
+<td class="coding_dna_change">c.1783del</td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">3</td>
+<td class="the_reference"><a href="#references">Tan et al. 2015</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID</td>
+<td class="variant_type">Frameshift</td>
+<td class="inheritance"><em>De novo</em></td>
+<td class="method">Targeted sequencing</td>
+<td class="chromosome"></td>
+<td class="cnv_size"></td>
+<td class="genome_build"></td>
+<td class="coding_dna_change">c.2602del</td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">4</td>
+<td class="the_reference"><a href="#references">Tan et al. 2015</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID</td>
+<td class="variant_type">Frameshift</td>
+<td class="inheritance"><em>De novo</em></td>
+<td class="method">Whole exome sequencing</td>
+<td class="chromosome"></td>
+<td class="cnv_size"></td>
+<td class="genome_build"></td>
+<td class="coding_dna_change">c.998_999del</td>
+<td class="protein_change">p.Val333AlafsX</td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">Trio 8</td>
+<td class="the_reference"><a href="#references">Vissers et al. 2010</a></td>
+<!--  -->
+<tr>
+<td class="disorders">SCZ</td>
+<td class="variant_type">Splice site</td>
+<td class="inheritance"><em>De novo</em></td>
+<td class="method">Whole exome sequencing</td>
+<td class="chromosome"></td>
+<td class="cnv_size"></td>
+<td class="genome_build"></td>
+<td class="coding_dna_change">c.3583-1</td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">trio_018</td>
+<td class="the_reference"><a href="#references">Xu et al. 2012</a></td>
+<!--  -->
+<tr>
+<td class="disorders">ID</td>
+<td class="variant_type">Nonsense</td>
+<td class="inheritance"><em>De novo</em></td>
+<td class="method">Whole exome sequencing</td>
+<td class="chromosome"></td>
+<td class="cnv_size"></td>
+<td class="genome_build"></td>
+<td class="coding_dna_change">NA</td>
+<td class="protein_change"></td>
+<td class="position"></td>
+<td class="reference_sequence"></td>
+<td class="alternate_sequence"></td>
+<td class="patient_id">14</td>
+<td class="the_reference"><a href="#references">Yang et al. 2013</a></td>
+<!--  -->
+</tbody>
     </table>
+    <div id="bottom_anchor"></div>
   </div>
 </div>
-<div class="row">
+<!--  -->
+
+<div class="row" id="citations">
+  <h4>References</h4>
   <div class="col-md-12">
-    <h4>
-      Vissers LE
-      et. al.,
-      <a href="http://www.ncbi.nlm.nih.gov/pubmed/21076407">A de novo paradigm for mental retardation.</a>,
-      Nat Genet 
-      2010
-    </h4>
-    <table class="table">
-      <thead>
-	<tr>
-	  <th class="col-md-2">Patient ID</th>
-          <th class="col-md-4">Disorders</th>
-	  <th class="col-md-2">Type</th>
-	  <th class="col-md-2">Inheritance</th>
-	  <th class="col-md-2">Method</th>
-	</tr>
-      </thead>
-      <tbody>
-	<tr>
-	  <td>Trio 8</td>
-	  <td>ID</td>
-	  <td>Frameshift</td>
-	  <td><em>De novo</em></td>
-	  <td>Whole exome sequencing</td>
-      </tbody>
-    </table>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-12">
-    <h4>
-      Hamdan FF
-      et. al.,
-      <a href="http://www.ncbi.nlm.nih.gov/pubmed/21237447">De novo SYNGAP1 mutations in nonsyndromic intellectual disability and autism.</a>,
-      Biol Psychiatry 
-      2011
-    </h4>
-    <table class="table">
-      <thead>
-	<tr>
-	  <th class="col-md-2">Patient ID</th>
-          <th class="col-md-4">Disorders</th>
-	  <th class="col-md-2">Type</th>
-	  <th class="col-md-2">Inheritance</th>
-	  <th class="col-md-2">Method</th>
-	</tr>
-      </thead>
-      <tbody>
-	<tr>
-	  <td>P1 R0034759</td>
-	  <td>ID, EP</td>
-	  <td>Frameshift</td>
-	  <td><em>De novo</em></td>
-	  <td>Targeted sequencing</td>
-	<tr>
-	  <td>P2 R0038372</td>
-	  <td>ID, EP, ADHD</td>
-	  <td>Frameshift</td>
-	  <td><em>De novo</em></td>
-	  <td>Targeted sequencing</td>
-	<tr>
-	  <td>P3 R0034526</td>
-	  <td>ID, ASD</td>
-	  <td>Splice site</td>
-	  <td><em>De novo</em></td>
-	  <td>Targeted sequencing</td>
-      </tbody>
-    </table>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-12">
-    <h4>
-      Hamdan FF
-      et. al.,
-      <a href="http://www.ncbi.nlm.nih.gov/pubmed/21364700">Intellectual disability without epilepsy associated with STXBP1 disruption.</a>,
-      Eur J Hum Genet 
-      2011
-    </h4>
-    <table class="table">
-      <thead>
-	<tr>
-	  <th class="col-md-2">Patient ID</th>
-          <th class="col-md-4">Disorders</th>
-	  <th class="col-md-2">Type</th>
-	  <th class="col-md-2">Inheritance</th>
-	  <th class="col-md-2">Method</th>
-	</tr>
-      </thead>
-      <tbody>
-	<tr>
-	  <td>Patient 1</td>
-	  <td>ID, EP</td>
-	  <td>Nonsense</td>
-	  <td><em>De novo</em></td>
-	  <td>Targeted sequencing</td>
-	<tr>
-	  <td>Patient 2</td>
-	  <td>ID, EP</td>
-	  <td>Nonsense</td>
-	  <td><em>De novo</em></td>
-	  <td>Targeted sequencing</td>
-	<tr>
-	  <td>Patient 3</td>
-	  <td>ID</td>
-	  <td>Frameshift</td>
-	  <td><em>De novo</em></td>
-	  <td>Targeted sequencing</td>
-      </tbody>
-    </table>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-12">
-    <h4>
-      Rauch A
-      et. al.,
-      <a href="http://www.ncbi.nlm.nih.gov/pubmed/23020937">Range of genetic mutations associated with severe non-syndromic sporadic intellectual disability: an exome sequencing study.</a>,
-      Lancet 
-      2012
-    </h4>
-    <table class="table">
-      <thead>
-	<tr>
-	  <th class="col-md-2">Patient ID</th>
-          <th class="col-md-4">Disorders</th>
-	  <th class="col-md-2">Type</th>
-	  <th class="col-md-2">Inheritance</th>
-	  <th class="col-md-2">Method</th>
-	</tr>
-      </thead>
-      <tbody>
-	<tr>
-	  <td>ER53899</td>
-	  <td>ID, ASD</td>
-	  <td>Frameshift</td>
-	  <td><em>De novo</em></td>
-	  <td>Whole exome sequencing</td>
-	<tr>
-	  <td>BO14/09</td>
-	  <td>ID, EP</td>
-	  <td>Frameshift</td>
-	  <td><em>De novo</em></td>
-	  <td>Whole exome sequencing</td>
-      </tbody>
-    </table>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-12">
-    <h4>
-      Xu B
-      et. al.,
-      <a href="http://www.ncbi.nlm.nih.gov/pubmed/23042115">De novo gene mutations highlight patterns of genetic and neural complexity in schizophrenia.</a>,
-      Nat Genet 
-      2012
-    </h4>
-    <table class="table">
-      <thead>
-	<tr>
-	  <th class="col-md-2">Patient ID</th>
-          <th class="col-md-4">Disorders</th>
-	  <th class="col-md-2">Type</th>
-	  <th class="col-md-2">Inheritance</th>
-	  <th class="col-md-2">Method</th>
-	</tr>
-      </thead>
-      <tbody>
-	<tr>
-	  <td>trio_018</td>
-	  <td>SCZ</td>
-	  <td>Splice site</td>
-	  <td><em>De novo</em></td>
-	  <td>Whole exome sequencing</td>
-      </tbody>
-    </table>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-12">
-    <h4>
+    <p><a name="references"></a>
       Berryer MH
       et. al.,
-      <a href="http://www.ncbi.nlm.nih.gov/pubmed/23161826">Mutations in SYNGAP1 cause intellectual disability, autism, and a specific form of epilepsy by inducing haploinsufficiency.</a>,
-      Hum Mutat 
+      <a href="http://www.ncbi.nlm.nih.gov/pubmed/23161826">Mutations in SYNGAP1 cause intellectual disability, autism, and a specific form of epilepsy by inducing haploinsufficiency.</a>
+      Hum Mutat
       2013
-    </h4>
-    <table class="table">
-      <thead>
-	<tr>
-	  <th class="col-md-2">Patient ID</th>
-          <th class="col-md-4">Disorders</th>
-	  <th class="col-md-2">Type</th>
-	  <th class="col-md-2">Inheritance</th>
-	  <th class="col-md-2">Method</th>
-	</tr>
-      </thead>
-      <tbody>
-	<tr>
-	  <td>P1</td>
-	  <td>ID, EP</td>
-	  <td>Frameshift</td>
-	  <td><em>Paternal</em></td>
-	  <td>Targeted sequencing</td>
-	<tr>
-	  <td>P4</td>
-	  <td>ID, EP</td>
-	  <td>Nonsense</td>
-	  <td><em>De novo</em></td>
-	  <td>Whole exome sequencing</td>
-	<tr>
-	  <td>P5</td>
-	  <td>ID, EP</td>
-	  <td>Frameshift</td>
-	  <td><em>De novo</em></td>
-	  <td>Whole exome sequencing</td>
-      </tbody>
-    </table>
+    </p>
   </div>
-</div>
-<div class="row">
   <div class="col-md-12">
-    <h4>
+    <p><a name="references"></a>
       Carvill GL
       et. al.,
-      <a href="http://www.ncbi.nlm.nih.gov/pubmed/23708187">Targeted resequencing in epileptic encephalopathies identifies de novo mutations in CHD2 and SYNGAP1.</a>,
-      Nat Genet 
+      <a href="http://www.ncbi.nlm.nih.gov/pubmed/23708187">Targeted resequencing in epileptic encephalopathies identifies de novo mutations in CHD2 and SYNGAP1.</a>
+      Nat Genet
       2013
-    </h4>
-    <table class="table">
-      <thead>
-	<tr>
-	  <th class="col-md-2">Patient ID</th>
-          <th class="col-md-4">Disorders</th>
-	  <th class="col-md-2">Type</th>
-	  <th class="col-md-2">Inheritance</th>
-	  <th class="col-md-2">Method</th>
-	</tr>
-      </thead>
-      <tbody>
-	<tr>
-	  <td>T15923</td>
-	  <td>ID, ASD, EP</td>
-	  <td>Nonsense</td>
-	  <td><em>De novo</em></td>
-	  <td>Targeted sequencing</td>
-	<tr>
-	  <td>T19988</td>
-	  <td>ID, EP</td>
-	  <td>Frameshift</td>
-	  <td><em>NA</em></td>
-	  <td>Targeted sequencing</td>
-	<tr>
-	  <td>T2528</td>
-	  <td>ID, EP</td>
-	  <td>Nonsense</td>
-	  <td><em>NA</em></td>
-	  <td>Targeted sequencing</td>
-	<tr>
-	  <td>T22387</td>
-	  <td>ID, ASD, EP</td>
-	  <td>Nonsense</td>
-	  <td><em>De novo</em></td>
-	  <td>Targeted sequencing</td>
-      </tbody>
-    </table>
+    </p>
   </div>
-</div>
-<div class="row">
   <div class="col-md-12">
-    <h4>
-      Yang Y
-      et. al.,
-      <a href="http://www.ncbi.nlm.nih.gov/pubmed/24088041">Clinical whole-exome sequencing for the diagnosis of mendelian disorders.</a>,
-      N Engl J Med 
-      2013
-    </h4>
-    <table class="table">
-      <thead>
-	<tr>
-	  <th class="col-md-2">Patient ID</th>
-          <th class="col-md-4">Disorders</th>
-	  <th class="col-md-2">Type</th>
-	  <th class="col-md-2">Inheritance</th>
-	  <th class="col-md-2">Method</th>
-	</tr>
-      </thead>
-      <tbody>
-	<tr>
-	  <td>14</td>
-	  <td>ID</td>
-	  <td>Nonsense</td>
-	  <td><em>De novo</em></td>
-	  <td>Whole exome sequencing</td>
-      </tbody>
-    </table>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-12">
-    <h4>
-      Purcell SM
-      et. al.,
-      <a href="http://www.ncbi.nlm.nih.gov/pubmed/24463508">A polygenic burden of rare disruptive mutations in schizophrenia.</a>,
-      Nature 
-      2014
-    </h4>
-    <table class="table">
-      <thead>
-	<tr>
-	  <th class="col-md-2">Patient ID</th>
-          <th class="col-md-4">Disorders</th>
-	  <th class="col-md-2">Type</th>
-	  <th class="col-md-2">Inheritance</th>
-	  <th class="col-md-2">Method</th>
-	</tr>
-      </thead>
-      <tbody>
-	<tr>
-	  <td>NA</td>
-	  <td>SCZ</td>
-	  <td>Frameshift</td>
-	  <td><em>NA</em></td>
-	  <td>Whole exome sequencing</td>
-      </tbody>
-    </table>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-12">
-    <h4>
-      Dyment DA
-      et. al.,
-      <a href="http://www.ncbi.nlm.nih.gov/pubmed/25046240">Whole-exome sequencing broadens the phenotypic spectrum of rare pediatric epilepsy: a retrospective study.</a>,
-      Clin Genet 
-      2014
-    </h4>
-    <table class="table">
-      <thead>
-	<tr>
-	  <th class="col-md-2">Patient ID</th>
-          <th class="col-md-4">Disorders</th>
-	  <th class="col-md-2">Type</th>
-	  <th class="col-md-2">Inheritance</th>
-	  <th class="col-md-2">Method</th>
-	</tr>
-      </thead>
-      <tbody>
-	<tr>
-	  <td>8</td>
-	  <td>ID, EP</td>
-	  <td>Frameshift</td>
-	  <td><em>De novo</em></td>
-	  <td>Whole exome sequencing</td>
-      </tbody>
-    </table>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-12">
-    <h4>
-      Redin C
-      et. al.,
-      <a href="http://www.ncbi.nlm.nih.gov/pubmed/25167861">Efficient strategy for the molecular diagnosis of intellectual disability using targeted high-throughput sequencing.</a>,
-      J Med Genet 
-      2014
-    </h4>
-    <table class="table">
-      <thead>
-	<tr>
-	  <th class="col-md-2">Patient ID</th>
-          <th class="col-md-4">Disorders</th>
-	  <th class="col-md-2">Type</th>
-	  <th class="col-md-2">Inheritance</th>
-	  <th class="col-md-2">Method</th>
-	</tr>
-      </thead>
-      <tbody>
-	<tr>
-	  <td>APN-139</td>
-	  <td>ID</td>
-	  <td>Frameshift</td>
-	  <td><em>De novo</em></td>
-	  <td>Targeted sequencing</td>
-      </tbody>
-    </table>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-12">
-    <h4>
-      Lee H
-      et. al.,
-      <a href="http://www.ncbi.nlm.nih.gov/pubmed/25326637">Clinical exome sequencing for genetic identification of rare Mendelian disorders.</a>,
-      JAMA 
-      2014
-    </h4>
-    <table class="table">
-      <thead>
-	<tr>
-	  <th class="col-md-2">Patient ID</th>
-          <th class="col-md-4">Disorders</th>
-	  <th class="col-md-2">Type</th>
-	  <th class="col-md-2">Inheritance</th>
-	  <th class="col-md-2">Method</th>
-	</tr>
-      </thead>
-      <tbody>
-	<tr>
-	  <td>105</td>
-	  <td>ID, ASD</td>
-	  <td>Frameshift</td>
-	  <td><em>De novo</em></td>
-	  <td>Whole exome sequencing</td>
-      </tbody>
-    </table>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-12">
-    <h4>
+    <p><a name="references"></a>
       De Rubeis S
       et. al.,
-      <a href="http://www.ncbi.nlm.nih.gov/pubmed/25363760">Synaptic, transcriptional and chromatin genes disrupted in autism.</a>,
-      Nature 
+      <a href="http://www.ncbi.nlm.nih.gov/pubmed/25363760">Synaptic, transcriptional and chromatin genes disrupted in autism.</a>
+      Nature
       2014
-    </h4>
-    <table class="table">
-      <thead>
-	<tr>
-	  <th class="col-md-2">Patient ID</th>
-          <th class="col-md-4">Disorders</th>
-	  <th class="col-md-2">Type</th>
-	  <th class="col-md-2">Inheritance</th>
-	  <th class="col-md-2">Method</th>
-	</tr>
-      </thead>
-      <tbody>
-	<tr>
-	  <td>09C80386</td>
-	  <td>ASD</td>
-	  <td>Frameshift</td>
-	  <td><em>De novo</em></td>
-	  <td>Whole exome sequencing</td>
-	<tr>
-	  <td>NDAR_INVDU502HMU_wes1</td>
-	  <td>ASD</td>
-	  <td>Nonsense</td>
-	  <td><em>De novo</em></td>
-	  <td>Whole exome sequencing</td>
-	<tr>
-	  <td>NDAR_INVZX362NCN_wes1</td>
-	  <td>ASD</td>
-	  <td>Frameshift</td>
-	  <td><em>De novo</em></td>
-	  <td>Whole exome sequencing</td>
-      </tbody>
-    </table>
+    </p>
   </div>
-</div>
-<div class="row">
   <div class="col-md-12">
-    <h4>
-      Iossifov I
+    <p><a name="references"></a>
+      Dyment DA
       et. al.,
-      <a href="http://www.ncbi.nlm.nih.gov/pubmed/25363768">The contribution of de novo coding mutations to autism spectrum disorder.</a>,
-      Nature 
-      2014
-    </h4>
-    <table class="table">
-      <thead>
-	<tr>
-	  <th class="col-md-2">Patient ID</th>
-          <th class="col-md-4">Disorders</th>
-	  <th class="col-md-2">Type</th>
-	  <th class="col-md-2">Inheritance</th>
-	  <th class="col-md-2">Method</th>
-	</tr>
-      </thead>
-      <tbody>
-	<tr>
-	  <td>13073</td>
-	  <td>ID, ASD</td>
-	  <td>Frameshift</td>
-	  <td><em>De novo</em></td>
-	  <td>Whole exome sequencing</td>
-      </tbody>
-    </table>
+      <a href="http://www.ncbi.nlm.nih.gov/pubmed/25046240">Whole-exome sequencing broadens the phenotypic spectrum of rare pediatric epilepsy: a retrospective study.</a>
+      Clin Genet
+      2015
+    </p>
   </div>
-</div>
-<div class="row">
   <div class="col-md-12">
-    <h4>
+    <p><a name="references"></a>
       Deciphering Developmental Disorders Study
       ,
-      <a href="http://www.ncbi.nlm.nih.gov/pubmed/25533962">Large-scale discovery of novel genetic causes of developmental disorders.</a>,
-      Nature 
+      <a href="http://www.ncbi.nlm.nih.gov/pubmed/25533962">Large-scale discovery of novel genetic causes of developmental disorders.</a>
+      Nature
       2015
-    </h4>
-    <table class="table">
-      <thead>
-	<tr>
-	  <th class="col-md-2">Patient ID</th>
-          <th class="col-md-4">Disorders</th>
-	  <th class="col-md-2">Type</th>
-	  <th class="col-md-2">Inheritance</th>
-	  <th class="col-md-2">Method</th>
-	</tr>
-      </thead>
-      <tbody>
-	<tr>
-	  <td>258536</td>
-	  <td>ID</td>
-	  <td>Loss of function</td>
-	  <td><em>De novo</em></td>
-	  <td>Whole exome sequencing</td>
-	<tr>
-	  <td>258913</td>
-	  <td>ID, EP</td>
-	  <td>Loss of function</td>
-	  <td><em>De novo</em></td>
-	  <td>Whole exome sequencing</td>
-	<tr>
-	  <td>259041</td>
-	  <td>ID, EP</td>
-	  <td>Frameshift</td>
-	  <td><em>De novo</em></td>
-	  <td>Whole exome sequencing</td>
-	<tr>
-	  <td>259606</td>
-	  <td>EP</td>
-	  <td>Frameshift</td>
-	  <td><em>De novo</em></td>
-	  <td>Whole exome sequencing</td>
-	<tr>
-	  <td>264135</td>
-	  <td>ID</td>
-	  <td>Loss of function</td>
-	  <td><em>De novo</em></td>
-	  <td>Whole exome sequencing</td>
-      </tbody>
-    </table>
+    </p>
+  </div>
+  <div class="col-md-12">
+    <p><a name="references"></a>
+      Hamdan FF
+      et. al.,
+      <a href="http://www.ncbi.nlm.nih.gov/pubmed/19196676">Mutations in SYNGAP1 in autosomal nonsyndromic mental retardation.</a>
+      N Engl J Med
+      2009
+    </p>
+  </div>
+  <div class="col-md-12">
+    <p><a name="references"></a>
+      Hamdan FF
+      et. al.,
+      <a href="http://www.ncbi.nlm.nih.gov/pubmed/21376300">Excess of de novo deleterious mutations in genes associated with glutamatergic systems in nonsyndromic intellectual disability.</a>
+      Am J Hum Genet
+      2011
+    </p>
+  </div>
+  <div class="col-md-12">
+    <p><a name="references"></a>
+      Hamdan FF
+      et. al.,
+      <a href="http://www.ncbi.nlm.nih.gov/pubmed/21237447">De novo SYNGAP1 mutations in nonsyndromic intellectual disability and autism.</a>
+      Biol Psychiatry
+      2011
+    </p>
+  </div>
+  <div class="col-md-12">
+    <p><a name="references"></a>
+      Iossifov I
+      et. al.,
+      <a href="http://www.ncbi.nlm.nih.gov/pubmed/25363768">The contribution of de novo coding mutations to autism spectrum disorder.</a>
+      Nature
+      2014
+    </p>
+  </div>
+  <div class="col-md-12">
+    <p><a name="references"></a>
+      Lee H
+      et. al.,
+      <a href="http://www.ncbi.nlm.nih.gov/pubmed/25326637">Clinical exome sequencing for genetic identification of rare Mendelian disorders.</a>
+      JAMA
+      2014
+    </p>
+  </div>
+  <div class="col-md-12">
+    <p><a name="references"></a>
+      Purcell SM
+      et. al.,
+      <a href="http://www.ncbi.nlm.nih.gov/pubmed/24463508">A polygenic burden of rare disruptive mutations in schizophrenia.</a>
+      Nature
+      2014
+    </p>
+  </div>
+  <div class="col-md-12">
+    <p><a name="references"></a>
+      Rauch A
+      et. al.,
+      <a href="http://www.ncbi.nlm.nih.gov/pubmed/23020937">Range of genetic mutations associated with severe non-syndromic sporadic intellectual disability: an exome sequencing study.</a>
+      Lancet
+      2012
+    </p>
+  </div>
+  <div class="col-md-12">
+    <p><a name="references"></a>
+      Redin C
+      et. al.,
+      <a href="http://www.ncbi.nlm.nih.gov/pubmed/25167861">Efficient strategy for the molecular diagnosis of intellectual disability using targeted high-throughput sequencing.</a>
+      J Med Genet
+      2014
+    </p>
+  </div>
+  <div class="col-md-12">
+    <p><a name="references"></a>
+      Tan CA
+      et. al.,
+      <a href="http://www.ncbi.nlm.nih.gov/pubmed/25693842">Characterization of patients referred for non-specific intellectual disability testing: the importance of autosomal genes for diagnosis.</a>
+      Clin Genet
+      2015
+    </p>
+  </div>
+  <div class="col-md-12">
+    <p><a name="references"></a>
+      Vissers LE
+      et. al.,
+      <a href="http://www.ncbi.nlm.nih.gov/pubmed/21076407">A de novo paradigm for mental retardation.</a>
+      Nat Genet
+      2010
+    </p>
+  </div>
+  <div class="col-md-12">
+    <p><a name="references"></a>
+      Xu B
+      et. al.,
+      <a href="http://www.ncbi.nlm.nih.gov/pubmed/23042115">De novo gene mutations highlight patterns of genetic and neural complexity in schizophrenia.</a>
+      Nat Genet
+      2012
+    </p>
+  </div>
+  <div class="col-md-12">
+    <p><a name="references"></a>
+      Yang Y
+      et. al.,
+      <a href="http://www.ncbi.nlm.nih.gov/pubmed/24088041">Clinical whole-exome sequencing for the diagnosis of mendelian disorders.</a>
+      N Engl J Med
+      2013
+    </p>
   </div>
 </div>
 
+<div class="source_data" data-unknown="3" data-denovo="32" data-inherited="1"></div>
 
+<div class="implicated_data" data-ID="30" data-ASD="9" data-EP="20" data-ADHD="1" data-SCZ="2" data-BD="0"></div>
 
     </div>
-  </body>
-  <script src="../javascripts/all.js" type="text/javascript"></script><script src="../javascripts/bootstrap.js" type="text/javascript"></script>
-</html>
