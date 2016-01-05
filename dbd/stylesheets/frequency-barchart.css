@@ -1,0 +1,49 @@
+.figure-freq-bar {
+  height:3px;
+  margin-bottom:1px;
+  line-height:1px;
+}
+.figure-freq-bar-ui-id {
+  background-color:#1b9e77;
+}
+.figure-freq-bar-ui-asd {
+  background-color:#d95f02;
+}
+.figure-freq-bar-ui-ep {
+  background-color:#7570b3;
+}
+.figure-freq-bar-ui-adhd {
+  background-color:#e7298a;
+}
+.figure-freq-bar-ui-scz {
+  background-color:#66a61e;
+}
+.figure-freq-bar-ui-bd {
+  background-color:#e6ab02;
+}
+.figure-freq-bar-ui-ab {
+  background-color:#000;
+}
+.figure-freq-scale {
+  position:relative;
+  left:0px;
+}
+.figure-freq-scale-line {
+  position:absolute;
+  border-right:solid #ccc 1px;
+  height:50px;  /* based on the number of graphs X 10px per the height of the .figure-freq-bar + 10 to handle the padding*/
+  top: -5px;
+}
+.figure-freq-key {
+  position:relative;
+  left:0px;
+  bottom:-15px;
+}
+.figure-freq-scale-key {
+  position:absolute;
+  border-radius:5px 5px 5px 0px;
+  background-color:#ccc;
+  color:#fff;
+  font-size:9px;
+  padding:2px 4px;
+}

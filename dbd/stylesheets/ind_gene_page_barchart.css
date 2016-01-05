@@ -1,0 +1,30 @@
+/* Style formatting for bar graphs at the top of the individual gene pages */
+
+
+.axis {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #a6a6a6;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+  fill: none;
+  stroke: #a6a6a6;
+  shape-rendering: crispEdges;
+  /*display: none;*/
+}
+
+/* To move the individual gene page bar graph to the left as far as possible. */
+#barGraph {
+  padding-left: 0;
+  margin-top: 2%;
+}
+
+.bar:hover {
+  fill: brown;
+}
