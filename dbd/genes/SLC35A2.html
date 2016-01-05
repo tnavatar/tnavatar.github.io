@@ -1,237 +1,494 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    
-    <!-- Always force latest IE rendering engine or request Chrome Frame -->
-    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-    
-    <!-- Use title if it's in the page YAML frontmatter -->
-    <title>The Middleman</title>
-    
-    <link href="../stylesheets/all.css" rel="stylesheet" />
-  </head>
-  
-  <body>
-    <div class="container genes genes_SLC35A2">
+    <div class="genes genes_SLC35A2">
       
-<!-- <div class="row"> -->
-  <!-- <div class="col-md-6">
-    <p><a href="../">back to genes</a></p>
-  </div> -->
-<!-- </div> -->
+<div class="gene-detail-page" id="gene_tray"  style="display:none;">
+  <div class="container">
+    <div class="row padding-top padding-bottom">
+      <ul class="list-unstyled">
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="ACACA.html">ACACA</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="ADNP.html">ADNP</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="AIFM3.html">AIFM3</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="ANK2.html">ANK2</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="ANKRD11.html">ANKRD11</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="ANKS1B.html">ANKS1B</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="ANOS1.html">ANOS1</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="AP1S2.html">AP1S2</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="APH1A.html">APH1A</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="ARHGAP24.html">ARHGAP24</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="ARHGEF38.html">ARHGEF38</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="ARID1B.html">ARID1B</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="ASH1L.html">ASH1L</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="ASXL3.html">ASXL3</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="ATRX.html">ATRX</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="AUTS2.html">AUTS2</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="AXL.html">AXL</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="BAIAP2.html">BAIAP2</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="BIRC6.html">BIRC6</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="BRAT1.html">BRAT1</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="BRWD1.html">BRWD1</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="CACNA1C.html">CACNA1C</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="CACNA2D2.html">CACNA2D2</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="CACNA2D3.html">CACNA2D3</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="CACNA2D4.html">CACNA2D4</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="CALCR.html">CALCR</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="CAPN12.html">CAPN12</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="CARKD.html">CARKD</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="CASK.html">CASK</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="CBL.html">CBL</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="CCDC91.html">CCDC91</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="CCSER1.html">CCSER1</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="CD163L1.html">CD163L1</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="CDC42BPB.html">CDC42BPB</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="CDH13.html">CDH13</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="CDKL5.html">CDKL5</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="CERS4.html">CERS4</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="CHAMP1.html">CHAMP1</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="CHD1L.html">CHD1L</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="CHD2.html">CHD2</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="CHD7.html">CHD7</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="CHD8.html">CHD8</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="CHRNA7.html">CHRNA7</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="CNTN4.html">CNTN4</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="CNTN6.html">CNTN6</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="CNTNAP2.html">CNTNAP2</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="COBL.html">COBL</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="CSDE1.html">CSDE1</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="CSMD1.html">CSMD1</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="CSTF2T.html">CSTF2T</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="CTNNA3.html">CTNNA3</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="CTNNB1.html">CTNNB1</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="CTTNBP2.html">CTTNBP2</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="CUL3.html">CUL3</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="CUL4B.html">CUL4B</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="CYFIP1.html">CYFIP1</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="CYLC2.html">CYLC2</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="DDHD2.html">DDHD2</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="DDX3X.html">DDX3X</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="DDX53.html">DDX53</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="DIP2A.html">DIP2A</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="DISC1.html">DISC1</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="DLG2.html">DLG2</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="DMD.html">DMD</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="DNAH10.html">DNAH10</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="DNM3.html">DNM3</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="DPP3.html">DPP3</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="DPP6.html">DPP6</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="DPYD.html">DPYD</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="DSCAM.html">DSCAM</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="DST.html">DST</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="DYRK1A.html">DYRK1A</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="EDA2R.html">EDA2R</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="EFTUD2.html">EFTUD2</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="EHMT1.html">EHMT1</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="ELAVL2.html">ELAVL2</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="EP300.html">EP300</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="EP400.html">EP400</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="ERBB4.html">ERBB4</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="EYS.html">EYS</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="FCRL6.html">FCRL6</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="FHIT.html">FHIT</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="FLG.html">FLG</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="FOXP1.html">FOXP1</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="GABRB3.html">GABRB3</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="GALNTL18.html">GALNTL18</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="GATAD2B.html">GATAD2B</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="GGNBP2.html">GGNBP2</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="GJB6.html">GJB6</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="GRIN2B.html">GRIN2B</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="GRIP1.html">GRIP1</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="GSDMC.html">GSDMC</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="HIST1H1E.html">HIST1H1E</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="HIVEP3.html">HIVEP3</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="HNRNPU.html">HNRNPU</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="IL1RAPL1.html">IL1RAPL1</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="IMMP2L.html">IMMP2L</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="INADL.html">INADL</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="IQGAP2.html">IQGAP2</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="IQSEC2.html">IQSEC2</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="ITSN1.html">ITSN1</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="JADE2.html">JADE2</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="JUP.html">JUP</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="KANK1.html">KANK1</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="KANSL1.html">KANSL1</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="KATNAL2.html">KATNAL2</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="KCNQ2.html">KCNQ2</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="KDM3A.html">KDM3A</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="KDM5B.html">KDM5B</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="KDM5C.html">KDM5C</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="KDM6A.html">KDM6A</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="KDM6B.html">KDM6B</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="KIAA0100.html">KIAA0100</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="KMT2A.html">KMT2A</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="KMT2C.html">KMT2C</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="KRT34.html">KRT34</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="KYNU.html">KYNU</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="L1CAM.html">L1CAM</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="LAMA2.html">LAMA2</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="LAMC3.html">LAMC3</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="LEO1.html">LEO1</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="LINGO2.html">LINGO2</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="LPP.html">LPP</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="LRBA.html">LRBA</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="LRP2.html">LRP2</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="MACROD2.html">MACROD2</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="MAGEL2.html">MAGEL2</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="MAPT.html">MAPT</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="MBD5.html">MBD5</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="MCC.html">MCC</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="MCPH1.html">MCPH1</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="MECP2.html">MECP2</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="MED13L.html">MED13L</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="MEF2C.html">MEF2C</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="MIB1.html">MIB1</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="MOV10.html">MOV10</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="MSRA.html">MSRA</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="MTMR12.html">MTMR12</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="MYH10.html">MYH10</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="MYOC.html">MYOC</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="MYT1L.html">MYT1L</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="NAA15.html">NAA15</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="NAALADL2.html">NAALADL2</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="NBEA.html">NBEA</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="NCKAP1.html">NCKAP1</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="NCKAP5.html">NCKAP5</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="NEDD9.html">NEDD9</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="NFIA.html">NFIA</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="NLGN3.html">NLGN3</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="NR3C2.html">NR3C2</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="NRG3.html">NRG3</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="NRXN1.html">NRXN1</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="NRXN3.html">NRXN3</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="NSD1.html">NSD1</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="OR2T10.html">OR2T10</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="OR52M1.html">OR52M1</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="PAH.html">PAH</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="PAK3.html">PAK3</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="PARK2.html">PARK2</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="PCDH15.html">PCDH15</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="PCOLCE.html">PCOLCE</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="PDE11A.html">PDE11A</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="PHF2.html">PHF2</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="PHF21A.html">PHF21A</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="PLA1A.html">PLA1A</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="PLA2G4F.html">PLA2G4F</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="PLCB1.html">PLCB1</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="POGZ.html">POGZ</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="PPM1D.html">PPM1D</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="PSD3.html">PSD3</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="PTCHD1.html">PTCHD1</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="PTEN.html">PTEN</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="PTPRD.html">PTPRD</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="PTPRM.html">PTPRM</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="PURA.html">PURA</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="QRICH1.html">QRICH1</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="RAB2A.html">RAB2A</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="RAB39B.html">RAB39B</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="RAI1.html">RAI1</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="RALGAPB.html">RALGAPB</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="RANBP17.html">RANBP17</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="RBFOX1.html">RBFOX1</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="RELN.html">RELN</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="RIMS1.html">RIMS1</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="RNASET2.html">RNASET2</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="SCARA3.html">SCARA3</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="SCN1A.html">SCN1A</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="SCN2A.html">SCN2A</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="SDK1.html">SDK1</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="SETBP1.html">SETBP1</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="SETD1A.html">SETD1A</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="SETD2.html">SETD2</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="SETD5.html">SETD5</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="SGSM3.html">SGSM3</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="SHANK3.html">SHANK3</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="SLC16A2.html">SLC16A2</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="SLC2A1.html">SLC2A1</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="SLC35A2.html">SLC35A2</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="SLC4A10.html">SLC4A10</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="SLC6A1.html">SLC6A1</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="SLC6A8.html">SLC6A8</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="SLC9A6.html">SLC9A6</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="SLCO1B1.html">SLCO1B1</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="SLCO1B3.html">SLCO1B3</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="SMC1A.html">SMC1A</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="SPARCL1.html">SPARCL1</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="SPAST.html">SPAST</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="SRCAP.html">SRCAP</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="STXBP1.html">STXBP1</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="STXBP5.html">STXBP5</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="SUCLG2.html">SUCLG2</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="SYNGAP1.html">SYNGAP1</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="TAF13.html">TAF13</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="TBR1.html">TBR1</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="TCF4.html">TCF4</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="TCF7L2.html">TCF7L2</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="TGM1.html">TGM1</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="THSD7A.html">THSD7A</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="TNRC6B.html">TNRC6B</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="TRIO.html">TRIO</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="TRPM1.html">TRPM1</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="TRPM3.html">TRPM3</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="TSPAN17.html">TSPAN17</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="TTLL3.html">TTLL3</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="TTN.html">TTN</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="UBE3A.html">UBE3A</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="UPF3B.html">UPF3B</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="UTP6.html">UTP6</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="VIL1.html">VIL1</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="VPS13B.html">VPS13B</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="WAC.html">WAC</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="WDFY3.html">WDFY3</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="WDR45.html">WDR45</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="WHSC1.html">WHSC1</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="WWOX.html">WWOX</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="YTHDC1.html">YTHDC1</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="ZBBX.html">ZBBX</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="ZMYND11.html">ZMYND11</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="ZNF559.html">ZNF559</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="ZNF774.html">ZNF774</a></li>
+        <li class="col-md-2 col-sm-3  col-xs-6"><small class='glyphicon glyphicon-chevron-right text-muted'></small> <a href="ZWILCH.html">ZWILCH</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
 
-<!-- <div class="row "> -->
-  <div class="col-md-6">
-    <p><a href="../">back to genes</a></p>
-    <h1><em>SLC35A2</em></h1>
-    <p><b>Gene name:  </b><em>solute carrier family 35 (UDP-galactose transporter), member A2</em></p>
-    <p><b>Chromosome band:  </b><em>Xp11.23-p11.22</em></p>
-    <h3>Tier 1</h3>
-    <!-- <p class="lead">4 pathogenic variants in 2 papers</p> -->
-    <!-- <ul> -->
-      <!-- <li class="list-unstyled"> -->
-	<!-- <strong> -->
-    <!-- 4 -->
-	<!-- </strong> -->
-	<!-- Implicated in Intellectual Disability/Developmental Delay (ID) -->
-      <!-- </li> -->
-      <!-- <li class="list-unstyled"> -->
-	<!-- <strong> -->
-    <!-- 0 -->
-	<!-- </strong> -->
-	<!-- Implicated in Autism Spectrum Disorder (ASD) -->
-      <!-- </li> -->
-      <!-- <li class="list-unstyled"> -->
-	<!-- <strong> -->
-    <!-- 4 -->
-	<!-- </strong> -->
-	<!-- Implicated in Epilepsy (EP) -->
-      <!-- </li> -->
-      <!-- <li class="list-unstyled"> -->
-	<!-- <strong> -->
-    <!-- 0 -->
-	<!-- </strong> -->
-	<!-- Implicated in Attention Deficit and Hyperactivity Disorder (ADHD) -->
-      <!-- </li> -->
-      <!-- <li class="list-unstyled"> -->
-	<!-- <strong> -->
-    <!-- 0 -->
-	<!-- </strong> -->
-	<!-- Implicated in Schizopherenia (SCZ) -->
-      <!-- </li> -->
-      <!-- <li class="list-unstyled"> -->
-	<!-- <strong> -->
-    <!-- 0 -->
-	<!-- </strong> -->
-	<!-- Implicated in Bipolar Disorder (BD) -->
-      <!-- </li> -->
-    <!-- </ul> -->
-    <!-- <div class="row"> -->
-      <div class="col-md-12" id="barGraph">
+<div id="gene">
+  <div id="hero">
+    <div style="background-image:url(http://geisingeradmi.org/site/assets/files/4640/waiting-room.jpg); background-position:top center;" id="page-hero">
+      <div class="container padding-bottom padding-top">
+        <div class="col-padding-1x col-padding-sides-1x">
+          <div class="hero-text">
+            <div class="text-padding-tight">
+              <div class="col-sm-3 gene-nav-links">
+                <a class="btn btn-default" href="../"><i class='glyphicon glyphicon-arrow-left'></i></a>
+                <button class="btn btn-default" id="gene_tray_button"><i class="glyphicon glyphicon-th"></i></button>
+              </div>
+              <div class="col-sm-6 text-center">
+                <h1 class="text-gene-title text-center"><em>SLC35A2</em></h1>
+              </div>
+              <div class="col-sm-3 gene-nav-links">
+                <div class="input-group lead pull-right">
+                    <input type="text" class="form-control" id="page-jump" placeholder="Jump to gene page" />
+                    <span class="input-group-btn">
+                      <button type="submit" class="btn btn-default" id="page-jump-button">Go</button>
+                    </span>
+                </div>
+              </div>
+              <div class="col-sm-12 text-center hidden-xs hidden-sm">
+                  <span class="badge ui-tier1" data-toggle="tooltip" data-placement="bottom" title="Gene with three or more de novo pathogenic loss-of-function variants">Tier 1</span>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    <!-- </div> -->
+    </div>
+  </div>
+<div class="container">
+  <div class="row">
+
+    <h3 class="col-sm-12"><em>SLC35A2</em></h3>
+    <div class="col-sm-6 col-md-3">
+        <span class="badge ui-tier1">Tier 1</span><div class="small text-muted border-top">Gene with three or more de novo pathogenic loss-of-function variants</div>
+    </div>
+
+    <div class="col-sm-6 col-md-3">
+      <em>solute carrier family 35 (UDP-galactose transporter), member A2</em>
+      <div class="small text-muted border-top">Gene Name</div>
+    </div>
+    <div class="clearfix visible-sm visible-xs"></div>
+    <div class="col-sm-6 col-md-3">
+      <em>Xp11.23-p11.22</em>
+      <div class="small text-muted border-top">Gene Location</div>
+    </div>
+
+    <div class="col-sm-6 col-md-3">
+      <a href="https://www.ncbi.nlm.nih.gov/gene/?term=SLC35A2[sym]" class="text-muted" target="_blank">NCBI Gene <i class="glyphicon glyphicon-new-window"></i></a> |  <a href="https://www.ncbi.nlm.nih.gov/books/?term=SLC35A2" class="text-muted" target="_blank">Gene Reviews <i class="glyphicon glyphicon-new-window"></i></a>
+      <div class="small text-muted border-top">External Resources</div>
+    </div>
+
+    <div class="col-sm-12">&nbsp;</div>
 
   </div>
-  <!--  -->
-
-<!-- </div> -->
-
-<div class="row" id="top-pieChart">
-  <div class="col-md-6" id="pieChart">
+<div class="panel panel-default">
+  <div class="panel-body">
+    <div class="col-md-6 graphContainer">
+      <div id="barGraph"></div>
+    </div>
+    <div class="col-md-6 graphContainer" id="top-pieChart">
+      <div id="pieChart"></div>
+    </div>
   </div>
 </div>
-
-
-<p id="par">
-  <b>Columns to display:</b><br>
-  &nbsp; Note: categories denoted by + may not have values in all cases.
-</p>
-
-<div class="col-md-3 checkboxes">
-  <p><input type="checkbox" name="disorders" checked="checked" /> Disorder(s)<br>
-  <input type="checkbox" name="variant_type" checked="checked" /> Variant Type<br>
-  <input type="checkbox" name="inheritance" checked="checked" /> Inheritance<br>
-  <input type="checkbox" name="method" checked="checked" /> Method<br>
-  <input type="checkbox" name="chromosome" /> Chromosome +<br>
-  <input type="checkbox" name="cnv_size" /> CNV Size +<br>
-  <input type="checkbox" name="genome_build" /> Genome Build +</p>
+<div class="clearfix">
+  <ul class="list-inline">
+    <li class="pull-right">
+      <cite class="text-muted small hidden-xs"><i class="glyphicon glyphicon-asterisk"></i>Categories may not have values in all cases</cite>
+    </li>
+    <li class="pull-right">
+      <cite class="text-muted small hidden-xs"><i class="glyphicon glyphicon-sort-by-alphabet"></i> Column sort</cite>
+    </li>
+  </ul>
 </div>
-<div class="col-md-9 checkboxes">
-  <p><input type="checkbox" name="coding_dna_change" /> Coding DNA Change +<br>
-  <input type="checkbox" name="protein_change" /> Protein Change +<br>
-  <input type="checkbox" name="position" /> Position +<br>
-  <input type="checkbox" name="reference_sequence" /> Reference Sequence +<br>
-  <input type="checkbox" name="alternate_sequence" /> Alternate Sequence +<br>
-  <input type="checkbox" name="patient_id" /> Patient ID<br>
-  <input type="checkbox" name="the_reference" checked="checked" /> Reference</p>
-</div>
-<div class="row">
-  <div class="col-md-12" id="table-container">
-    <table class="table" id="maintable">
-    <thead>
-  <tr>
-  <th class="disorders">Disorder(s)</th>
-  <th class="variant_type">Variant Type</th>
-  <th class="inheritance">Inheritance</th>
-  <th class="method">Method</th>
-  <th class="chromosome">Chromosome</th>
-  <th class="cnv_size">CNV Size</th>
-  <th class="genome_build">Genome Build</th>
-  <th class="coding_dna_change">Coding DNA Change</th>
-  <th class="protein_change">Protein Change</th>
-  <th class="position">Position</th>
-  <th class="reference_sequence">Reference Sequence</th>
-  <th class="alternate_sequence">Alternate Sequence</th>
-  <th class="patient_id">Patient ID</th>
-  <th class="the_reference">Reference</th>
-  </tr>
-</thead>
+ <div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title pull-left">Cases</h3>
+    <div class="text-right">
+        <span class="text-muted" style="padding-bottom:4px">Column Control</span>
+        <select class="form-control" multiple id="show-hide-menu2">
+          <option value="patient_id" selected="true">Patient ID</option>
+          <option value="disorders" selected="true">Disorder(s)</option>
+          <option value="variant_type" selected="true">Variant Type</option>
+          <option value="inheritance" selected="true">Inheritance</option>
+          <option value="method" selected="true">Method</option>
+          <option value="chromosome" >Chromosome *</option>
+          <option value="cnv_size">CNV Size *</option>
+          <option value="genome_build">Genome Build *</option>
+          <option value="coding_dna_change">Coding DNA Change *</option>
+          <option value="protein_change">Protein Change *</option>
+          <option value="position">Position *</option>
+          <option value="reference_sequence">Reference Sequence *</option>
+          <option value="alternate_sequence">Alternate Sequence *</option>
+          <option value="the_reference" selected="true">Reference</option>
+        </select>
+    </div>
+  </div>
+  <div class="panel-body table-responsive padding-none" id="individual-genes">
+    <table class="table margin-bottom-none" id="ind-gene-table">
+      <thead>
+        <tr>
+          <th class="patient_id ind-data-sort visible-col text-nowrap" data-sort="patient_id1">Patient ID</th>
+          <th class="disorders ind-data-sort visible-col text-nowrap" data-sort="disorders1">Disorder(s)</th>
+          <th class="variant_type ind-data-sort visible-col text-nowrap" data-sort="variant_type1">Variant Type</th>
+          <th class="inheritance ind-data-sort visible-col text-nowrap" data-sort="inheritance1">Inheritance</th>
+          <th class="method ind-data-sort visible-col text-nowrap" data-sort="method1">Method</th>
+          <th class="chromosome ind-data-sort visible-col text-nowrap" data-sort="chromosome1">Chromosome&nbsp;*</th>
+          <th class="cnv_size ind-data-sort visible-col text-nowrap" data-sort="cnv_size1">CNV Size&nbsp;*</th>
+          <th class="genome_build ind-data-sort visible-col text-nowrap" data-sort="genome_build1">Genome Build&nbsp;*</th>
+          <th class="coding_dna_change ind-data-sort visible-col text-nowrap" data-sort="coding_dna_change1">Coding DNA Change&nbsp;*</th>
+          <th class="protein_change ind-data-sort visible-col text-nowrap" data-sort="protein_change1">Protein Change&nbsp;*</th>
+          <th class="position ind-data-sort visible-col text-nowrap" data-sort="position1">Position&nbsp;*</th>
+          <th class="reference_sequence ind-data-sort visible-col text-nowrap" data-sort="reference_sequence1">Reference Sequence&nbsp;*</th>
+          <th class="alternate_sequence ind-data-sort visible-col text-nowrap" data-sort="alternate_sequence1">Alternate Sequence&nbsp;*</th>
+          <th class="the_reference visible-col text-nowrap" data-sort="the_reference1" id="reference-col-header">Reference</th>
+          <th class="date ind-data-sort" data-sort="date1">Date</th>
+          <th class="the_pmid ind-data-sort" id="the_pmid" data-sort="the_pmid1">PMID</th>
+        </tr>
+      </thead>
 
 
-
-
-
-<tbody>
-<!--  -->
-<tr>
-<td class="disorders">ID, EP</td>
-<td class="variant_type">Nonsense</td>
-<td class="inheritance"><em>De novo</em></td>
-<td class="method">Whole exome sequencing</td>
-<td class="chromosome"></td>
-<td class="cnv_size"></td>
-<td class="genome_build"></td>
-<td class="coding_dna_change">c.683C>A</td>
-<td class="protein_change">p.Ser228X</td>
-<td class="position"></td>
-<td class="reference_sequence"></td>
-<td class="alternate_sequence"></td>
-<td class="patient_id">ISnd</td>
-<td class="the_reference"><a href="#references">EuroEPINOMICS-RES Consortium et al. 2014</a></td>
-<!--  -->
-<tr>
-<td class="disorders">ID, EP</td>
-<td class="variant_type">Nonsense</td>
-<td class="inheritance"><em>De novo</em></td>
-<td class="method">Whole exome sequencing</td>
-<td class="chromosome"></td>
-<td class="cnv_size"></td>
-<td class="genome_build"></td>
-<td class="coding_dna_change"></td>
-<td class="protein_change"></td>
-<td class="position">48762684</td>
-<td class="reference_sequence">G</td>
-<td class="alternate_sequence">A</td>
-<td class="patient_id">isepgp014670ahl1</td>
-<td class="the_reference"><a href="#references">EuroEPINOMICS-RES Consortium et al. 2014</a></td>
-<!--  -->
-<tr>
-<td class="disorders">ID, EP</td>
-<td class="variant_type">Frameshift</td>
-<td class="inheritance"><em>De novo</em></td>
-<td class="method">Whole exome sequencing</td>
-<td class="chromosome"></td>
-<td class="cnv_size"></td>
-<td class="genome_build"></td>
-<td class="coding_dna_change">c.433_434del</td>
-<td class="protein_change"></td>
-<td class="position"></td>
-<td class="reference_sequence"></td>
-<td class="alternate_sequence"></td>
-<td class="patient_id">Patient 1</td>
-<td class="the_reference"><a href="#references">Kodera et al. 2013*</a></td>
-<!--  -->
-<tr>
-<td class="disorders">ID, EP</td>
-<td class="variant_type">Frameshift</td>
-<td class="inheritance"><em>De novo</em></td>
-<td class="method">Whole exome sequencing</td>
-<td class="chromosome"></td>
-<td class="cnv_size"></td>
-<td class="genome_build"></td>
-<td class="coding_dna_change">c.972del</td>
-<td class="protein_change"></td>
-<td class="position"></td>
-<td class="reference_sequence"></td>
-<td class="alternate_sequence"></td>
-<td class="patient_id">Patient 2</td>
-<td class="the_reference"><a href="#references">Kodera et al. 2013*</a></td>
-<!--  -->
-</tbody>
+      <tbody class="list">
+        <tr>
+          <td class="patient_id patient_id1">ISnd</td>
+          <td class="disorders disorders1">ID, EP</td>
+          <td class="variant_type variant_type1">Nonsense</td>
+            <td class="inheritance inheritance1"><em>De novo</em></td>
+          <td class="method method1">Whole exome sequencing</td>
+          <td class="chromosome chromosome1"></td>
+          <td class="cnv_size cnv_size1"></td>
+          <td class="genome_build genome_build1"></td>
+          <td class="coding_dna_change coding_dna_change1">c.683C>A</td>
+          <td class="protein_change protein_change1">p.Ser228X</td>
+          <td class="position position1"></td>
+          <td class="reference_sequence reference_sequence1"></td>
+          <td class="alternate_sequence alternate_sequence1"></td>
+          <td class="the_reference the_reference1"><a href="#jump-25262651" class="refs" id="25262651">
+            EuroEPINOMICS-RES Consortium et. al., 2014</a>
+          </td>
+          <td class="date date1">2014</td>
+          <td class="the_pmid the_pmid1">25262651</td>
+        <tr>
+          <td class="patient_id patient_id1">isepgp014670ahl1</td>
+          <td class="disorders disorders1">ID, EP</td>
+          <td class="variant_type variant_type1">Nonsense</td>
+            <td class="inheritance inheritance1"><em>De novo</em></td>
+          <td class="method method1">Whole exome sequencing</td>
+          <td class="chromosome chromosome1"></td>
+          <td class="cnv_size cnv_size1"></td>
+          <td class="genome_build genome_build1"></td>
+          <td class="coding_dna_change coding_dna_change1"></td>
+          <td class="protein_change protein_change1"></td>
+          <td class="position position1">48762684</td>
+          <td class="reference_sequence reference_sequence1">G</td>
+          <td class="alternate_sequence alternate_sequence1">A</td>
+          <td class="the_reference the_reference1"><a href="#jump-25262651" class="refs" id="25262651">
+            EuroEPINOMICS-RES Consortium et. al., 2014</a>
+          </td>
+          <td class="date date1">2014</td>
+          <td class="the_pmid the_pmid1">25262651</td>
+        <tr>
+          <td class="patient_id patient_id1">Patient 1</td>
+          <td class="disorders disorders1">ID, EP</td>
+          <td class="variant_type variant_type1">Frameshift</td>
+            <td class="inheritance inheritance1"><em>De novo</em></td>
+          <td class="method method1">Whole exome sequencing</td>
+          <td class="chromosome chromosome1"></td>
+          <td class="cnv_size cnv_size1"></td>
+          <td class="genome_build genome_build1"></td>
+          <td class="coding_dna_change coding_dna_change1">c.433_434del</td>
+          <td class="protein_change protein_change1"></td>
+          <td class="position position1"></td>
+          <td class="reference_sequence reference_sequence1"></td>
+          <td class="alternate_sequence alternate_sequence1"></td>
+          <td class="the_reference the_reference1"><a href="#jump-24115232" class="refs" id="24115232">
+            Kodera H et. al., 2013</a>
+          </td>
+          <td class="date date1">2013</td>
+          <td class="the_pmid the_pmid1">24115232</td>
+        <tr>
+          <td class="patient_id patient_id1">Patient 2</td>
+          <td class="disorders disorders1">ID, EP</td>
+          <td class="variant_type variant_type1">Frameshift</td>
+            <td class="inheritance inheritance1"><em>De novo</em></td>
+          <td class="method method1">Whole exome sequencing</td>
+          <td class="chromosome chromosome1"></td>
+          <td class="cnv_size cnv_size1"></td>
+          <td class="genome_build genome_build1"></td>
+          <td class="coding_dna_change coding_dna_change1">c.972del</td>
+          <td class="protein_change protein_change1"></td>
+          <td class="position position1"></td>
+          <td class="reference_sequence reference_sequence1"></td>
+          <td class="alternate_sequence alternate_sequence1"></td>
+          <td class="the_reference the_reference1"><a href="#jump-24115232" class="refs" id="24115232">
+            Kodera H et. al., 2013</a>
+          </td>
+          <td class="date date1">2013</td>
+          <td class="the_pmid the_pmid1">24115232</td>
+      </tbody>
     </table>
-    <div id="bottom_anchor"></div>
   </div>
 </div>
-<!--  -->
-
-<div class="row" id="citations">
-  <h4>References</h4>
-  <div class="col-md-12">
-    <p><a name="references"></a>
-      EuroEPINOMICS-RES Consortium
-      et. al.,
-      <a href="http://www.ncbi.nlm.nih.gov/pubmed/25262651">De novo mutations in synaptic transmission genes including DNM1 cause epileptic encephalopathies.</a>
-      Am J Hum Genet
-      2014
-    </p>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">References</h3>
   </div>
-  <div class="col-md-12">
-    <p><a name="references"></a>
-      Kodera H
-      et. al.,
-      <a href="http://www.ncbi.nlm.nih.gov/pubmed/24115232">De novo mutations in SLC35A2 encoding a UDP-galactose transporter cause early-onset epileptic encephalopathy.</a>
-      Hum Mutat
-      2013
-    </p>
+  <div class="panel-body padding-none">
+    <table class="table margin-bottom-none">
+      <tr class="ref" id="25262651">
+        <td>
+          <a name="jump-25262651"></a>
+          EuroEPINOMICS-RES Consortium
+          et. al.,
+          <a href="http://www.ncbi.nlm.nih.gov/pubmed/25262651">De novo mutations in synaptic transmission genes including DNM1 cause epileptic encephalopathies.</a>
+          Am J Hum Genet,
+          2014
+        </td>
+      </tr>
+      <tr class="ref" id="24115232">
+        <td>
+          <a name="jump-24115232"></a>
+          Kodera H
+          et. al.,
+          <a href="http://www.ncbi.nlm.nih.gov/pubmed/24115232">De novo mutations in SLC35A2 encoding a UDP-galactose transporter cause early-onset epileptic encephalopathy.</a>
+          Hum Mutat,
+          2013
+        </td>
+      </tr>
+    </table>
   </div>
 </div>
+</body>
 
 <div class="source_data" data-unknown="0" data-denovo="4" data-inherited="0"></div>
 
 <div class="implicated_data" data-ID="4" data-ASD="0" data-EP="4" data-ADHD="0" data-SCZ="0" data-BD="0"></div>
 
     </div>
-  </body>
-  <script src="../javascripts/all.js"></script><script src="../javascripts/bootstrap.js"></script>
-</html>

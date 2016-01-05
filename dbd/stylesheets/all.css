@@ -7245,67 +7245,254 @@ button.close {
   /* line 18, /Users/tristan/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.5.1/assets/stylesheets/bootstrap/mixins/_responsive-visibility.scss */
   .hidden-print {
     display: none !important; } }
-/* To put some space between the right paragraph at the top of the main page and the top of the page */
-/* line 4, /Users/tristan/code/dbd-genes/source/stylesheets/all.css.scss */
-#top-paragraph {
-  margin-top: 3%; }
+/* Font Sizing */
+/* line 6, /Users/tristan/code/dbd-genes/source/stylesheets/all.css.scss */
+.text-gene-title {
+  font-size: 60px;
+  margin: 0px;
+  font-weight: 100 !important; }
 
-/* To make floating top header opaque as you scroll down */
-/* line 9, /Users/tristan/code/dbd-genes/source/stylesheets/all.css.scss */
-thead {
-  background-color: white; }
+/* line 11, /Users/tristan/code/dbd-genes/source/stylesheets/all.css.scss */
+#gene_tray {
+  font-size: 12px; }
+
+/* Search Box Sizing */
+/* line 18, /Users/tristan/code/dbd-genes/source/stylesheets/all.css.scss */
+.search.input-sm, .input-group-sm > .search.form-control,
+.input-group-sm > .search.input-group-addon,
+.input-group-sm > .input-group-btn > .search.btn,
+.main-search-sort.input-sm,
+.input-group-sm > .main-search-sort.form-control,
+.input-group-sm > .main-search-sort.input-group-addon,
+.input-group-sm > .input-group-btn > .main-search-sort.btn {
+  height: 25px !important;
+  padding: 2px 10px !important; }
+
+/* Borders */
+/* line 27, /Users/tristan/code/dbd-genes/source/stylesheets/all.css.scss */
+.border-top {
+  border-top: 1px #ccc solid; }
+
+/* Misc Positioning */
+/* line 34, /Users/tristan/code/dbd-genes/source/stylesheets/all.css.scss */
+.gene-nav-links {
+  margin-top: 10px; }
+
+/* line 37, /Users/tristan/code/dbd-genes/source/stylesheets/all.css.scss */
+.top-paragraph-left {
+  margin-top: 2%; }
+
+/* line 40, /Users/tristan/code/dbd-genes/source/stylesheets/all.css.scss */
+.margin-bottom-none {
+  margin-bottom: 0px; }
+
+/* line 43, /Users/tristan/code/dbd-genes/source/stylesheets/all.css.scss */
+.padding-none {
+  padding: 0px; }
+
+/* line 46, /Users/tristan/code/dbd-genes/source/stylesheets/all.css.scss */
+.padding-bottom {
+  padding-bottom: 10px; }
+
+/* line 49, /Users/tristan/code/dbd-genes/source/stylesheets/all.css.scss */
+.padding-top {
+  padding-top: 10px; }
+
+/* line 52, /Users/tristan/code/dbd-genes/source/stylesheets/all.css.scss */
+.panel-heading {
+  padding: 5px; }
+
+/* line 55, /Users/tristan/code/dbd-genes/source/stylesheets/all.css.scss */
+.panel-title {
+  margin-top: 4px !important; }
+
+/* Tier UI Colors */
+/* line 62, /Users/tristan/code/dbd-genes/source/stylesheets/all.css.scss */
+.badge.ui-tier1 {
+  background-color: #0f2a8f !important; }
+
+/* line 65, /Users/tristan/code/dbd-genes/source/stylesheets/all.css.scss */
+.badge.ui-tier2 {
+  background-color: #2f5492 !important; }
+
+/* line 68, /Users/tristan/code/dbd-genes/source/stylesheets/all.css.scss */
+.badge.ui-tier3 {
+  background-color: #527f9e !important; }
+
+/* line 71, /Users/tristan/code/dbd-genes/source/stylesheets/all.css.scss */
+.badge.ui-tier4 {
+  background-color: #7e888a !important; }
+
+/* line 74, /Users/tristan/code/dbd-genes/source/stylesheets/all.css.scss */
+.badge.ui-tier4, .badge.ui-tier3, .badge.ui-tier2, .badge.ui-tier1 {
+  vertical-align: top !important; }
 
 /* To add space at the top and bottom of the References section */
-/* line 14, /Users/tristan/code/dbd-genes/source/stylesheets/all.css.scss */
+/* line 81, /Users/tristan/code/dbd-genes/source/stylesheets/all.css.scss */
 #citations {
   margin-left: 3%;
   margin-top: 8%;
   margin-bottom: 10%; }
 
-/* To put space between the top of the checkbox area and the bottom of the implicated bar chart
-   on the individual gene pages. */
-/* line 22, /Users/tristan/code/dbd-genes/source/stylesheets/all.css.scss */
-#par {
-  margin-top: 2%; }
+/* Code to properly format floating table headers */
+/* line 90, /Users/tristan/code/dbd-genes/source/stylesheets/all.css.scss */
+body {
+  margin: 0 auto;
+  padding: 0px;
+  font-family: Arial, Helvetica, sans-serif; }
 
-/* To shift the pie chart on the individual genes pages down. */
-/* line 27, /Users/tristan/code/dbd-genes/source/stylesheets/all.css.scss */
-#top-pieChart {
-  margin-top: 8%; }
+/* line 96, /Users/tristan/code/dbd-genes/source/stylesheets/all.css.scss */
+table {
+  border: 0;
+  padding: 0;
+  margin: 0 0 20px 0;
+  border-collapse: collapse; }
 
-/* line 31, /Users/tristan/code/dbd-genes/source/stylesheets/all.css.scss */
-.bar {
-  fill: steelblue; }
+/* line 103, /Users/tristan/code/dbd-genes/source/stylesheets/all.css.scss */
+th {
+  padding: 5px;
+  /* NOTE: th padding must be set explicitly in order to support IE */
+  text-align: right;
+  font-weight: bold;
+  line-height: 2em;
+  background-color: #FFF; }
 
-/* line 35, /Users/tristan/code/dbd-genes/source/stylesheets/all.css.scss */
-.bar:hover {
-  fill: brown; }
+/* line 112, /Users/tristan/code/dbd-genes/source/stylesheets/all.css.scss */
+tbody td {
+  padding: 10px;
+  line-height: 18px;
+  border-top: 1px; }
 
-/* line 39, /Users/tristan/code/dbd-genes/source/stylesheets/all.css.scss */
-.axis {
-  font: 10px sans-serif; }
+/* line 119, /Users/tristan/code/dbd-genes/source/stylesheets/all.css.scss */
+td {
+  text-align: right; }
 
-/* line 43, /Users/tristan/code/dbd-genes/source/stylesheets/all.css.scss */
-.axis path,
-.axis line {
-  fill: none;
-  stroke: #000;
-  shape-rendering: crispEdges; }
+/* line 123, /Users/tristan/code/dbd-genes/source/stylesheets/all.css.scss */
+td:first-child, th:first-child {
+  text-align: left; }
 
-/* line 50, /Users/tristan/code/dbd-genes/source/stylesheets/all.css.scss */
-.x.axis path {
-  fill: none;
-  stroke: #000;
-  shape-rendering: crispEdges;
-  /*display: none;*/ }
+/* line 129, /Users/tristan/code/dbd-genes/source/stylesheets/all.css.scss */
+.disease-sort {
+  width: 20%; }
 
-/* To move the individual gene page bar graph to the left as far as possible. */
-/* line 58, /Users/tristan/code/dbd-genes/source/stylesheets/all.css.scss */
-#barGraph {
-  padding-left: 0;
-  margin-top: 2%; }
+/* line 136, /Users/tristan/code/dbd-genes/source/stylesheets/all.css.scss */
+button {
+  margin-right: 1%; }
 
-/* To put space between the checkboxes and the main table on the individual genes pages */
-/* line 64, /Users/tristan/code/dbd-genes/source/stylesheets/all.css.scss */
-.checkboxes {
+/* line 142, /Users/tristan/code/dbd-genes/source/stylesheets/all.css.scss */
+.sort-explain {
+  margin-top: 1%; }
+
+/* line 149, /Users/tristan/code/dbd-genes/source/stylesheets/all.css.scss */
+.submit-data {
+  padding: 5px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black; }
+
+/* line 158, /Users/tristan/code/dbd-genes/source/stylesheets/all.css.scss */
+#show-hide-menu {
   margin-bottom: 2%; }
+
+/* line 165, /Users/tristan/code/dbd-genes/source/stylesheets/all.css.scss */
+#page-jump,
+#page-jump-label,
+#page-jump-button,
+#page-jump-main,
+#page-jump-label-main,
+#page-jump-button-main {
+  font-size: 14px; }
+
+@media (max-width: 995px) {
+  /* line 179, /Users/tristan/code/dbd-genes/source/stylesheets/all.css.scss */
+  #de-novo-sort,
+  #inherited-sort,
+  .de-novo,
+  .inherited {
+    display: none; } }
+/* line 190, /Users/tristan/code/dbd-genes/source/stylesheets/all.css.scss */
+.de-novo,
+.inherited,
+.variants,
+#de-novo-sort,
+#inherited-sort,
+#variants-sort {
+  text-align: center; }
+
+/* line 202, /Users/tristan/code/dbd-genes/source/stylesheets/all.css.scss */
+.gene.vert-align,
+.tier.vert-align,
+.de-novo.vert-align,
+.inherited.vert-align,
+.variants.vert-align {
+  vertical-align: middle; }
+
+/* line 213, /Users/tristan/code/dbd-genes/source/stylesheets/all.css.scss */
+#tier-sort,
+.data-sort-figure {
+  text-align: left; }
+
+/* Set the colors of the boxes in the main page legend (in figure column header) */
+/* line 221, /Users/tristan/code/dbd-genes/source/stylesheets/all.css.scss */
+.legend-design {
+  margin-bottom: 0px; }
+
+/* line 224, /Users/tristan/code/dbd-genes/source/stylesheets/all.css.scss */
+.legend-color {
+  width: 5px;
+  height: 5px;
+  display: inline-block;
+  margin-bottom: 2px; }
+
+/* line 230, /Users/tristan/code/dbd-genes/source/stylesheets/all.css.scss */
+#legend-id {
+  background-color: #1b9e77; }
+
+/* line 233, /Users/tristan/code/dbd-genes/source/stylesheets/all.css.scss */
+#legend-asd {
+  background-color: #d95f02; }
+
+/* line 236, /Users/tristan/code/dbd-genes/source/stylesheets/all.css.scss */
+#legend-ep {
+  background-color: #7570b3; }
+
+/* line 239, /Users/tristan/code/dbd-genes/source/stylesheets/all.css.scss */
+#legend-adhd {
+  background-color: #e7298a; }
+
+/* line 242, /Users/tristan/code/dbd-genes/source/stylesheets/all.css.scss */
+#legend-scz {
+  background-color: #66a61e; }
+
+/* line 245, /Users/tristan/code/dbd-genes/source/stylesheets/all.css.scss */
+#legend-bd {
+  background-color: #e6ab02; }
+
+/* Set spacing between items in main page figures column header legend */
+/* line 252, /Users/tristan/code/dbd-genes/source/stylesheets/all.css.scss */
+.space-span,
+.space-span-id,
+.space-span-asd,
+.space-span-ep,
+.space-span-adhd,
+.space-span-scz,
+.space-span-bd {
+  margin-left: 0.6em;
+  margin-right: 0.6em; }
+
+/* Horizontally center the figures on the gene detail pages (for cases with small screen sizes) */
+/* line 266, /Users/tristan/code/dbd-genes/source/stylesheets/all.css.scss */
+.graphContainer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; }
+
+/* Hide the columns used to sort the tables on the main and gene detail pages */
+/* line 275, /Users/tristan/code/dbd-genes/source/stylesheets/all.css.scss */
+.date, .the_pmid,
+#id-frequency, #asd-frequency,
+#ep-frequency, #adhd-frequency,
+#scz-frequency, #bd-frequency,
+.id-frequency, .asd-frequency,
+.ep-frequency, .adhd-frequency,
+.scz-frequency, .bd-frequency {
+  display: none; }

@@ -1,5 +1,10 @@
+// Creates pie charts on individual genes pages
 
-            var pie = new d3pie("pieChart", {
+if ($(".gene-detail-page")[0]) {
+
+  // Used to generate the pie chart
+  function generatePieChart() {
+    var pieChartOutline = {
             	"header": {
             		"title": {
             			"text": "Inheritance",
@@ -74,11 +79,18 @@
 		}
 	},
 	"effects": {
+    // Remove to re-enable effects
+    "load": { //this
+			"effect": "none" //this
+		}, //this
 		"pullOutSegmentOnClick": {
-			"effect": "linear",
-			"speed": 400,
+			// "effect": "linear", // put this back in
+      "effect": "none", //this
+      "speed": 400,
 			"size": 8
-		}
+		}, // this (only the comma)
+    "highlightSegmentOnMouseover": false, //this
+		"highlightLuminosity": -0.5 //this
 	},
 	"misc": {
 		"gradient": {
@@ -86,4 +98,38 @@
 			"percentage": 100
 		}
 	}
-});
+};
+
+    // Scale down the pie chart, title, and labels if the screen is narrower than 580 pixels
+    if (window.innerWidth <= 580) {
+      pieChartOutline.size.canvasWidth = parseInt(225 * window.innerWidth / 580 + 225);
+      pieChartOutline.size.canvasHeight = parseInt(175 * window.innerWidth / 580 + 175);
+      pieChartOutline.header.title.fontSize = parseInt(10 * window.innerWidth / 580 + 10);
+      pieChartOutline.labels.mainLabel.fontSize = parseInt(8 * window.innerWidth / 580 + 8);
+      pieChartOutline.labels.value.fontSize = parseInt(7 * window.innerWidth / 580 + 7);
+    }
+
+    // Generate the pie chart using d3.pie
+    var pie = new d3pie("pieChart", pieChartOutline);
+  }
+
+  // Generate initial pie chart
+  generatePieChart();
+
+
+  // Generates a new pie chart that is smaller when the screen size is reduced below 580 pixels
+  function resizePie() {
+    var minNormalWidth = 580;
+    if (window.innerWidth <= minNormalWidth) {
+      // Remove the old pie chart and generate a new, resized one whenever the screen is resized when its size is below 580px
+      $("#pieChart").find("svg").remove();
+      generatePieChart();
+    }
+  }
+
+  // Call the resizePie() function when the screen size changes
+  $(window).resize(function() {
+    resizePie();
+  });
+}
+;
