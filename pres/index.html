@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+# Modelling genetic variation and gene dosage
+
+---
+
+# Objective
+
+* Create a model for structured data sufficient to describe large and small scale genetic variation intended for transfer between computer systems.
+
+---
+
+# Why this matters
+
+---
+
+# Patient Care
+
+Reports from genetic testing labs are currently delivered via scanned documents. With computer readable models and appropriate knowledge bases a computer to identify the variants described in the report and connect them with knowledge discovered about a patient's variants discovered after.
+
+---
+
+# Knowledge Curation
+
+Information in existing knowledge bases is often composed with ad-hoc data models, which may have compatibility issues with each other. Appropriate standard models make it possible to combine information from different sources (eg MyCode and ClinVar) while ensuring models are talking about the same thing (the same variant, for instance).
+
+
+---
+
+# Goals
+
+* Create a minimal model; do not create a proliferation of types.
+* Most objects should support an identifier.
+* Model should be unambiguous
+* Ideally, there are not multiple ways to represent the same concept.
+* Structures should be small and carefully defined.
+* Use existing representations as a guide, but do not bind the model too closely to them when doing so is inconsistent with existing goals.
+  * Not a VCF clone
+  * Not simply an attempt to structure HGVS or ISCN notation
+* Terms used to describe elements of the model should be precise.
+  * Favor using standard jargon to define elements.
+  * Elements should be tied to a standard ontology.
+* Model is intended for transfer of information between systems, not as an internal database model (though a system implementing this may elect to use this structure internally).
+
+---
+
+# Genetic Variation
+
+### Core VMC model, identifiable types:
+
+(from large to small scale)
+
+* Genotype
+* Haplotype
+* Allele
+* Location
+* Sequence
+
+---
+
+### Core VMC model, primitive types:
+
+* Interval
+* Residue
+* Identifier
+* ID
+
+---
+
+# Allele
+
+```
+{
+    "id" : "AL20"
+    "location_id" : "LOC10"
+    "state" : "C"
+}
+```
+
+---
+
+# Location
+
+```
+{
+    id: "LOC10"
+    interval: {
+        "start" : 44908684,
+        "end" : 44908683
+    },
+    "sequence_id" : "NCBI:NC_00019.10"
+}
+
+```
+
+---
+
+# Proposed extensions to model to support copy number variation
+
+### Adding types:
+
+* subsequence
+* copy number
+* range
+
+---
+
+# Subsequence
+
+---
+
+# Range -- new type
+
+* three fields
+  * min 
+  * max
+  * type
+* used in place of an integer when the value cannot be defined except as within a range of integers
+* inclusive of endpoints
+
+---
+
+# Interval -- modified type
+
+* three fields
+  * start 
+  * end
+  * type
+* Interval currently accepts an unsigned integer for start and end
+* Recommend changing to accept a Range in addition to an unsigned integer
+
+---
+
+# State|Subsequence -- new type
+
+* four fields
+  * id
+  * sequence
+  * copies|ploidy
+  * type
+* Represents a subsequence, typically included in an allele to represent a situated state change to a sequence by referrence to the copied sequence
+
+---
+
+# Genomic Sequence Count | Copy Number -- new type
+
+* four fields
+  * id
+  * sequence
+  * copies|ploidy
+  * type
+* Represents the number of copies of a specific subsequence within a subject genome, without being situated in a specific location
+
+---
+
+# Deletion
+
+```
+[ {
+  "id" : "d17b17d9-7c0c-4c3c-a0dd-9f4440bf62e0",
+  "type" : "location",
+  "interval" : {
+    "start" : {
+      "min" : null,
+      "max" : 259528
+    },
+    "end" : {
+      "min" : 307998,
+      "max" : null
+    }
+  }
+}, {
+  "id" : "VCV000032021",
+  "location-id" : "d17b17d9-7c0c-4c3c-a0dd-9f4440bf62e0",
+  "state" : "",
+  "type" : "allele",
+  "comment" : "GRCh38/hg38 6p25.3(chr6:259528-307998)x1"
+} ]
+```
+
+
+---
+
+# Duplication
+
+```
+[ {
+  "id" : "6aa07427-7c31-4453-9307-a51917fb7ff4",
+  "type" : "location",
+  "interval" : {
+    "start" : {
+      "min" : null,
+      "max" : 259528
+    },
+    "end" : {
+      "min" : 293493,
+      "max" : null
+    }
+  }
+}, {
+  "id" : "VCV000032174",
+  "sequence-id" : "6aa07427-7c31-4453-9307-a51917fb7ff4",
+  "copies" : 3,
+  "type" : "copy_number",
+  "comment" : "GRCh38/hg38 6p25.3(chr6:259528-293493)x3"
+} ]
+```
+
+# Introduction
+
+    </textarea>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>
