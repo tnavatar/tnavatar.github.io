@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif);
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body {
+        font-family: 'Droid Serif';
+      }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: 400;
+        margin-bottom: 0;
+      }
+      .remark-slide-content h1 { font-size: 3em; }
+      .remark-slide-content h2 { font-size: 2em; }
+      .remark-slide-content h3 { font-size: 1.6em; }
+      .footnote {
+        position: absolute;
+        bottom: 3em;
+      }
+      li p { line-height: 1.25em; }
+      .red { color: #fa0000; }
+      .large { font-size: 2em; }
+      a, a > code {
+        color: rgb(249, 38, 114);
+        text-decoration: none;
+      }
+      code {
+        background: #e7e8e2;
+        border-radius: 5px;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+      .remark-code-line-highlighted     { background-color: #373832; }
+      .pull-left {
+        float: left;
+        width: 47%;
+      }
+      .pull-right {
+        float: right;
+        width: 47%;
+      }
+      .pull-right ~ p {
+        clear: both;
+      }
+      #slideshow .slide .content code {
+        font-size: 0.8em;
+      }
+      #slideshow .slide .content pre code {
+        font-size: 0.9em;
+        padding: 15px;
+      }
+      .inverse {
+        background: #272822;
+        color: #F6D0B1;
+        /* color: #777872;*/
+        text-shadow: 0 0 20px #333;
+      }
+      .inverse h1, .inverse h2 {
+        color: #f3f3f3;
+        line-height: 0.8em;
+      }
+      /* Classes added to mark progress*/
+      .complete {
+          color: #4b5f7c 
+      }
+      .in-progress {
+          color: #c29d6b
+      }
+      .new {
+          color: #7e3333
+      }
+
+      /* Slide-specific styling */
+      #slide-inverse .footnote {
+        bottom: 12px;
+        left: 20px;
+      }
+      #slide-how .slides {
+        font-size: 0.9em;
+        position: absolute;
+        top:  151px;
+        right: 140px;
+      }
+      #slide-how .slides h3 {
+        margin-top: 0.2em;
+      }
+      #slide-how .slides .first, #slide-how .slides .second {
+        padding: 1px 20px;
+        height: 90px;
+        width: 120px;
+        -moz-box-shadow: 0 0 10px #777;
+        -webkit-box-shadow: 0 0 10px #777;
+        box-shadow: 0 0 10px #777;
+      }
+      #slide-how .slides .first {
+        background: #fff;
+        position: absolute;
+        top: 20%;
+        left: 20%;
+        z-index: 1;
+      }
+      #slide-how .slides .second {
+        position: relative;
+        background: #fff;
+        z-index: 0;
+      }
+
+      /* Two-column layout */
+      .left-column {
+          color: #2E4546;
+          /* color: #777; */
+        width: 30%;
+        height: 92%;
+        float: left;
+      }
+        .left-column h2:last-of-type, .left-column h3:last-child {
+          color: #000;
+        }
+      .right-column {
+        width: 65%;
+        float: right;
+        padding-top: 1em;
+      }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle, inverse
+
+# ClinGen Data Exchange
+
+---
+
+class: center, middle
+
+# Purpose
+
+The ClinGen Data Exchange provides a platform for query and distribution of ClinGen curations in a structured, machine readable form.
+
+???
+
+Mention that the term 'data exchange' should now be used to refer to all ClinGen resources for sharing ClinGen curations between computers, including the Baylor Evidence Repo
+
+---
+
+.left-column[
+# Enables
+]
+
+.right-column[
+## Sharing of ClinGen data within ClinGen
+
+* ClinGen Website
+* Evidence Repo
+* Gene Curation Tracking System
+
+## Sharing of data with the community
+
+* **ClinVar** (via ClinVar submission tool)
+* Variant annotation tools
+* Other research efforts
+]
+
+---
+class: center, middle, inverse
+# Components
+
+### Data Models 
+### Evidence Repo 
+### Kafka
+### ClinVar Submitter
+### Validation tools
+### (other REST APIs)
+
+---
+
+layout: true
+
+.left-column[
+# Data Models
+Broad/Geisinger
+]
+
+---
+
+.right-column[
+## Purpose
+
+Represents a contract between producers and consumers of data. Provides a consistent structure for sharing of data using commonly understood terms (defined in external ontologies).
+
+Formalized data models are necessary for sharing information with the community and are necessary for richly structured data.
+
+Ad-hoc data models are used as a stopgap for sharing data internally while data models are formalized.
+]
+
+---
+
+.right-column[
+## Current status and progress
+
+* Allele
+  * Sequence Variants (.complete[completed])
+  * Copy Number Variants (.in-progress[in progress--new])
+* Variant Pathogenicity
+  * Sequence Variants (.complete[completed])
+  * Copy Number Variants (need curation standard to start work)
+* Gene Dosage (.new[beta release--new])
+* Gene Validity (ad-hoc)
+* Actionability (ad-hoc, Baylor has started exploratory work on formal model)
+]
+
+---
+
+layout: false
+
+.left-column[
+# Evidence Repo
+Baylor
+]
+.right-column[
+## Purpose
+
+Provides a machine queryable interface to ClinGen data--returns structured data in the standard ClinGen data models.
+
+Used to respond to interfaces that have a specific question to ask, for example, "What does ClinGen know about TSC1:c.3469A>G"
+]
+
+---
+
+.left-column[
+# Kafka
+Broad/Geisinger
+]
+
+.right-column[
+## Purpose
+
+Provides a stream of all structured curated data produced by ClinGen. Also provides a persistent archive of all structured data, including historical curations.
+
+Used to feed data to consumers that maintain their own backing store, such as the ClinGen Website. Also used to notifiy consumers that the information relating to a topic has changed.
+
+## Status and progress
+
+* Variant Pathogenicity (.in-progress[in progress])
+* Gene Dosage (.new[beta--new])
+* Gene Validity (via ad-hoc model)
+* Actionability (via ad-hoc model)
+]
+---
+
+.left-column[
+# ClinVar Submitter
+]
+
+.right-column[
+## Purpose
+
+Transform standard ClinGen Variant Pathogenicity data into a ClinVar submission 
+
+## Status and progress
+
+.new[Beta version available, currently in testing.]
+]
+
+---
+
+.left-column[
+# Validation tools
+]
+
+.right-column[
+## Purpose
+
+Validate compliance of data with ClinGen standard data models
+
+## Status and progress
+
+* JSON Schema based validation exists for Variant Pathogenicity model.
+* Next steps are to develop schemas for other models.
+* Need to develop graph-based schemas to validate RDF Transformation.
+]
+
+---
+
+class: center, middle, inverse
+
+# Next work
+
+---
+
+class: middle
+
+### Gene Validity -- formal model
+
+* Need to coordinate and prioritize efforts of both Data Exchange and Stanford teams to complete this item.
+
+### Validation
+
+* Extend schema-based validation to Gene Dosage model.
+* Establish structure and standards for RDF validation of model content.
+
+    </textarea>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>
