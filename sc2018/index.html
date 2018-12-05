@@ -171,19 +171,19 @@ Mention that the term 'data exchange' should now be used to refer to all ClinGen
 class: center, middle, inverse
 # Components
 
-### Data Models 
-### Evidence Repo 
-### Kafka
-### ClinVar Submitter
-### Validation tools
-### (other REST APIs)
+### Data Standards
+##### ClinVar Submission Generator
+##### Validation Tools
+### APIs
+### Streams
+
 
 ---
 
 layout: true
 
 .left-column[
-# Data Models
+# Data Standards
 Broad/Geisinger
 ]
 
@@ -204,15 +204,15 @@ Ad-hoc data models are used as a stopgap for sharing data internally while data 
 .right-column[
 ## Current status and progress
 
-* Allele
-  * Sequence Variants (.complete[completed])
+* Variants
+  * Allele (.complete[completed])
   * Copy Number Variants (.in-progress[in progress--new])
 * Variant Pathogenicity
   * Sequence Variants (.complete[completed])
   * Copy Number Variants (need curation standard to start work)
 * Gene Dosage (.new[beta release--new])
-* Gene Validity (ad-hoc)
-* Actionability (ad-hoc, Baylor has started exploratory work on formal model)
+* Gene Disease Validity (ad-hoc)
+* Clinical Actionability (ad-hoc, Baylor has started exploratory work on formal model)
 ]
 
 ---
@@ -220,7 +220,7 @@ Ad-hoc data models are used as a stopgap for sharing data internally while data 
 layout: false
 
 .left-column[
-# Evidence Repo
+# Evidence Repository
 Baylor
 ]
 .right-column[
@@ -234,7 +234,7 @@ Used to respond to interfaces that have a specific question to ask, for example,
 ---
 
 .left-column[
-# Kafka
+# Streams
 Broad/Geisinger
 ]
 
@@ -249,13 +249,13 @@ Used to feed data to consumers that maintain their own backing store, such as th
 
 * Variant Pathogenicity (.in-progress[in progress])
 * Gene Dosage (.new[beta--new])
-* Gene Validity (via ad-hoc model)
-* Actionability (via ad-hoc model)
+* Gene Disease Validity (via ad-hoc model)
+* Clinical Actionability (via ad-hoc model)
 ]
 ---
 
 .left-column[
-# ClinVar Submitter
+# ClinVar Submission Generator
 ]
 
 .right-column[
@@ -296,7 +296,7 @@ class: center, middle, inverse
 
 class: middle
 
-### Gene Validity -- formal model
+### Gene Disease Validity -- formal model
 
 * Need to coordinate and prioritize efforts of both Data Exchange and Stanford teams to complete this item.
 
